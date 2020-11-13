@@ -1,0 +1,254 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+
+.wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.sidenav {
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 4px 5px #D5D8DC;
+    max-width: 190px;
+}
+
+.hidden-sidenav {
+    height: 100vh;
+    background-color: white;
+    width: 190px;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #F8F9F9;
+    max-height: 190px;
+    padding-top: 45px;
+    padding-bottom: 35px;
+    border-bottom: 0.5px groove #FDFEFE;
+}
+
+.intro:hover {
+    background: #F2F3F4;
+}
+
+.intro a:hover {
+    text-decoration: none;
+}
+
+#fullname {
+    text-align: center;
+    color: #17A589;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+#job {
+    color: #6E2C00;
+    text-align: center;
+    font-size: 0.6em;
+    font-weight: 300;
+}
+
+.about {
+    background-color: white;
+    transition: all .5s;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+    .about:hover {
+        border-left: 4px solid #229954;
+        background: #F8F9F9;
+    }
+    
+.experience {
+    background-color: white;
+    transition: all .5s;
+    font-size: 15px;
+}
+
+    .experience:hover {
+        border-left: 4px solid #3498DB;
+        background: #F8F9F9;        
+    }
+
+.skills {
+    background-color: white;
+    transition: all .5s;
+    font-size: 15px;
+}
+
+    .skills:hover {
+        border-left: 4px solid #FAF208;
+        background: #F8F9F9;        
+    }
+
+.education {
+    background-color: white;
+    transition: all .5s;
+    font-size: 15px;
+}
+
+    .education:hover {
+        border-left: 4px solid #EE0808;
+        background: #F8F9F9;        
+    }
+
+    .envelope {
+        color: #BA4A00;
+    }
+
+.contact {
+    background-color: white;
+    transition: all .5s;
+    font-size: 15px;
+}
+
+    .contact:hover {
+        border-left: 4px solid #BA4A00;
+        background: #F8F9F9;        
+    }
+
+.resume {
+    background-color: white;
+    transition: all .5s;
+    font-size: 15px;
+}
+
+    .resume:hover {
+        border-left: 4px solid #000;
+        background: #F8F9F9;        
+    }
+
+#horizontal {
+    box-shadow: 0px 3px 5px #D6DBDF;
+    width: 100%;
+    height: 64px;
+    padding-top: 18px;
+    padding-bottom: 12px;
+}
+
+/*Toggle Button starts*/
+.toggle {
+    position: relative;
+    z-index: 1;
+    margin-left: 20px;
+    background: white;
+    color: #117864;
+    outline: none;
+}
+.toggle:hover,
+.toggle:focus,
+.toggle:active {
+  outline: none;
+}
+/*Toggle Button ends*/
+.name-title {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 18px;
+}
+
+.name-title h2 {
+    text-align: center;
+    color: #17A589;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.name-title h2 span {
+    color: #6E2C00;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 400; 
+}
+
+main {
+    padding-left: 190px;
+    background-color: #F8F9F9;
+}
+
+h3 {
+    font-size: 2.92rem;
+    line-height: 3.212rem;
+    font-weight: 200;
+    margin-bottom: 60px;
+    padding: 30px 40px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #117864;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+@media (max-width: 992px) {
+    #vertical {
+        display: none;
+    }
+
+    #horizontal {
+        display: block;
+    }
+
+    #hide {
+        position: absolute;
+        left: -194px;
+        top: 0;
+        z-index: 3;
+        transition: all 0.4s;
+    }
+
+    main {
+        padding-left: 0;
+    }
+
+    h3 {
+        padding: 20px 30px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 993px) {
+    #vertical {
+        display: block;
+    }
+
+    #horizontal {
+        display: none;
+    }
+
+    #hide {
+        display: none;
+    }
+}
+
+@media (max-width: 350px) {
+    .name-title h2 {
+        padding-left: 20px;
+    }
+}
+
+
