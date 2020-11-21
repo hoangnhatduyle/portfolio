@@ -1,0 +1,99 @@
+#experience .card-title {
+    border-bottom: 1px solid #D5D8DC;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    width: 99%;
+}
+
+.job-title {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #145A32;
+}
+
+.company-logo {
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.company-name {
+    color: #28B463;
+}
+
+.job-task-achieve {
+    font-size: 23px;
+    font-weight: 600;
+    color: #28B463;
+    margin-bottom: 5px;
+}
+
+.school-logo {
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.school-name {
+    color: #003E7E;
+}
+
+.school-title {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #1A5276;
+}
+
+.school-task-achieve {
+    font-size: 23px;
+    font-weight: 600;
+    color: #003E7E;
+    margin-bottom: 5px;
+}
+
+.club-logo {
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    max-height: 50px;    
+}
+
+.club-name {
+    color: #E42323;
+}
+
+.club-title {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #943126;
+}
+
+.club-task-achieve {
+    font-size: 23px;
+    font-weight: 600;
+    color: #E42323;
+    margin-bottom: 5px;
+}
+
+#experience ul {
+    list-style: none;
+    font-weight: 500;
+    line-height: 1.8;
+    padding-left: 20px;
+}
+
+#experience ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+@media (min-width: 768px) {
+    .job-title, .school-title, .club-title {
+        text-align: right;
+    }
+}

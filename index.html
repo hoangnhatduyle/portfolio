@@ -7,6 +7,7 @@
 
     <title>Hoang Nhat Duy Le</title>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -14,7 +15,11 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="section.css">
+    <link rel="stylesheet" href="contact-section.css">
+    <link rel="stylesheet" href="education-section.css">
+    <link rel="stylesheet" href="skills-section.css">
+    <link rel="stylesheet" href="about-section.css">
+    <link rel="stylesheet" href="experience.css">
 
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
@@ -40,34 +45,34 @@
                     <!-- sidebar -->
                     <div class="col-xl-2 col-lg-3 col-md-4 pl-0 pr-0 fixed-top sidenav">
                         <div class="intro px-2">
-                            <a href="" class="logo">
+                            <a class="logo" onclick="topFunction()">
                                 <h1 id="fullname">Hoang Nhat Duy Le<br>
                                     <span id="job">Software Developer</span></h1>
                             </a>
                         </div>
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-item"><a href="#section1" class="nav-link text-dark p-3 about"><i
+                            <li class="nav-item"><a href="#about" class="nav-link text-dark p-3 about"><i
                                         class="text-success fas fa-user-alt fa-lg mr-3"></i>About</a>
                             </li>
 
-                            <li class="nav-item"><a href="#section2" class="nav-link text-dark p-3 experience"><i
+                            <li class="nav-item"><a href="#experience" class="nav-link text-dark p-3 experience"><i
                                         class="text-primary fas fa-chart-line fa-lg mr-3"></i>Experience</a>
                             </li>
 
-                            <li class="nav-item"><a href="#section3" class="nav-link text-dark p-3 skills"><i
+                            <li class="nav-item"><a href="#skills" class="nav-link text-dark p-3 skills"><i
                                         class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
                             </li>
 
-                            <li class="nav-item"><a href="#section4" class="nav-link text-dark p-3 education"><i
+                            <li class="nav-item"><a href="#education" class="nav-link text-dark p-3 education"><i
                                         class="text-danger fas fa-graduation-cap text-success fa-lg mr-3"></i>Education</a>
                             </li>
 
-                            <li class="nav-item"><a href="#section5" class="nav-link text-dark p-3 contact"><i
+                            <li class="nav-item"><a href="#contact" class="nav-link text-dark p-3 contact"><i
                                         class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
                             </li>
 
-                            <li class="nav-item"><a href="" class="nav-link text-dark p-3 resume"><i
-                                        class="fas fa-file-alt fa-lg mr-3"></i>Resume</a>
+                            <li class="nav-item"><a class="nav-link text-dark p-3 resume" data-toggle="modal"
+                                    data-target="#resume-popup"><i class="fas fa-file-alt fa-lg mr-3"></i>Resume</a>
                             </li>
                         </ul>
                     </div>
@@ -81,28 +86,30 @@
                     <!-- sidebar -->
                     <div class="pl-0 pr-0 hidden-sidenav">
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-item"><a href="" class="nav-link text-dark p-3 about"><i
-                                        class="text-success fas fa-user-alt fa-lg mr-3"></i>About</a>
+                            <li class="nav-item"><a href="#about" class="nav-link text-dark p-3 about"
+                                    onclick="off()"><i class="text-success fas fa-user-alt fa-lg mr-3"></i>About</a>
                             </li>
 
-                            <li class="nav-item"><a href="" class="nav-link text-dark p-3 experience"><i
+                            <li class="nav-item"><a href="#experience" class="nav-link text-dark p-3 experience"
+                                    onclick="off()"><i
                                         class="text-primary fas fa-chart-line fa-lg mr-3"></i>Experience</a>
                             </li>
 
-                            <li class="nav-item"><a href="" class="nav-link text-dark p-3 skills"><i
-                                        class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
+                            <li class="nav-item"><a href="#skills" class="nav-link text-dark p-3 skills"
+                                    onclick="off()"><i class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
                             </li>
 
-                            <li class="nav-item"><a href="" class="nav-link text-dark p-3 education"><i
+                            <li class="nav-item"><a href="#education" class="nav-link text-dark p-3 education"
+                                    onclick="off()"><i
                                         class="text-danger fas fa-graduation-cap text-success fa-lg mr-3"></i>Education</a>
                             </li>
 
-                            <li class="nav-item"><a href="" class="nav-link text-dark p-3 contact"><i
-                                        class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
+                            <li class="nav-item"><a href="#contact" class="nav-link text-dark p-3 contact"
+                                    onclick="off()"><i class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
                             </li>
 
-                            <li class="nav-item"><a href="" class="nav-link text-dark p-3 resume"><i
-                                        class="fas fa-file-alt fa-lg mr-3"></i>Resume</a>
+                            <li class="nav-item"><a class="nav-link text-dark p-3 resume" data-toggle="modal"
+                                    data-target="#resume-popup"><i class="fas fa-file-alt fa-lg mr-3"></i>Resume</a>
                             </li>
                         </ul>
                     </div>
@@ -110,13 +117,485 @@
             </div>
         </nav>
 
+        <div class="modal fade" id="resume-popup">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-center">
+                        <h4 class="w-100 modal-title text-center font-weight-bold">The document will open automatically,
+                            you can download it in Word or PDF.</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <iframe class="resume-document"
+                            src="https://onedrive.live.com/embed?resid=426F9E146C2BF341%211342&amp;authkey=%21AC_gZ92yC3j_nss&amp;em=2&amp;wdPrint=1&amp;wdEmbedCode=0"
+                            width="850px" height="800px" frameborder="0">This is an embedded <a target="_blank"
+                                href="https://office.com">Microsoft Office</a> document, powered by <a target="_blank"
+                                href="https://office.com/webapps">Office</a>.</iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success"><a class="text-white text-decoration-none"
+                                href="document/Hoang_Nhat_Duy_Le_Resume.docx" download><i
+                                    class="fa fa-download mr-2"></i>Download Word</a></button>
+                        <button type="button" class="btn btn-info"><a class="text-white text-decoration-none"
+                                href="document/Hoang_Nhat_Duy_Le_Resume.pdf" target="_blank" download><i
+                                    class="fa fa-download mr-2"></i>Download PDF</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <main onclick="off()">
+            <section id="about">
+                <h3>About</h3>
+                <div class="container-fluid box">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-11">
+                            <div class="team-selection">
+                                <h1>Hello, I'm <span>Hoang Nhat Duy Le</span>. <br>I'm a junior in CSE at UToledo.</h1>
+                                <span class="border"></span>
+                                <div class="ps">
+                                    <div class="container-fluid p-0">
+                                        <div class="row d-flex justify-content-center align-items-center p-0"
+                                            id="image-group">
+                                            <div
+                                                class="d-flex justify-content-center align-items-center col-md-3 col-6 p-0">
+                                                <a onclick="showDescription1()"><img src="images/about1.jpeg" alt=""
+                                                        id="pic1"></a></div>
+                                            <div
+                                                class="d-flex justify-content-center align-items-center col-md-3 col-6 p-0 divPic2">
+                                                <a onclick="showDescription2()"><img src="images/about2.png" alt=""
+                                                        id="pic2"></a></div>
+                                            <div
+                                                class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
+                                                <a onclick="showDescription3()"><img src="images/about3.jpg" alt=""
+                                                        id="pic3"></a></div>
+                                            <div
+                                                class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
+                                                <a onclick="showDescription4()"><img src="images/about4.png" alt=""
+                                                        id="pic4"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="section p-0" id="p1">
+                                    <span class="name"></span>
+                                    <span class="border"></span>
+                                    <p class="about-description">
+                                        <span class="about-description-title text-center mb-3">International
+                                            Student</span>
+                                        I am currently a junior majoring in Computer Science and Engineering while
+                                        pursuing my passion in Data Science as a minor. During my education at UToledo,
+                                        I have had wonderful time learning cutting-edge technologies while participating
+                                        in
+                                        several student organizations like First Year Rocket Engineering, Vietnamese
+                                        Student
+                                        Association (VSA), UToledo Data Science Club.
+                                    </p>
+                                </div>
+                                <div class="section p-0" id="p2">
+                                    <span class="name"></span>
+                                    <span class="border"></span>
+                                    <p class="about-description">
+                                        <span class="about-description-title text-center mb-3">Growth and
+                                            Development</span>
+                                        I am someone who is consistently growing themselves and who takes the time to
+                                        continue learning even though it’s not a direct requirement of the job.
+                                        Additionally, I consistently sets firm goals for myself.
+                                        Then, once I’ve defined the benchmarks, I take the necessary steps to achieve
+                                        those milestones.
+                                    </p>
+                                </div>
+                                <div class="section p-0" id="p3">
+                                    <span class="name"></span>
+                                    <span class="border"></span>
+                                    <p class="about-description">
+                                        <span class="about-description-title text-center mb-3">Myers-Briggs Type
+                                            Indicator - ISTJ type</span>
+                                        I always take responsible for my actions and take pride in the work I have done.
+                                        As a programmer, I enjoy my enormous attention to details, my love for making
+                                        impacts and my work ethic to prove myself.
+                                    </p>
+                                </div>
+                                <div class="section p-0" id="p4">
+                                    <span class="name"></span>
+                                    <span class="border"></span>
+                                    <p class="about-description">
+                                        <span class="about-description-title text-center mb-3">Vietnamese
+                                            Nationality</span>
+                                        I am proud of being Vietnamese. My country is a country with a special culure.
+                                        From the Hung King Dynasty - the first Dynasty of Vietnam - our ancestors
+                                        celebrated Tet Holiday every year. In the Tet, we cooked Banh Chung and Banh
+                                        Tet, two special dishes made from sticky rice to offer our ancestors. Thousand
+                                        years have passed and this nice cultural feature has been kept untill now.
+
+                                        Vietnamese people are intelligent, hard working and thirsty for moving up.
+                                        Throughout history, we have had a large number of great man achieving the world
+                                        fame. Tran Hung Dao and Vo Nguyen Giap are the two world military talents. Ho
+                                        Chi Minh was world cutural great man...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="experience">
+                <h3>Experience</h3>
+                <div class="container-fluid box">
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-10">
+                            <div class="card card-common">
+                                <div class="container-fluid d-flex align-items-center justify-content-center mb-2 pt-3">
+                                    <div class="row d-flex align-items-center card-title px-0 pb-2">
+                                        <div class="col-md-8 pl-0 d-flex align-items-center">
+                                            <img class="d-none d-sm-inline-block company-logo" src="images/pti.png"
+                                                alt="">
+                                            <span class="company-name ml-xs-0 ml-sm-3">Plastic Technologies Inc</span>
+                                        </div>
+                                        <div class="d-flex align-items-center col-md-4 mt-2 mt-md-0 px-0">
+                                            <h4 class="job-title w-100">
+                                                Web Developer - Engineer Co-op
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid px-0">
+                                    <div class="row mb-3 d-flex justify-content-center">
+                                        <div class="col-11">
+                                            <div class="mb-4">
+                                                <h5 class="job-task-achieve">Responsibilities</h5>
+                                                <ul>
+                                                    <li>Web update and maintenance using .NET Framework, C#, JavaScript,
+                                                        HTML, and SQL database to improve day-to-day operations within
+                                                        the
+                                                        company, and innovation for future business.</li>
+                                                    <li>Assisted project engineers with lab measurements and testing to
+                                                        validate customer’s current product designs.</li>
+                                                    <li>Generated and presented reports on simulation results of the
+                                                        product.</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h5 class="job-task-achieve">Achievements</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <span>January 2020 - May 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-10">
+                            <div class="card card-common">
+                                <div class="container-fluid d-flex align-items-center justify-content-center mb-2 pt-3">
+                                    <div class="row d-flex align-items-center card-title px-0 pb-2">
+                                        <div class="col-md-8 pl-0 d-flex align-items-center">
+                                            <img class="d-none d-sm-inline-block school-logo" src="images/toledo2.png"
+                                                alt="">
+                                            <span class="school-name ml-xs-0 ml-sm-3">Academic Industry Immersion
+                                                Seminar</span>
+                                        </div>
+                                        <div class="d-flex align-items-center col-md-4 mt-2 mt-md-0 px-0">
+                                            <h4 class="school-title w-100">
+                                                Co-op Student
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid px-0">
+                                    <div class="row mb-3 d-flex justify-content-center">
+                                        <div class="col-11">
+                                            <div class="mb-4">
+                                                <h5 class="school-task-achieve">Responsibilities</h5>
+                                                <ul>
+                                                    <li>Working on a case study group from DANA Incorporation to
+                                                        develop solutions for a M220 EDL carrier facing a problem
+                                                        occurring on the center section assembly line..</li>
+                                                    <li>Completed KEEN Entrepreneurial Mindset Modules about Solving
+                                                        Problems Under Organizational Constraints, Building, Sustaining,
+                                                        Leading Effective Teams and Developing a Business Plan to
+                                                        enhance professional skills.</li>
+                                                    <li>Completed online certifications via Lynda/LinkedIn to broaden
+                                                        technical skills such as Android Studio Essential Training,
+                                                        JavaScript Essential Training and Learning C# Algorithms.</li>
+                                                    <li>Discovered personality type using the Myers-Briggs Type
+                                                        Indicator and analyzed the best ways to work with team members.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h5 class="school-task-achieve">Achievements</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <span>August 2020 - December 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-10">
+                            <div class="card card-common">
+                                <div class="container-fluid d-flex align-items-center justify-content-center mb-2 pt-3">
+                                    <div class="row d-flex align-items-center card-title px-0 pb-2">
+                                        <div class="col-md-8 pl-0 d-flex align-items-center">
+                                            <img class="d-none d-sm-inline-block club-logo" src="images/clublogo.png"
+                                                alt="">
+                                            <span class="club-name ml-xs-0 ml-sm-3">UToledo Data Science Club</span>
+                                        </div>
+                                        <div class="d-flex align-items-center col-md-4 mt-2 mt-md-0 px-0">
+                                            <h4 class="club-title w-100">
+                                                Web Developer/Member
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid px-0">
+                                    <div class="row mb-3 d-flex justify-content-center">
+                                        <div class="col-11">
+                                            <div class="mb-4">
+                                                <h5 class="club-task-achieve">Responsibilities</h5>
+                                                <ul>
+                                                    <li>Responsible for building, coding, and designing the official
+                                                        website.</li>
+                                                    <li>Working on separate projects such as image recognition, credit
+                                                        application approval prediction.</li>
+                                                    <li>Researching about machine learning, deep learning and neuron
+                                                        network.</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h5 class="club-task-achieve">Achievements</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <span>August 2020 - December 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills">
+                <h3>Skills</h3>
+                <div class="container-fluid box">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-11">
+                            <div class="card card-common p-4">
+                                <h4 class="card-title">
+                                    Website Design & Development
+                                </h4>
+                                <div class="card-body px-0">
+                                    <div class="container-fluid px-0">
+                                        <div class="row">
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/html5.svg" alt="">
+                                                <p class="skills-description">HTML5</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/css.svg" alt="">
+                                                <p class="skills-description">CSS</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/javascript.svg" alt="">
+                                                <p class="skills-description">Javascript</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center second-last-logo">
+                                                <img class="skills-logo mb-3" src="images/boostrap.svg" alt="">
+                                                <p class="skills-description">Boostrap</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center last-logo">
+                                                <img class="skills-logo mb-3" src="images/jquery.png" alt="">
+                                                <p class="skills-description">jquery</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-11">
+                            <div class="card card-common p-4">
+                                <h4 class="card-title">
+                                    Back-end Support
+                                </h4>
+                                <div class="card-body px-0">
+                                    <div class="container-fluid px-0">
+                                        <div class="row text-center">
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/mysql.svg" alt="">
+                                                <p class="skills-description">MySQL</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/mongodb.svg" alt="">
+                                                <p class="skills-description">MongoDB</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/php.svg" alt="">
+                                                <p class="skills-description">PHP</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center third-last-logo">
+                                                <img class="skills-logo mb-3" src="images/nodejs.svg" alt="">
+                                                <p class="skills-description">NodeJS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-11">
+                            <div class="card card-common p-4">
+                                <h4 class="card-title">
+                                    Programming Language
+                                </h4>
+                                <div class="card-body px-0">
+                                    <div class="container-fluid px-0">
+                                        <div class="row text-center">
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/csharp.svg" alt="">
+                                                <p class="skills-description">C#</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/java.svg" alt="">
+                                                <p class="skills-description">Java</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/c++.svg" alt="">
+                                                <p class="skills-description">C++</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/python.svg" alt="">
+                                                <p class="skills-description">Python</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-11">
+                            <div class="card card-common p-4">
+                                <h4 class="card-title">
+                                    Other
+                                </h4>
+                                <div class="card-body px-0">
+                                    <div class="container-fluid px-0">
+                                        <div class="row text-center">
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/gitlab.svg" alt="">
+                                                <p class="skills-description">Gitlab</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/github.svg" alt="">
+                                                <p class="skills-description">Github</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center">
+                                                <img class="skills-logo mb-3" src="images/jupyter.svg" alt="">
+                                                <p class="skills-description">Jupyter</p>
+                                            </div>
+                                            <div class="col p-0 mr-4 text-center fourth-last-logo">
+                                                <img class="skills-logo mb-3" src="images/datascience.svg" alt="">
+                                                <p class="skills-description">Data Science</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education">
+                <h3>Education</h3>
+                <div class="container-fluid px-5 px-lg-5 box">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-sm-12 col-md-7 p-2 mr-xl-5 mr-sm-0 mb-sm-4">
+                            <div class="card card-common">
+                                <div class="container-fluid px-0">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5 col-sm-6 logo-image">
+                                            <img src="images/toledo.png" alt="">
+                                        </div>
+                                        <div class="col-lg-7 col-sm-6 card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="text-secondary">
+                                                    <a class="card-title" href="https://www.utoledo.edu/"
+                                                        target="_blank">
+                                                        University of
+                                                        Toledo</a>
+                                                    <h5 class="location">Toledo, OH</h5>
+                                                    <ul>
+                                                        <li>GPA: 3.89</li>
+                                                        <li>Major: Computer Science and Engineering</li>
+                                                        <li>Minor: Data Science</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <span>August 2018 - October 2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-sm-12 col-md-5 p-2">
+                            <div class="card card-common">
+                                <div class="container-fluid px-0">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5 col-sm-6 logo-image">
+                                            <img src="images/nth.png" alt=""></div>
+                                        <div class="col-lg-7 col-sm-6 card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="text-secondary">
+                                                    <a class="card-title"
+                                                        href="https://thptnguyenthuonghien.hcm.edu.vn/"
+                                                        target="_blank">Nguyen Thuong
+                                                        Hien High School<a>
+                                                            <h5 class="location">Ho Chi Minh City, Vietnam</h5>
+                                                            <ul>
+                                                                <li>Natural Science</li>
+                                                            </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <span>August 2015 - May 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="contact">
                 <h3>Contact</h3>
                 <!--contact page start-->
-                <div class="container-fluid px-xs-2 px-lg-5">
+                <div class="container-fluid px-xs-2 px-lg-5 box">
                     <div class="row align-items-center contact-section">
-                        <div class="col-lg-6 contact-info">
+                        <div class="col-lg-6 contact-info justify-content-center">
+                            <p class="d-none"><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                                    </svg></a><br>linkedin.com/in/hoangnhatduyle</p>
                             <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                         <path
                                             d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
@@ -125,164 +604,50 @@
                                         <path
                                             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg></a><br>github.com/NDuy248</p>
-                            <p><a><i class="fas fa-envelope"></i></a><br>lehoangnhatduy2000@gmail.com</p>
+                            <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12.042 23.648c-7.813 0-12.042-4.876-12.042-11.171 0-6.727 4.762-12.125 13.276-12.125 6.214 0 10.724 4.038 10.724 9.601 0 8.712-10.33 11.012-9.812 6.042-.71 1.108-1.854 2.354-4.053 2.354-2.516 0-4.08-1.842-4.08-4.807 0-4.444 2.921-8.199 6.379-8.199 1.659 0 2.8.876 3.277 2.221l.464-1.632h2.338c-.244.832-2.321 8.527-2.321 8.527-.648 2.666 1.35 2.713 3.122 1.297 3.329-2.58 3.501-9.327-.998-12.141-4.821-2.891-15.795-1.102-15.795 8.693 0 5.611 3.95 9.381 9.829 9.381 3.436 0 5.542-.93 7.295-1.948l1.177 1.698c-1.711.966-4.461 2.209-8.78 2.209zm-2.344-14.305c-.715 1.34-1.177 3.076-1.177 4.424 0 3.61 3.522 3.633 5.252.239.712-1.394 1.171-3.171 1.171-4.529 0-2.917-3.495-3.434-5.246-.134z" />
+                                    </svg></a><br>lehoangnhatduy2000@gmail.com</p>
                             <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                         <path
                                             d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
                                     </svg>
                                     </svg></a><br>Lê Hoàng Nhật Duy</p>
                         </div>
-                        <div class="col-lg-6 contact-form px-5 px-lg-0">
-                            <h2>Want to get in touch?</h2>
+                        <div class="col-lg-6 contact-form px-3 px-lg-0">
+                            <h4>Want to get in touch?</h4>
                             <form method="post">
                                 <input type="text" name="name" class="text-box" placeholder="Your Name" id="name"
                                     required />
                                 <input type="text" name="email" class="text-box" placeholder="Your Email" id="email" />
                                 <textarea name="message" rows="2" placeholder="Your Message" id="myText"
                                     required></textarea>
-                                <input type="button" name="submit" class="send-btn" value="Send"
-                                    onclick="sendEmail()" />
+                                <div class="container-fluid">
+                                    <div class="row justify-content-end">
+                                        <!--alert messages start-->
+                                        <div id="success" class="col-lg-9 col-md-8 col-xs-8 pr-3">
+                                            <span id="sucess">Message Sent! Thank you for contacting me.</span>
+                                        </div>
+                                        <div id="error" class="col-lg-9 col-md-8 col-xs-8 pr-3">
+                                            <span>Please fill in all blanks.</span>
+                                        </div>
+                                        <div class="col-lg-1 col-md-2 col-xs-2"></div>
+                                        <!--alert messages end-->
+                                        <input type="button" name="submit" class="col-lg-2 col-md-2 col-xs-2 send-btn"
+                                            value="Send" id="send" onclick="sendEmail()" />
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <!--contact page end-->
             </section>
-            <hr>
-            <div id="section2">
-                <h2>Section Two</h2>
-                <p>Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse
-                    ultrices placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra
-                    tincidunt. Quisque non sapien nec lacus condimentum facilisis ut iaculis enim. Sed viverra
-                    interdum bibendum. Donec ac sollicitudin dolor. Sed fringilla vitae lacus at rutrum.
-                    Phasellus congue vestibulum ligula sed consequat.</p>
-                <p>Enim arcu, interdum vel metus dignissim, venenatis feugiat purus. Nulla posuere orci ut leo
-                    sodales, sed cursus dolor ornare. Cum sociis natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus. Etiam sit amet quam orci. Nulla sollicitudin lectus eget
-                    posuere venenatis. Sed vestibulum elementum sagittis. Quisque tristique tortor quis feugiat
-                    sollicitudin. Ut pellentesque luctus vulputate. Ut at odio ac erat blandit vehicula ut eget
-                    urna. In hac habitasse platea dictumst. Nullam ut iaculis nibh, eget eleifend elit.</p>
-                <p>Fusce enim arcu, interdum vel metus dignissim, venenatis feugiat purus. Nulla posuere orci ut
-                    leo sodales, sed cursus dolor ornare. Cum sociis natoque penatibus et magnis dis parturient
-                    montes, nascetur ridiculus mus. Etiam sit amet quam orci. Nulla sollicitudin lectus eget
-                    posuere venenatis. Sed vestibulum elementum sagittis. Quisque tristique tortor quis feugiat
-                    sollicitudin. Ut pellentesque luctus vulputate. Ut at odio ac erat blandit vehicula ut eget
-                    urna. In hac habitasse platea dictumst. Nullam ut iaculis nibh, eget eleifend elit.</p>
-                <p>Tibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed. Nam odio tortor,
-                    dictum quis malesuada at, pellentesque vitae orci. Vivamus elementum, felis eu auctor
-                    lobortis, diam velit egestas lacus, quis fermentum metus ante quis urna. Sed at facilisis
-                    libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                    mus. Vestibulum bibendum blandit dolor. Nunc orci dolor, molestie nec nibh in, hendrerit
-                    tincidunt ante. Vivamus sem augue, hendrerit non sapien in, mollis ornare augue.</p>
-                <p>Nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero egestas sit amet.
-                    Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est mollis nulla
-                    tempus aliquet. Praesent luctus hendrerit arcu non laoreet. Morbi consequat placerat magna,
-                    ac ornare odio sagittis sed. Donec vitae ullamcorper purus. Vivamus non metus ac justo porta
-                    volutpat.</p>
-            </div>
-            <hr>
-            <div id="section3">
-                <h2>Section Three</h2>
-                <p>Integer pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien
-                    vel, porttitor bibendum enim. Donec sed nibh vitae lorem porttitor blandit in nec ante.
-                    Pellentesque vitae metus ipsum. Phasellus sed nunc ac sem malesuada condimentum. Etiam in
-                    aliquam lectus. Nam vel sapien diam. Donec pharetra id arcu eget blandit. Proin imperdiet
-                    mattis augue in porttitor. Quisque tempus enim id lobortis feugiat. Suspendisse tincidunt
-                    risus quis dolor fringilla blandit. Ut sed sapien at purus lacinia porttitor. Nullam
-                    iaculis, felis a pretium ornare, dolor nisl semper tortor, vel sagittis lacus est consequat
-                    eros. Sed id pretium nisl. Curabitur dolor nisl, laoreet vitae aliquam id, tincidunt sit
-                    amet mauris.</p>
-                <p>Integer pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien
-                    vel, porttitor bibendum enim. Donec sed nibh vitae lorem porttitor blandit in nec ante.
-                    Pellentesque vitae metus ipsum. Phasellus sed nunc ac sem malesuada condimentum. Etiam in
-                    aliquam lectus. Nam vel sapien diam. Donec pharetra id arcu eget blandit. Proin imperdiet
-                    mattis augue in porttitor. Quisque tempus enim id lobortis feugiat. Suspendisse tincidunt
-                    risus quis dolor fringilla blandit. Ut sed sapien at purus lacinia porttitor. Nullam
-                    iaculis, felis a pretium ornare, dolor nisl semper tortor, vel sagittis lacus est consequat
-                    eros. Sed id pretium nisl. Curabitur dolor nisl, laoreet vitae aliquam id.</p>
-                <p>Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus
-                    mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus,
-                    volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget ante rutrum
-                    adipiscing. Cras interdum ipsum mattis, tempus mauris vel, semper ipsum. Duis sed dolor ut
-                    enim lobortis pellentesque ultricies ac ligula. Pellentesque convallis elit nisi, id
-                    vulputate ipsum ullamcorper ut. Cras ac pulvinar purus, ac viverra est. Suspendisse potenti.
-                    Integer pellentesque neque et elementum tempus. Curabitur bibendum in ligula ut rhoncus.</p>
-            </div>
-            <hr>
-            <div id="section4">
-                <h2>Section Four</h2>
-                <p>Suspendisse a orci facilisis, dignissim tortor vitae, ultrices mi. Vestibulum a iaculis
-                    lacus. Phasellus vitae convallis ligula, nec volutpat tellus. Vivamus scelerisque mollis
-                    nisl, nec vehicula elit egestas a. Sed luctus metus id mi gravida, faucibus convallis neque
-                    pretium. Maecenas quis sapien ut leo fringilla tempor vitae sit amet leo. Donec imperdiet
-                    tempus placerat. Pellentesque pulvinar ultrices nunc sed ultrices. Morbi vel mi pretium,
-                    fermentum lacus et, viverra tellus. Phasellus sodales libero nec dui convallis, sit amet
-                    fermentum sapien auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                    posuere cubilia Curae; Sed eu elementum nibh, quis varius libero.</p>
-                <p>Ut ut risus nisl. Fusce porttitor eros at magna luctus, non congue nulla eleifend. Aenean
-                    porttitor feugiat dolor sit amet facilisis. Pellentesque venenatis magna et risus commodo, a
-                    commodo turpis gravida. Nam mollis massa dapibus urna aliquet, quis iaculis elit sodales.
-                    Sed eget ornare orci, eu malesuada justo. Nunc lacus augue, dictum quis dui id, lacinia
-                    congue quam. Nulla sem sem, aliquam nec dolor ac, tempus convallis nunc. Interdum et
-                    malesuada fames ac ante ipsum primis in faucibus. Nulla suscipit convallis iaculis. Quisque
-                    eget commodo ligula. Praesent leo dui, facilisis quis eleifend in, aliquet vitae nunc.
-                    Suspendisse fermentum odio ac massa ultricies pellentesque. Fusce eu suscipit massa.</p>
-                <p>In mauris nunc, convallis eget pretium eu, bibendum non leo. Proin suscipit purus adipiscing
-                    dolor gravida, in fermentum sapien blandit. Praesent pellentesque ligula dui, in gravida
-                    turpis vehicula ac. Pellentesque hendrerit nunc ut luctus hendrerit. Aliquam nec tincidunt
-                    urna. Ut interdum nec odio non interdum. Curabitur ligula justo, dapibus non ligula
-                    tristique, dapibus tristique nulla. Aliquam pulvinar dapibus eros, rutrum pretium urna
-                    iaculis ut. Nam est est, tempus id egestas et, viverra in dui. Aliquam gravida orci tortor,
-                    sed congue justo ornare vel. Cras in quam consectetur eros varius scelerisque. Ut vel
-                    fermentum purus. Nullam interdum blandit turpis, id pellentesque massa feugiat at. Ut sed
-                    lectus lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                    cubilia Curae; Nulla rutrum, ante quis convallis ultricies, magna quam rhoncus erat..</p>
-                <p>Bvtae lobortis diam, id molestie magna. Aliquam consequat ipsum quis est dictum ultrices.
-                    Aenean nibh velit, fringilla in diam id, blandit hendrerit lacus. Donec vehicula rutrum
-                    tellus eget fermentum. Pellentesque ac erat et arcu ornare tincidunt. Aliquam erat volutpat.
-                    Vivamus lobortis urna quis gravida semper. In condimentum, est a faucibus luctus, mi dolor
-                    cursus mi, id vehicula arcu risus a nibh. Pellentesque blandit sapien lacus, vel vehicula
-                    nunc feugiat sit amet.</p>
-            </div>
-            <hr>
-            <div id="section5">
-                <h2>Section Five</h2>
-                <p>Nam eget purus nec est consectetur vehicula. Nullam ultrices nisl risus, in viverra libero
-                    egestas sit amet. Etiam porttitor dolor non eros pulvinar malesuada. Vestibulum sit amet est
-                    mollis nulla tempus aliquet. Praesent luctus hendrerit arcu non laoreet. Morbi consequat
-                    placerat magna, ac ornare odio sagittis sed. Donec vitae ullamcorper purus. Vivamus non
-                    metus ac justo porta volutpat.</p>
-                <p>Sed vitae lobortis diam, id molestie magna. Aliquam consequat ipsum quis est dictum ultrices.
-                    Aenean nibh velit, fringilla in diam id, blandit hendrerit lacus. Donec vehicula rutrum
-                    tellus eget fermentum. Pellentesque ac erat et arcu ornare tincidunt. Aliquam erat volutpat.
-                    Vivamus lobortis urna quis gravida semper. In condimentum, est a faucibus luctus, mi dolor
-                    cursus mi, id vehicula arcu risus a nibh. Pellentesque blandit sapien lacus, vel vehicula
-                    nunc feugiat sit amet.</p>
-                <p>Suspendisse a orci facilisis, dignissim tortor vitae, ultrices mi. Vestibulum a iaculis
-                    lacus. Phasellus vitae convallis ligula, nec volutpat tellus. Vivamus scelerisque mollis
-                    nisl, nec vehicula elit egestas a. Sed luctus metus id mi gravida, faucibus convallis neque
-                    pretium. Maecenas quis sapien ut leo fringilla tempor vitae sit amet leo. Donec imperdiet
-                    tempus placerat. Pellentesque pulvinar ultrices nunc sed ultrices. Morbi vel mi pretium,
-                    fermentum lacus et, viverra tellus. Phasellus sodales libero nec dui convallis, sit amet
-                    fermentum sapien auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                    posuere cubilia Curae; Sed eu elementum nibh, quis varius libero.</p>
-                <p>Fermentum ipsum. Morbi a orci vulputate tortor ornare blandit a quis orci. Donec aliquam
-                    sodales gravida. In ut ullamcorper nisi, ac pretium velit. Vestibulum vitae lectus volutpat,
-                    consequat lorem sit amet, pulvinar tellus. In tincidunt vel leo eget pulvinar. Curabitur a
-                    eros non lacus malesuada aliquam. Praesent et tempus odio. Integer a quam nunc. In hac
-                    habitasse platea dictumst. Aliquam porta nibh nulla, et mattis turpis placerat eget.
-                    Pellentesque dui diam, pellentesque vel gravida id, accumsan eu magna.</p>
-            </div>
-            <!-- <section id="intro" class="section scrollspy">
-
-            </section>
-            <section id="contact" class="section scrollspy">
-                <h3>Contact</h3>
-            </section> -->
         </main>
     </div>
 
     <script src="action.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
         integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
