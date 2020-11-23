@@ -54,6 +54,12 @@ let contact = document.querySelector("#contact");
 
 window.addEventListener("scroll", () => {
     var windo = window.pageYOffset + 2;
+    if (windo - 2 > 0) {
+        document.getElementById("go-top").style.display = "flex";
+    } else if (windo - 2 == 0) {
+        document.getElementById("go-top").style.display = "none";
+    }
+
     if (about.offsetTop <= windo && experience.offsetTop > windo) {
         document.querySelector(".about").setAttribute("id", "activeAbout");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
@@ -115,6 +121,31 @@ window.addEventListener("scroll", () => {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+function aboutSection() {
+    let about = document.querySelector("#about");
+    window.scrollTo(0, about.offsetTop);
+}
+function experienceSection() {
+    let experience = document.querySelector("#experience");
+    window.scrollTo(0, experience.offsetTop);
+}
+function skillsSection() {
+    let skills = document.querySelector("#skills");
+    window.scrollTo(0, skills.offsetTop);
+}
+function projectSection() {
+    let project = document.querySelector("#project");
+    window.scrollTo(0, project.offsetTop);
+}
+function educationSection() {
+    let education = document.querySelector("#education");
+    window.scrollTo(0, education.offsetTop);
+}
+function contactSection() {
+    let contact = document.querySelector("#contact");
+    window.scrollTo(0, contact.offsetTop);
 }
 
 function on() {
