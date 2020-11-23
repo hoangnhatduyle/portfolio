@@ -72,7 +72,7 @@
   .timeline-img {
     width: 30px;
     height: 30px;
-    background: #117864;
+    background: #003E7E;
     border-radius: 50%;
     position: absolute;
     left: 50%;
@@ -81,7 +81,7 @@
   }
   
   #project a {
-    background: #117864;
+    background: #003E7E;
     color: #FFFFFF;
     padding: 8px 20px;
     text-transform: uppercase;
@@ -126,7 +126,7 @@
 
   #project .card-title {
       display: block;
-      color: #117864;
+      color: #003E7E;
       font-weight: 600;
       font-size: 20px;
   }
