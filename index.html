@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
+    <link rel="title icon" href="assets/">
     <title>Hoang Nhat Duy Le</title>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="contact-section.css">
-    <link rel="stylesheet" href="education-section.css">
-    <link rel="stylesheet" href="skills-section.css">
-    <link rel="stylesheet" href="about-section.css">
-    <link rel="stylesheet" href="experience.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact-section.css">
+    <link rel="stylesheet" href="css/education-section.css">
+    <link rel="stylesheet" href="css/skills-section.css">
+    <link rel="stylesheet" href="css/about-section.css">
+    <link rel="stylesheet" href="css/project-section.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/top-profile.css">
 
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
@@ -63,6 +65,10 @@
                                         class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
                             </li>
 
+                            <li class="nav-item"><a href="#project" class="nav-link text-dark p-3 project"><i
+                                        class="project-icon fas fa-chart-pie fa-lg mr-3"></i>Project</a>
+                            </li>
+
                             <li class="nav-item"><a href="#education" class="nav-link text-dark p-3 education"><i
                                         class="text-danger fas fa-graduation-cap text-success fa-lg mr-3"></i>Education</a>
                             </li>
@@ -97,6 +103,10 @@
 
                             <li class="nav-item"><a href="#skills" class="nav-link text-dark p-3 skills"
                                     onclick="off()"><i class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
+                            </li>
+
+                            <li class="nav-item"><a href="#project" class="nav-link text-dark p-3 project"
+                                    onclick="off()"><i class="project-icon fas fa-chart-pie fa-lg mr-3"></i>Project</a>
                             </li>
 
                             <li class="nav-item"><a href="#education" class="nav-link text-dark p-3 education"
@@ -145,6 +155,14 @@
         </div>
 
         <main onclick="off()">
+            <section id="top">
+                <div class="top-container box p-0 ml-sm-5">
+                    <h2 class="p-0"><span class="beginner-header">Thank you</span> for visiting my page. <br><span
+                            class="beginner-header">I hope</span> we can
+                        collaborate in one day.</h2>
+                    <span class="border-intro"></span>
+                </div>
+            </section>
             <section id="about">
                 <h3>About</h3>
                 <div class="container-fluid box">
@@ -155,23 +173,22 @@
                                 <span class="border"></span>
                                 <div class="ps">
                                     <div class="container-fluid p-0">
-                                        <div class="row d-flex justify-content-center align-items-center p-0"
-                                            id="image-group">
+                                        <div class="row p-0" id="image-group">
                                             <div
                                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 p-0">
-                                                <a onclick="showDescription1()"><img src="images/about1.jpeg" alt=""
+                                                <a onclick="showDescription1()"><img src="assets/about1.jpeg" alt=""
                                                         id="pic1"></a></div>
                                             <div
                                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 p-0 divPic2">
-                                                <a onclick="showDescription2()"><img src="images/about2.png" alt=""
+                                                <a onclick="showDescription2()"><img src="assets/about2.png" alt=""
                                                         id="pic2"></a></div>
                                             <div
                                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
-                                                <a onclick="showDescription3()"><img src="images/about3.jpg" alt=""
+                                                <a onclick="showDescription3()"><img src="assets/about3.jpg" alt=""
                                                         id="pic3"></a></div>
                                             <div
                                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
-                                                <a onclick="showDescription4()"><img src="images/about4.png" alt=""
+                                                <a onclick="showDescription4()"><img src="assets/about4.png" alt=""
                                                         id="pic4"></a></div>
                                         </div>
                                     </div>
@@ -181,6 +198,11 @@
                                     <span class="name"></span>
                                     <span class="border"></span>
                                     <p class="about-description">
+                                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                                            </svg></button>
                                         <span class="about-description-title text-center mb-3">International
                                             Student</span>
                                         I am currently a junior majoring in Computer Science and Engineering while
@@ -196,6 +218,11 @@
                                     <span class="name"></span>
                                     <span class="border"></span>
                                     <p class="about-description">
+                                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                                            </svg></button>
                                         <span class="about-description-title text-center mb-3">Growth and
                                             Development</span>
                                         I am someone who is consistently growing themselves and who takes the time to
@@ -209,6 +236,11 @@
                                     <span class="name"></span>
                                     <span class="border"></span>
                                     <p class="about-description">
+                                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                                            </svg></button>
                                         <span class="about-description-title text-center mb-3">Myers-Briggs Type
                                             Indicator - ISTJ type</span>
                                         I always take responsible for my actions and take pride in the work I have done.
@@ -220,6 +252,11 @@
                                     <span class="name"></span>
                                     <span class="border"></span>
                                     <p class="about-description">
+                                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                height="24" viewBox="0 0 24 24">
+                                                <path
+                                                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
+                                            </svg></button>
                                         <span class="about-description-title text-center mb-3">Vietnamese
                                             Nationality</span>
                                         I am proud of being Vietnamese. My country is a country with a special culure.
@@ -248,53 +285,7 @@
                                 <div class="container-fluid d-flex align-items-center justify-content-center mb-2 pt-3">
                                     <div class="row d-flex align-items-center card-title px-0 pb-2">
                                         <div class="col-md-8 pl-0 d-flex align-items-center">
-                                            <img class="d-none d-sm-inline-block company-logo" src="images/pti.png"
-                                                alt="">
-                                            <span class="company-name ml-xs-0 ml-sm-3">Plastic Technologies Inc</span>
-                                        </div>
-                                        <div class="d-flex align-items-center col-md-4 mt-2 mt-md-0 px-0">
-                                            <h4 class="job-title w-100">
-                                                Web Developer - Engineer Co-op
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="container-fluid px-0">
-                                    <div class="row mb-3 d-flex justify-content-center">
-                                        <div class="col-11">
-                                            <div class="mb-4">
-                                                <h5 class="job-task-achieve">Responsibilities</h5>
-                                                <ul>
-                                                    <li>Web update and maintenance using .NET Framework, C#, JavaScript,
-                                                        HTML, and SQL database to improve day-to-day operations within
-                                                        the
-                                                        company, and innovation for future business.</li>
-                                                    <li>Assisted project engineers with lab measurements and testing to
-                                                        validate customer’s current product designs.</li>
-                                                    <li>Generated and presented reports on simulation results of the
-                                                        product.</li>
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <h5 class="job-task-achieve">Achievements</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-secondary">
-                                    <span>January 2020 - May 2020</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-5 justify-content-center">
-                        <div class="col-10">
-                            <div class="card card-common">
-                                <div class="container-fluid d-flex align-items-center justify-content-center mb-2 pt-3">
-                                    <div class="row d-flex align-items-center card-title px-0 pb-2">
-                                        <div class="col-md-8 pl-0 d-flex align-items-center">
-                                            <img class="d-none d-sm-inline-block school-logo" src="images/toledo2.png"
+                                            <img class="d-none d-sm-inline-block school-logo" src="assets/toledo2.png"
                                                 alt="">
                                             <span class="school-name ml-xs-0 ml-sm-3">Academic Industry Immersion
                                                 Seminar</span>
@@ -346,7 +337,53 @@
                                 <div class="container-fluid d-flex align-items-center justify-content-center mb-2 pt-3">
                                     <div class="row d-flex align-items-center card-title px-0 pb-2">
                                         <div class="col-md-8 pl-0 d-flex align-items-center">
-                                            <img class="d-none d-sm-inline-block club-logo" src="images/clublogo.png"
+                                            <img class="d-none d-sm-inline-block company-logo" src="assets/pti.png"
+                                                alt="">
+                                            <span class="company-name ml-xs-0 ml-sm-3">Plastic Technologies Inc</span>
+                                        </div>
+                                        <div class="d-flex align-items-center col-md-4 mt-2 mt-md-0 px-0">
+                                            <h4 class="job-title w-100">
+                                                Web Developer - Engineer Co-op
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid px-0">
+                                    <div class="row mb-3 d-flex justify-content-center">
+                                        <div class="col-11">
+                                            <div class="mb-4">
+                                                <h5 class="job-task-achieve">Responsibilities</h5>
+                                                <ul>
+                                                    <li>Web update and maintenance using .NET Framework, C#, JavaScript,
+                                                        HTML, and SQL database to improve day-to-day operations within
+                                                        the
+                                                        company, and innovation for future business.</li>
+                                                    <li>Assisted project engineers with lab measurements and testing to
+                                                        validate customer’s current product designs.</li>
+                                                    <li>Generated and presented reports on simulation results of the
+                                                        product.</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h5 class="job-task-achieve">Achievements</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <span>January 2020 - May 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-10">
+                            <div class="card card-common">
+                                <div class="container-fluid d-flex align-items-center justify-content-center mb-2 pt-3">
+                                    <div class="row d-flex align-items-center card-title px-0 pb-2">
+                                        <div class="col-md-8 pl-0 d-flex align-items-center">
+                                            <img class="d-none d-sm-inline-block club-logo" src="assets/clublogo.png"
                                                 alt="">
                                             <span class="club-name ml-xs-0 ml-sm-3">UToledo Data Science Club</span>
                                         </div>
@@ -398,23 +435,23 @@
                                     <div class="container-fluid px-0">
                                         <div class="row">
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/html5.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/html5.svg" alt="">
                                                 <p class="skills-description">HTML5</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/css.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/css.svg" alt="">
                                                 <p class="skills-description">CSS</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/javascript.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/javascript.svg" alt="">
                                                 <p class="skills-description">Javascript</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center second-last-logo">
-                                                <img class="skills-logo mb-3" src="images/boostrap.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/boostrap.svg" alt="">
                                                 <p class="skills-description">Boostrap</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center last-logo">
-                                                <img class="skills-logo mb-3" src="images/jquery.png" alt="">
+                                                <img class="skills-logo mb-3" src="assets/jquery.png" alt="">
                                                 <p class="skills-description">jquery</p>
                                             </div>
                                         </div>
@@ -434,19 +471,19 @@
                                     <div class="container-fluid px-0">
                                         <div class="row text-center">
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/mysql.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/mysql.svg" alt="">
                                                 <p class="skills-description">MySQL</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/mongodb.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/mongodb.svg" alt="">
                                                 <p class="skills-description">MongoDB</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/php.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/php.svg" alt="">
                                                 <p class="skills-description">PHP</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center third-last-logo">
-                                                <img class="skills-logo mb-3" src="images/nodejs.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/net.svg" alt="">
                                                 <p class="skills-description">NodeJS</p>
                                             </div>
                                         </div>
@@ -466,19 +503,19 @@
                                     <div class="container-fluid px-0">
                                         <div class="row text-center">
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/csharp.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/csharp.svg" alt="">
                                                 <p class="skills-description">C#</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/java.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/java.svg" alt="">
                                                 <p class="skills-description">Java</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/c++.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/c++.svg" alt="">
                                                 <p class="skills-description">C++</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/python.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/python.svg" alt="">
                                                 <p class="skills-description">Python</p>
                                             </div>
                                         </div>
@@ -498,24 +535,65 @@
                                     <div class="container-fluid px-0">
                                         <div class="row text-center">
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/gitlab.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/gitlab.svg" alt="">
                                                 <p class="skills-description">Gitlab</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/github.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/github.svg" alt="">
                                                 <p class="skills-description">Github</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="images/jupyter.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/jupyter.svg" alt="">
                                                 <p class="skills-description">Jupyter</p>
                                             </div>
                                             <div class="col p-0 mr-4 text-center fourth-last-logo">
-                                                <img class="skills-logo mb-3" src="images/datascience.svg" alt="">
+                                                <img class="skills-logo mb-3" src="assets/datascience.svg" alt="">
                                                 <p class="skills-description">Data Science</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="project">
+                <h3>Project</h3>
+                <div class="timeline box">
+                    <div class="container">
+                        <div class="timeline-item">
+                            <div class="timeline-img"></div>
+                            <div class="timeline-content timeline-card js--fadeInLeft">
+                                <div class="timeline-img-header">
+
+                                </div>
+                                <div class="date">May 2020 - Now</div>
+                                <p class="project-description"><span class="card-title">myHome Website</span>
+                                    myHome project is built with the purpose of managing my house rental. The website
+                                    includes tenant contact information, lease agreement, deadline, ... This website is
+                                    currently just a front end product but in the future I will integrate the use of the
+                                    database to improve the quality of the website.</p>
+                                <a class="bnt-more" href="https://nduy248.github.io/HomeWebsite/"
+                                    target="_blank">View</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item mb-0">
+                            <div class="timeline-img"></div>
+                            <div class="timeline-content timeline-card js--fadeInRight">
+                                <div class="timeline-img-header">
+
+                                </div>
+                                <div class="date">August 2020 - Now</div>
+                                <p class="project-description"><span class="card-title">UToledo Data Science
+                                        Website</span>UToledo Data Science Website is an official website of UT Data
+                                    Science Club used to promote the image of the club. The website contains information
+                                    of the advisor, current club members, ongoing events and the projects that are being
+                                    carried out by the club. In the future, this website will be used as the main means
+                                    of contact for the club as planned.</p>
+                                <a class="bnt-more" href="https://utoledo-datascience.github.io/"
+                                    target="_blank">View</a>
                             </div>
                         </div>
                     </div>
@@ -530,7 +608,7 @@
                                 <div class="container-fluid px-0">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-5 col-sm-6 logo-image">
-                                            <img src="images/toledo.png" alt="">
+                                            <img src="assets/toledo.png" alt="">
                                         </div>
                                         <div class="col-lg-7 col-sm-6 card-body">
                                             <div class="d-flex justify-content-between">
@@ -560,7 +638,7 @@
                                 <div class="container-fluid px-0">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-5 col-sm-6 logo-image">
-                                            <img src="images/nth.png" alt=""></div>
+                                            <img src="assets/nth.png" alt=""></div>
                                         <div class="col-lg-7 col-sm-6 card-body">
                                             <div class="d-flex justify-content-between">
                                                 <div class="text-secondary">
@@ -631,10 +709,14 @@
                                         <div id="error" class="col-lg-9 col-md-8 col-xs-8 pr-3">
                                             <span>Please fill in all blanks.</span>
                                         </div>
+                                        <div id="failure" class="col-lg-9 col-md-8 col-xs-8 pr-3">
+                                            <span>I apologize that there was an error sending this message. Please send
+                                                me a direct email.</span>
+                                        </div>
                                         <div class="col-lg-1 col-md-2 col-xs-2"></div>
                                         <!--alert messages end-->
-                                        <input type="button" name="submit" class="col-lg-2 col-md-2 col-xs-2 send-btn"
-                                            value="Send" id="send" onclick="sendEmail()" />
+                                        <input type="button" class="col-lg-2 col-md-2 col-xs-2 send-btn" value="Send"
+                                            onclick="sendEmail(event)" />
                                     </div>
                                 </div>
                             </form>
@@ -646,7 +728,7 @@
         </main>
     </div>
 
-    <script src="action.js"></script>
+    <script src="js/action.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -665,6 +747,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
+
+
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
+    <script src="js/project.js"></script>
+
+    <script>
+        $(".close").click(function () {
+            document.getElementById("p1").style.display = "none";
+            document.getElementById("p2").style.display = "none";
+            document.getElementById("p3").style.display = "none";
+            document.getElementById("p4").style.display = "none";
+            document.getElementById("pic4").style.filter = "grayscale(100%)";
+            document.getElementById("pic1").style.filter = "grayscale(100%)";
+            document.getElementById("pic2").style.filter = "grayscale(100%)";
+            document.getElementById("pic3").style.filter = "grayscale(100%)";
+        });
+    </script>
 </body>
 
 </html>

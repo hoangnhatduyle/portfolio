@@ -1,0 +1,14 @@
+#top {
+    height: 100vh;
+    background: url(../assets/profile3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    #top {
+        margin-bottom: -64px;
+    }
+}

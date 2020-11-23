@@ -1,3 +1,9 @@
+#image-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .team-selection {
     text-align: center;
 }

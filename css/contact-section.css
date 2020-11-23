@@ -55,7 +55,7 @@
     }
 
     .contact-form .send-btn {
-        background: #117864;
+        background: #003E7E;
         color: white;
         border: none;
         height: 50px;
@@ -101,6 +101,19 @@
 }   
 
 #error {
+    display: none;
+    text-align: center;
+    background: #FFF3CD;
+    font-size: 16px;
+    padding: 17px 40px;
+    margin-bottom: 15px;
+    position: relative;
+    border-left: 8px solid #FFA502;
+    border-right: 8px solid #FFA502;
+    border-radius: 4px;
+}
+
+#failure {
     display: none;
     text-align: center;
     background: #FFF3CD;

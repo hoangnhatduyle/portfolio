@@ -47,30 +47,50 @@
 let about = document.querySelector("#about");
 let experience = document.querySelector("#experience");
 let skills = document.querySelector("#skills");
+let project = document.querySelector("#project");
 let education = document.querySelector("#education");
 let contact = document.querySelector("#contact");
 
 
 window.addEventListener("scroll", () => {
     var windo = window.pageYOffset + 2;
-    if (experience.offsetTop <= windo && skills.offsetTop > windo) {
-        document.querySelector(".experience").setAttribute("id", "activeExperience");
-        document.querySelector(".about").removeAttribute("id", "activeAbout");
+    if (about.offsetTop <= windo && experience.offsetTop > windo) {
+        document.querySelector(".about").setAttribute("id", "activeAbout");
+        document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".skills").removeAttribute("id", "activeSkills");
+        document.querySelector(".project").removeAttribute("id", "activeProject");
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".contact").removeAttribute("id", "activeContact");
     }
-    else if (skills.offsetTop <= windo && education.offsetTop > windo) {
+    else if (experience.offsetTop <= windo && skills.offsetTop > windo) {
+        document.querySelector(".experience").setAttribute("id", "activeExperience");
+        document.querySelector(".about").removeAttribute("id", "activeAbout");
+        document.querySelector(".skills").removeAttribute("id", "activeSkills");
+        document.querySelector(".project").removeAttribute("id", "activeProject");
+        document.querySelector(".education").removeAttribute("id", "activeEducation");
+        document.querySelector(".contact").removeAttribute("id", "activeContact");
+    }
+    else if (skills.offsetTop <= windo && project.offsetTop > windo) {
         document.querySelector(".skills").setAttribute("id", "activeSkills");
         document.querySelector(".about").removeAttribute("id", "activeAbout");
+        document.querySelector(".project").removeAttribute("id", "activeProject");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".education").removeAttribute("id", "activeEducation");
+        document.querySelector(".contact").removeAttribute("id", "activeContact");
+    }
+    else if (project.offsetTop <= windo && education.offsetTop > windo) {
+        document.querySelector(".project").setAttribute("id", "activeProject");
+        document.querySelector(".education").removeAttribute("id", "activeAbout");
+        document.querySelector(".about").removeAttribute("id", "activeAbout");
+        document.querySelector(".skills").removeAttribute("id", "activeSkills");
+        document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".contact").removeAttribute("id", "activeContact");
     }
     else if (education.offsetTop <= windo && contact.offsetTop > windo) {
         document.querySelector(".education").setAttribute("id", "activeEducation");
         document.querySelector(".about").removeAttribute("id", "activeAbout");
         document.querySelector(".skills").removeAttribute("id", "activeSkills");
+        document.querySelector(".project").removeAttribute("id", "activeProject");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".contact").removeAttribute("id", "activeContact");
     }
@@ -78,15 +98,17 @@ window.addEventListener("scroll", () => {
         document.querySelector(".contact").setAttribute("id", "activeContact");
         document.querySelector(".about").removeAttribute("id", "activeAbout");
         document.querySelector(".skills").removeAttribute("id", "activeSkills");
+        document.querySelector(".project").removeAttribute("id", "activeProject");
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
     }
     else {
-        document.querySelector(".about").setAttribute("id", "activeAbout");
-        document.querySelector(".experience").removeAttribute("id", "activeExperience");
-        document.querySelector(".skills").removeAttribute("id", "activeSkills");
-        document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".contact").removeAttribute("id", "activeContact");
+        document.querySelector(".about").removeAttribute("id", "activeAbout");
+        document.querySelector(".skills").removeAttribute("id", "activeSkills");
+        document.querySelector(".project").removeAttribute("id", "activeProject");
+        document.querySelector(".education").removeAttribute("id", "activeEducation");
+        document.querySelector(".experience").removeAttribute("id", "activeExperience");
     }
 });
 
@@ -132,7 +154,7 @@ function fadeOut(id, time) {
     }, time);
 }
 
-function sendEmail() {
+function sendEmail(event) {
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var mailBody = document.getElementById("myText").value;
@@ -142,24 +164,25 @@ function sendEmail() {
         fadeOut("error", 3000);
     } else {
         var mailContent = "Name: " + name + ". \nEmail: " + email + ". \nMessage: " + mailBody;
+        event.preventDefault();
         Email.send({
-            // Host: "smtp.gmail.com",
-            //  Username: "Your mail here",
-            //  Password: "Your Password here",
-            SecureToken: "5c6fe5b0-8c68-4754-a459-62bddc1be7d0",
+            SecureToken: "2fb6f6b2-bf99-4f1c-8400-18e8632fffd9",
             From: "prtflpersonal@gmail.com",
-            To: 'lehoangnhatduy2000@gmail.com',
+            To: "lehoangnhatduy2000@gmail.com",
             Subject: "Message From Portfolio",
             Body: mailContent
-        })
-            .then(function (message) {
-                alert(message)
-            });
-        document.getElementById("success").style.display = "inline-block";
-        fadeOut("success", 3000);
-        document.getElementById("name").value = " ";
-        document.getElementById("email").value = " ";
-        document.getElementById("myText").value = " ";
+        }).then(function (message) {
+            if (message == "OK") {
+                document.getElementById("success").style.display = "inline-block";
+                fadeOut("success", 3000);
+                document.getElementById("name").value = " ";
+                document.getElementById("email").value = " ";
+                document.getElementById("myText").value = " ";
+            } else {
+                document.getElementById("failure").style.display = "inline-block";
+                fadeOut("failure", 4000);
+            }
+        });
     }
 }
 
