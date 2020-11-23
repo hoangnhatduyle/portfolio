@@ -31,6 +31,9 @@
 
     <div class="wrapper">
         <div id="overlay" onclick="off()"></div>
+        <a id="go-top" onclick="topFunction()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24">
+                <path d="M24 22h-24l12-20z" /></svg></a>
         <nav id="horizontal">
             <button type="button" class="border-0 px-0 toggle" onclick="on()">
                 <i class="fas fa-bars fa-2x"></i></button>
@@ -53,27 +56,29 @@
                             </a>
                         </div>
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-item"><a href="#about" class="nav-link text-dark p-3 about"><i
+                            <li class="nav-item"><a class="nav-link text-dark p-3 about" onclick="aboutSection()"><i
                                         class="text-success fas fa-user-alt fa-lg mr-3"></i>About</a>
                             </li>
 
-                            <li class="nav-item"><a href="#experience" class="nav-link text-dark p-3 experience"><i
+                            <li class="nav-item"><a class="nav-link text-dark p-3 experience"
+                                    onclick="experienceSection()"><i
                                         class="text-primary fas fa-chart-line fa-lg mr-3"></i>Experience</a>
                             </li>
 
-                            <li class="nav-item"><a href="#skills" class="nav-link text-dark p-3 skills"><i
+                            <li class="nav-item"><a class="nav-link text-dark p-3 skills" onclick="skillsSection()"><i
                                         class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
                             </li>
 
-                            <li class="nav-item"><a href="#project" class="nav-link text-dark p-3 project"><i
+                            <li class="nav-item"><a class="nav-link text-dark p-3 project" onclick="projectSection()"><i
                                         class="project-icon fas fa-chart-pie fa-lg mr-3"></i>Project</a>
                             </li>
 
-                            <li class="nav-item"><a href="#education" class="nav-link text-dark p-3 education"><i
+                            <li class="nav-item"><a class="nav-link text-dark p-3 education"
+                                    onclick="educationSection()"><i
                                         class="text-danger fas fa-graduation-cap text-success fa-lg mr-3"></i>Education</a>
                             </li>
 
-                            <li class="nav-item"><a href="#contact" class="nav-link text-dark p-3 contact"><i
+                            <li class="nav-item"><a class="nav-link text-dark p-3 contact" onclick="contactSection()"><i
                                         class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
                             </li>
 
@@ -92,30 +97,34 @@
                     <!-- sidebar -->
                     <div class="pl-0 pr-0 hidden-sidenav">
                         <ul class="navbar-nav flex-column">
-                            <li class="nav-item"><a href="#about" class="nav-link text-dark p-3 about"
-                                    onclick="off()"><i class="text-success fas fa-user-alt fa-lg mr-3"></i>About</a>
+                            <li class="nav-item"><a class="nav-link text-dark p-3 about"
+                                    onclick="off();aboutSection()"><i
+                                        class="text-success fas fa-user-alt fa-lg mr-3"></i>About</a>
                             </li>
 
-                            <li class="nav-item"><a href="#experience" class="nav-link text-dark p-3 experience"
-                                    onclick="off()"><i
+                            <li class="nav-item"><a class="nav-link text-dark p-3 experience"
+                                    onclick="off();experienceSection()"><i
                                         class="text-primary fas fa-chart-line fa-lg mr-3"></i>Experience</a>
                             </li>
 
-                            <li class="nav-item"><a href="#skills" class="nav-link text-dark p-3 skills"
-                                    onclick="off()"><i class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
+                            <li class="nav-item"><a class="nav-link text-dark p-3 skills"
+                                    onclick="off();skillsSection()"><i
+                                        class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
                             </li>
 
-                            <li class="nav-item"><a href="#project" class="nav-link text-dark p-3 project"
-                                    onclick="off()"><i class="project-icon fas fa-chart-pie fa-lg mr-3"></i>Project</a>
+                            <li class="nav-item"><a class="nav-link text-dark p-3 project"
+                                    onclick="off();projectSection()"><i
+                                        class="project-icon fas fa-chart-pie fa-lg mr-3"></i>Project</a>
                             </li>
 
-                            <li class="nav-item"><a href="#education" class="nav-link text-dark p-3 education"
-                                    onclick="off()"><i
+                            <li class="nav-item"><a class="nav-link text-dark p-3 education"
+                                    onclick="off();educationSection()"><i
                                         class="text-danger fas fa-graduation-cap text-success fa-lg mr-3"></i>Education</a>
                             </li>
 
-                            <li class="nav-item"><a href="#contact" class="nav-link text-dark p-3 contact"
-                                    onclick="off()"><i class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
+                            <li class="nav-item"><a class="nav-link text-dark p-3 contact"
+                                    onclick="off();contactSection()"><i
+                                        class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
                             </li>
 
                             <li class="nav-item"><a class="nav-link text-dark p-3 resume" data-toggle="modal"
@@ -156,7 +165,7 @@
 
         <main onclick="off()">
             <section id="top">
-                <div class="top-container box p-0 ml-sm-5">
+                <div class="top-container box p-0 ml-sm-4 mt-2">
                     <h2 class="p-0"><span class="beginner-header">Thank you</span> for visiting my page. <br><span
                             class="beginner-header">I hope</span> we can
                         collaborate in one day.</h2>
