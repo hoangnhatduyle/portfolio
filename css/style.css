@@ -166,8 +166,6 @@ section {
     }
 
 .top-container {
-    color: white;
-    font-weight: 200;
     left: 0;
     position: absolute;
     top: 0;
@@ -204,7 +202,8 @@ section {
 }
 
 .top-container h2 {
-    font-weight: 300;
+    color: white;
+    font-weight: 400;
     line-height: 150%;
     padding: 0 30px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
