@@ -67,7 +67,7 @@ section {
 }
 
 #job {
-    color: #6E2C00;
+    color: #AB2A2A;
     text-align: center;
     font-size: 0.6em;
     font-weight: 300;
@@ -236,7 +236,7 @@ section {
     z-index: 1;
     margin-left: 20px;
     background: white;
-    color: #117864;
+    color: #003E7E;
     outline: none;
 }
 .toggle:hover,
@@ -254,13 +254,13 @@ section {
 
 .name-title h2 {
     text-align: center;
-    color: #17A589;
+    color: #003E7E;
     font-size: 18px;
     font-weight: 600;
 }
 
 .name-title h2 span {
-    color: #795548;
+    color: #AB2A2A;
     text-align: center;
     font-size: 0.7em;
     font-weight: 400; 

@@ -76,6 +76,10 @@
 }
 
 @media (max-width: 395px) {
+    .ps a  {
+        min-width: 120px;
+    }
+
     .ps a img {
         height: 100%;
     }   
