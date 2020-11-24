@@ -61,19 +61,19 @@
 }
 
 .club-name {
-    color: #E42323;
+    color: #FFD200;
 }
 
 .club-title {
     font-size: 1.1rem;
     line-height: 2rem;
-    color: #943126;
+    color: #D4AC0D;
 }
 
 .club-task-achieve {
     font-size: 23px;
     font-weight: 600;
-    color: #E42323;
+    color: #FFD200;
     margin-bottom: 5px;
 }
 
