@@ -30,24 +30,24 @@
     }
     
     .last-logo {
-        margin-top: 30px;
+        margin-top: 40px;
     }
 }
 
 @media (max-width: 404px) {
     .second-last-logo {
-        margin-top: 30px;
+        margin-top: 40px;
     }
 }
 
 @media (max-width: 396px) {
     .third-last-logo {
-        margin-top: 30px;
+        margin-top: 40px;
     }
 }
 
 @media (max-width: 384px) {
     .fourth-last-logo {
-        margin-top: 30px;
+        margin-top: 40px;
     }
 }
