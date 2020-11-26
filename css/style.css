@@ -387,22 +387,6 @@ h3 {
         position: relative;
         top: 64px;
     }
-
-    .ps a img:hover {
-        pointer-events:none;
-    }
-
-    .card-common:hover {
-        pointer-events:none;
-    }
-
-    .timeline-content:hover {
-        pointer-events:none;
-    }
-
-    .skills-logo:hover {
-        pointer-events:none;
-    }
 }
 
 @media (min-width: 993px) {
