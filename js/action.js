@@ -186,15 +186,16 @@ function fadeOut(id, time) {
 }
 
 function sendEmail(event) {
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var mailBody = document.getElementById("myText").value;
+    const emailForm = document.querySelector("#emailForm");
+    var name = emailForm.elements.name;
+    var email = emailForm.elements.email;
+    var mailBody = emailForm.elements.message;
 
-    if (name == "" || email == "" || mailBody == "") {
+    if (name.value == "" || email.value == "" || mailBody.value == "") {
         document.getElementById("error").style.display = "inline-block";
         fadeOut("error", 3000);
     } else {
-        var mailContent = "Name: " + name + ". \nEmail: " + email + ". \nMessage: " + mailBody;
+        var mailContent = "Name: " + name.value + ". \nEmail: " + email.value + ". \nMessage: " + mailBody.value;
         event.preventDefault();
         Email.send({
             SecureToken: "2fb6f6b2-bf99-4f1c-8400-18e8632fffd9",
@@ -206,9 +207,9 @@ function sendEmail(event) {
             if (message == "OK") {
                 document.getElementById("success").style.display = "inline-block";
                 fadeOut("success", 3000);
-                document.getElementById("name").value = " ";
-                document.getElementById("email").value = " ";
-                document.getElementById("myText").value = " ";
+                name.value = "";
+                email.value = "";
+                mailBody.value = "";
             } else {
                 document.getElementById("failure").style.display = "inline-block";
                 fadeOut("failure", 4000);
