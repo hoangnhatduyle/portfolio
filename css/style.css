@@ -357,6 +357,14 @@ h3 {
     background-color: #CACFD2;
 }
 
+#downloadWord {
+    background-color: #00A4EF;
+}
+
+#downloadPDF {
+    background-color: #F40F02;
+}
+
 @media (max-width: 992px) {
     #vertical {
         display: none;
