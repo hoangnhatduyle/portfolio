@@ -198,7 +198,7 @@ function sendEmail(event) {
         var mailContent = "Name: " + name.value + ". \nEmail: " + email.value + ". \nMessage: " + mailBody.value;
         event.preventDefault();
         Email.send({
-            SecureToken: "2fb6f6b2-bf99-4f1c-8400-18e8632fffd9",
+            SecureToken: "25ad52ce-4d77-4b5d-abe9-6d83f5eed1a6",
             From: "prtflpersonal@gmail.com",
             To: "lehoangnhatduy2000@gmail.com",
             Subject: "Message From Portfolio",
@@ -211,6 +211,7 @@ function sendEmail(event) {
                 email.value = "";
                 mailBody.value = "";
             } else {
+                console.log(message)
                 document.getElementById("failure").style.display = "inline-block";
                 fadeOut("failure", 4000);
             }
