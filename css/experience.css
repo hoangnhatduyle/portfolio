@@ -77,6 +77,30 @@
     margin-bottom: 5px;
 }
 
+.equity-logo {
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.equity-name {
+    color: #17325c;
+}
+
+.equity-title {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #17325c;
+}
+
+.equity-task-achieve {
+    font-size: 23px;
+    font-weight: 600;
+    color: #17325c;
+    margin-bottom: 5px;
+}
+
 #experience ul {
     list-style: none;
     font-weight: 500;
@@ -93,7 +117,7 @@
   }
 
 @media (min-width: 768px) {
-    .job-title, .school-title, .club-title {
+    .job-title, .school-title, .club-title, .equity-title {
         text-align: right;
     }
 }
