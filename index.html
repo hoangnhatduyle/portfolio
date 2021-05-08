@@ -131,8 +131,8 @@
                                         class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
                             </li>
 
-                            <li class="nav-item"><a href="document/Hoang_Nhat_Duy_Le_Resume.pdf" target="_blank"
-                                    class="nav-link text-dark p-3 resume"><i
+                            <li class="nav-item"><a href="document/Hoang_Nhat_Duy_Le_Resume - Updated.pdf"
+                                    target="_blank" class="nav-link text-dark p-3 resume"><i
                                         class="fas fa-file-alt fa-lg mr-3"></i>Resume</a>
                             </li>
                         </ul>
@@ -150,16 +150,38 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body d-flex justify-content-center">
-                        <iframe class="resume-document" src="document/Hoang_Nhat_Duy_Le_Resume.pdf" width="760px"
-                            height="800px" frameborder="0"></iframe>
+                        <iframe class="resume-document" src="document/Hoang_Nhat_Duy_Le_Resume - Updated.pdf"
+                            width="760px" height="800px" frameborder="0"></iframe>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn" id="downloadWord"><a class="text-white text-decoration-none"
-                                href="document/Hoang_Nhat_Duy_Le_Resume.docx" download><i
+                                href="document/Hoang_Nhat_Duy_Le_Resume - Updated.docx" download><i
                                     class="fa fa-download mr-2"></i>Download Word</a></button>
                         <button type="button" class="btn" id="downloadPDF"><a class="text-white text-decoration-none"
-                                href="document/Hoang_Nhat_Duy_Le_Resume.pdf" target="_blank" download><i
+                                href="document/Hoang_Nhat_Duy_Le_Resume - Updated.pdf" target="_blank" download><i
                                     class="fa fa-download mr-2"></i>Download PDF</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal mt-5 fade" id="radixVideo">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-center">
+                        <h4 class="w-100 modal-title text-center font-weight-bold">The video is for demonstration only.
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body d-flex justify-content-center">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video controls="true" class="embed-responsive-item">
+                                <source src="assets/RadixProject.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        © 2021 Copyright - Hoang Nhat Duy Le
                     </div>
                 </div>
             </div>
@@ -668,7 +690,7 @@
                             </div>
                         </div>
 
-                        <div class="timeline-item mb-0">
+                        <div class="timeline-item">
                             <div class="timeline-img"></div>
                             <div class="timeline-content timeline-card js--fadeInRight">
                                 <div class="timeline-img-header">
@@ -685,9 +707,31 @@
                                     target="_blank">View</a>
                             </div>
                         </div>
+
+                        <div class="timeline-item mb-0">
+                            <div class="timeline-img"></div>
+                            <div class="timeline-content timeline-card js--fadeInLeft">
+                                <div class="timeline-img-header">
+
+                                </div>
+                                <div class="date">April 2021 - May 2021</div>
+                                <p class="project-description"><span class="card-title">Radix Project</span>
+                                    Radix project is written in Intel 80x86 Assembly Language. The program will first
+                                    take in radices for input and output numbers from 2 (binary) to 62. Once the
+                                    arithmetic has been completed, the program will output all calculations to the user
+                                    and then prompt the user if they wish to repeat. Then depending on the user, the
+                                    program will either terminate or can be repeated as many times as the user wishes.
+                                    In addition, none of the Irvine32 functions are to be used which means that I had
+                                    to come up with our own procedures for reading the
+                                    input and converting it to a usable value. </p>
+                                <a class="bnt-more" style="cursor: pointer" data-toggle="modal"
+                                    data-target="#radixVideo">View</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
+
             <section id="education">
                 <h3>Education</h3>
                 <div class="container-fluid px-5 px-lg-5 box">
@@ -784,7 +828,7 @@
                         </div>
                         <div class="col-lg-6 contact-form px-3 px-lg-0">
                             <h4>Want to get in touch?</h4>
-                            <form method="post" id="emailForm">
+                            <form method="post" action="https://formspree.io/f/mpzkqegp" id="emailForm">
                                 <input type="text" name="name" class="text-box" placeholder="Your Name" id="name"
                                     required />
                                 <input type="text" name="email" class="text-box" placeholder="Your Email" id="email" />
@@ -793,7 +837,7 @@
                                 <div class="container-fluid">
                                     <div class="row justify-content-end">
                                         <!--alert messages start-->
-                                        <div id="success" class="col-lg-9 col-md-8 col-xs-8 pr-3">
+                                        <!-- <div id="success" class="col-lg-9 col-md-8 col-xs-8 pr-3">
                                             <span id="sucess">Message Sent! Thank you for contacting me.</span>
                                         </div>
                                         <div id="error" class="col-lg-9 col-md-8 col-xs-8 pr-3">
@@ -803,10 +847,17 @@
                                             <span>I apologize that there was an error sending this message. Please send
                                                 me a direct email.</span>
                                         </div>
-                                        <div class="col-lg-1 col-md-2 col-xs-2"></div>
+                                        <div class="col-lg-1 col-md-2 col-xs-2"></div> -->
                                         <!--alert messages end-->
-                                        <input type="button" class="col-lg-2 col-md-2 col-xs-2 send-btn" value="Send"
-                                            onclick="sendEmail(event)" />
+                                        <!-- <input type="button" id="my-form-button"
+                                            class="col-lg-2 col-md-2 col-xs-2 send-btn" value="Send"
+                                            onclick="sendEmail(event)" /> -->
+                                        <button id="my-form-button" href="#">Send </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col px-0">
+                                            <p id="my-form-status"></p>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -819,6 +870,7 @@
     </div>
 
     <script src="js/action.js"></script>
+    <script src="js/sendEmail.js"></script>
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
         integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"

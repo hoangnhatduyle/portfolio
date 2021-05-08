@@ -87,7 +87,12 @@
         }
 
 
-#success {
+#my-form-status {
+    font-size: 25px;
+    margin-top: 10px;
+}
+        
+/* #success {
     display: none;
     text-align: center;
     background: #D4EDDA;
@@ -124,7 +129,7 @@
     border-left: 8px solid #FFA502;
     border-right: 8px solid #FFA502;
     border-radius: 4px;
-}
+} */
         
 @media (min-width: 1168px) {
     .contact-info {
