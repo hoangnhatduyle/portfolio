@@ -42,6 +42,7 @@
 }
 
 .ps a img {
+    object-fit: cover;
     width: 100%;
     filter: grayscale(100%);
     transition: 0.4s all;

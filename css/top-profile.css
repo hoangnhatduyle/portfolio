@@ -1,6 +1,7 @@
 #top {
     height: 100vh;
     background: url(../assets/profile3.jpg);
+    object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
