@@ -1,11 +1,18 @@
 #top {
     height: 100vh;
-    background: url(../assets/profile3.jpg);
     object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: relative;
+    /* position: relative; */
+}
+
+#top img {
+    pointer-events: none;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
 @media (max-width: 992px) {

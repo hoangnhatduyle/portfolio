@@ -49,6 +49,7 @@ let experience = document.querySelector("#experience");
 let skills = document.querySelector("#skills");
 let project = document.querySelector("#project");
 let education = document.querySelector("#education");
+let feedback = document.querySelector("#feedback");
 let contact = document.querySelector("#contact");
 
 
@@ -67,6 +68,7 @@ window.addEventListener("scroll", () => {
         document.querySelector(".project").removeAttribute("id", "activeProject");
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".contact").removeAttribute("id", "activeContact");
+        document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
     }
     else if (experience.offsetTop <= windo && skills.offsetTop > windo) {
         document.querySelector(".experience").setAttribute("id", "activeExperience");
@@ -75,6 +77,7 @@ window.addEventListener("scroll", () => {
         document.querySelector(".project").removeAttribute("id", "activeProject");
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".contact").removeAttribute("id", "activeContact");
+        document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
     }
     else if (skills.offsetTop <= windo && project.offsetTop > windo) {
         document.querySelector(".skills").setAttribute("id", "activeSkills");
@@ -83,6 +86,7 @@ window.addEventListener("scroll", () => {
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".contact").removeAttribute("id", "activeContact");
+        document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
     }
     else if (project.offsetTop <= windo && education.offsetTop > windo) {
         document.querySelector(".project").setAttribute("id", "activeProject");
@@ -91,9 +95,20 @@ window.addEventListener("scroll", () => {
         document.querySelector(".skills").removeAttribute("id", "activeSkills");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".contact").removeAttribute("id", "activeContact");
+        document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
     }
-    else if (education.offsetTop <= windo && contact.offsetTop > windo) {
+    else if (education.offsetTop <= windo && feedback.offsetTop > windo) {
         document.querySelector(".education").setAttribute("id", "activeEducation");
+        document.querySelector(".about").removeAttribute("id", "activeAbout");
+        document.querySelector(".skills").removeAttribute("id", "activeSkills");
+        document.querySelector(".project").removeAttribute("id", "activeProject");
+        document.querySelector(".experience").removeAttribute("id", "activeExperience");
+        document.querySelector(".contact").removeAttribute("id", "activeContact");
+        document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
+    }
+    else if (feedback.offsetTop <= windo && contact.offsetTop > windo) {
+        document.querySelector(".feedback").setAttribute("id", "activeFeedback");
+        document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".about").removeAttribute("id", "activeAbout");
         document.querySelector(".skills").removeAttribute("id", "activeSkills");
         document.querySelector(".project").removeAttribute("id", "activeProject");
@@ -107,6 +122,7 @@ window.addEventListener("scroll", () => {
         document.querySelector(".project").removeAttribute("id", "activeProject");
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
+        document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
     }
     else {
         document.querySelector(".contact").removeAttribute("id", "activeContact");
@@ -115,6 +131,7 @@ window.addEventListener("scroll", () => {
         document.querySelector(".project").removeAttribute("id", "activeProject");
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
+        document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
     }
 });
 
@@ -142,6 +159,10 @@ function projectSection() {
 function educationSection() {
     let education = document.querySelector("#education");
     window.scrollTo(0, education.offsetTop);
+}
+function feedbackSection() {
+    let feedback = document.querySelector("#feedback");
+    window.scrollTo(0, feedback.offsetTop);
 }
 function contactSection() {
     let contact = document.querySelector("#contact");

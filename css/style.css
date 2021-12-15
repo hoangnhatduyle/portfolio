@@ -1,5 +1,7 @@
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 * {
@@ -82,23 +84,23 @@ section {
     font-size: 15px;
 }
 
-    .about:hover {
-        border-left: 4px solid #229954;
-        background: #F8F9F9;
-        cursor: pointer;
-    }
-    
+.about:hover {
+    border-left: 4px solid #229954;
+    background: #F8F9F9;
+    cursor: pointer;
+}
+
 .experience {
     background-color: white;
     transition: all .5s;
     font-size: 15px;
 }
 
-    .experience:hover {
-        border-left: 4px solid #3498DB;
-        background: #F8F9F9;     
-        cursor: pointer;   
-    }
+.experience:hover {
+    border-left: 4px solid #3498DB;
+    background: #F8F9F9;
+    cursor: pointer;
+}
 
 .skills {
     background-color: white;
@@ -106,11 +108,11 @@ section {
     font-size: 15px;
 }
 
-    .skills:hover {
-        border-left: 4px solid #FAF208;
-        background: #F8F9F9;   
-        cursor: pointer;     
-    }
+.skills:hover {
+    border-left: 4px solid #FAF208;
+    background: #F8F9F9;
+    cursor: pointer;
+}
 
 .project {
     background-color: white;
@@ -118,15 +120,31 @@ section {
     font-size: 15px;
 }
 
-    .project:hover {
-        border-left: 4px solid #8322B2;
-        background: #F8F9F9; 
-        cursor: pointer;       
-    }
+.project:hover {
+    border-left: 4px solid #8322B2;
+    background: #F8F9F9;
+    cursor: pointer;
+}
 
-    .project-icon {
-        color: #8322B2;        
-    }
+.project-icon {
+    color: #8322B2;
+}
+
+.feedback {
+    background-color: white;
+    transition: all .5s;
+    font-size: 15px;
+}
+
+.feedback:hover {
+    border-left: 4px solid #7CFFF7;
+    background: #F8F9F9;
+    cursor: pointer;
+}
+
+.feedback-icon {
+    color: #7CFFF7;
+}
 
 .education {
     background-color: white;
@@ -134,11 +152,11 @@ section {
     font-size: 15px;
 }
 
-    .education:hover {
-        border-left: 4px solid #EE0808;
-        background: #F8F9F9;  
-        cursor: pointer;      
-    }
+.education:hover {
+    border-left: 4px solid #EE0808;
+    background: #F8F9F9;
+    cursor: pointer;
+}
 
 .contact {
     background-color: white;
@@ -146,15 +164,15 @@ section {
     font-size: 15px;
 }
 
-    .contact:hover {
-        border-left: 4px solid #BA4A00;
-        background: #F8F9F9;  
-        cursor: pointer;      
-    }
+.contact:hover {
+    border-left: 4px solid #BA4A00;
+    background: #F8F9F9;
+    cursor: pointer;
+}
 
-    .envelope {
-        color: #BA4A00;
-    }
+.envelope {
+    color: #BA4A00;
+}
 
 .resume {
     background-color: white;
@@ -162,11 +180,11 @@ section {
     font-size: 15px;
 }
 
-    .resume:hover {
-        border-left: 4px solid #000;
-        background: #F8F9F9;        
-        cursor: pointer;
-    }
+.resume:hover {
+    border-left: 4px solid #000;
+    background: #F8F9F9;
+    cursor: pointer;
+}
 
 .top-container {
     left: 0;
@@ -176,6 +194,12 @@ section {
     padding: 0 1.5rem;
     margin: 0 auto;
     max-width: 1280px;
+}
+
+@media (max-width: 992px) {
+    .top-container {
+        top: 64px;
+    }
 }
 
 .border-intro {
@@ -190,18 +214,6 @@ section {
 .beginner-header {
     padding: 0 10px;
     background-color: #003E7E
-}
-
-@media only screen and (min-width: 601px) {
-    .top-container {
-        width: 85%;
-    }
-}
-
-@media only screen and (min-width: 993px) {
-    .top-container {
-        width: 70%;
-    }
 }
 
 .top-container h2 {
@@ -233,6 +245,7 @@ section {
 }
 
 /*Toggle Button starts*/
+
 .toggle {
     position: relative;
     z-index: 1;
@@ -241,12 +254,13 @@ section {
     color: #003E7E;
     outline: none;
 }
-.toggle:hover,
-.toggle:focus,
-.toggle:active {
-  outline: none;
+
+.toggle:hover, .toggle:focus, .toggle:active {
+    outline: none;
 }
+
 /*Toggle Button ends*/
+
 .name-title {
     display: block;
     width: 100%;
@@ -265,10 +279,11 @@ section {
     color: #AB2A2A;
     text-align: center;
     font-size: 0.7em;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 main {
+    width: 100vw;
     padding-left: 190px;
     background-color: #F8F9F9;
 }
@@ -299,7 +314,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
@@ -330,6 +345,12 @@ h3 {
 #activeEducation {
     font-weight: bold;
     border-left: 4px solid #EE0808;
+    background: #F8F9F9;
+}
+
+#activeFeedback {
+    font-weight: bold;
+    border-left: 4px solid #7CFFF7;
     background: #F8F9F9;
 }
 
@@ -394,6 +415,7 @@ h3 {
         padding: 20px 30px;
         margin-bottom: 40px;
     }
+
     h3, .box {
         position: relative;
         top: 64px;
@@ -412,7 +434,7 @@ h3 {
     #hide {
         display: none;
     }
-    
+
     #go-top {
         visibility: hidden;
     }
@@ -423,5 +445,3 @@ h3 {
         padding-left: 20px;
     }
 }
-
-

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <link rel="title icon" href="assets/title.png">
+    <link rel="title icon" href="assets/man.png">
     <title>Hoang Nhat Duy Le</title>
 
     <!-- Bootstrap CSS CDN -->
@@ -20,11 +20,15 @@
     <link rel="stylesheet" href="css/skills-section.css">
     <link rel="stylesheet" href="css/about-section.css">
     <link rel="stylesheet" href="css/project-section.css">
+    <link rel="stylesheet" href="css/feedback-section.css">
     <link rel="stylesheet" href="css/experience.css">
     <link rel="stylesheet" href="css/top-profile.css">
+    <link rel="stylesheet" href="Tools/node_modules/swiper/swiper-bundle.min.css">
 
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
@@ -79,7 +83,12 @@
 
                             <li class="nav-item"><a class="nav-link text-dark p-3 education"
                                     onclick="educationSection()"><i
-                                        class="text-danger fas fa-graduation-cap text-success fa-lg mr-3"></i>Education</a>
+                                        class="text-danger fas fa-graduation-cap fa-lg mr-3"></i>Education</a>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link text-dark p-3 feedback"
+                                    onclick="feedbackSection()"><i
+                                        class="feedback-icon fas fa-comments fa-lg mr-3"></i>Feedback</a>
                             </li>
 
                             <li class="nav-item"><a class="nav-link text-dark p-3 contact" onclick="contactSection()"><i
@@ -123,7 +132,12 @@
 
                             <li class="nav-item"><a class="nav-link text-dark p-3 education"
                                     onclick="off();educationSection()"><i
-                                        class="text-danger fas fa-graduation-cap text-success fa-lg mr-3"></i>Education</a>
+                                        class="text-danger fas fa-graduation-cap fa-lg mr-3"></i>Education</a>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link text-dark p-3 feedback"
+                                    onclick="off();feedbackSection()"><i
+                                        class="feedback-icon fas fa-comments fa-lg mr-3"></i>Feedback</a>
                             </li>
 
                             <li class="nav-item"><a class="nav-link text-dark p-3 contact"
@@ -141,7 +155,7 @@
             </div>
         </nav>
 
-        <div class="modal fade" id="resume-popup">
+        <div class="modal mt-5 fade" id="resume-popup">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-center">
@@ -149,9 +163,8 @@
                             you can download it in Word or PDF.</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <div class="modal-body d-flex justify-content-center">
-                        <iframe class="resume-document" src="document/Hoang_Nhat_Duy_Le_Resume - Updated.pdf"
-                            width="760px" height="800px" frameborder="0"></iframe>
+                    <div class="modal-body bg-dark d-flex justify-content-center">
+                        <img src="document/Hoang_Nhat_Duy_Le_Resume - Updated.png" width="99.5%" height="95%" alt="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn" id="downloadWord"><a class="text-white text-decoration-none"
@@ -165,7 +178,7 @@
             </div>
         </div>
 
-        <div class="modal mt-5 fade" id="radixVideo">
+        <div class="modal mt-3 fade" id="radixVideo">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-center">
@@ -187,9 +200,36 @@
             </div>
         </div>
 
+        <div class="modal mt-5 fade" id="huffman">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-flex justify-content-center">
+                        <h4 class="w-100 modal-title text-center font-weight-bold">I AM SORRY FOR THIS INCONVENIENCE.
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="line-height: 1.5rem;">Since this is a project I have done during college, I have to
+                            make
+                            it private to avoid any
+                            problem associated with the Academoc Honesty Policy. Please send me an email (you can find
+                            it in the Contact Section) so that I can invite you to view the this Repository.</p>
+                        <br>
+                        <p>Please click <a href="https://github.com/hoangnhatduyle/Huffman" target="_blank">here</a> for
+                            Source Code when you have the permission.</p>
+                        </p>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        © 2021 Copyright - Hoang Nhat Duy Le
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <main onclick="off()">
             <section id="top">
-                <div class="top-container box p-0 ml-sm-4 mt-2">
+                <img src="assets/Compressed/profile3-min.jpg" alt="">
+                <div class="top-container p-0 pl-4 mt-2">
                     <h2 class="p-0"><span class="beginner-header">Thank you</span> for visiting my page. <br><span
                             class="beginner-header">I hope</span> we can
                         collaborate one day.</h2>
@@ -202,30 +242,35 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11">
                             <div class="team-selection">
-                                <h1>Hello, I'm <span>Hoang Nhat Duy Le</span>. <br>I'm a junior in CSE at UToledo.</h1>
+                                <h1>Hello, I am <span>Hoang Nhat Duy Le</span>. <br>I am currently a senior in CSE at
+                                    UToledo.</h1>
                                 <span class="border"></span>
                                 <div class="ps">
                                     <div class="container-fluid p-0">
                                         <div class="row p-0" id="image-group">
                                             <div
                                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 p-0">
-                                                <a onclick="showDescription1()"><img src="assets/about1.jpeg" alt=""
-                                                        id="pic1"></a>
+                                                <div class="image" onclick="showDescription1()">
+                                                    <img src="assets/Compressed/about1-min.jpeg" id="pic1">>
+                                                </div>
                                             </div>
                                             <div
                                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 p-0 divPic2">
-                                                <a onclick="showDescription2()"><img src="assets/about2.png" alt=""
-                                                        id="pic2"></a>
+                                                <div class="image" onclick="showDescription2()">
+                                                    <img src="assets/Compressed/about2-min.png" alt="" id="pic2">
+                                                </div>
                                             </div>
                                             <div
                                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
-                                                <a onclick="showDescription3()"><img src="assets/about3.jpg" alt=""
-                                                        id="pic3"></a>
+                                                <div class="image" onclick="showDescription3()">
+                                                    <img src="assets/Compressed/about3-min.jpg" alt="" id="pic3">
+                                                </div>
                                             </div>
                                             <div
                                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
-                                                <a onclick="showDescription4()"><img src="assets/about4.png" alt=""
-                                                        id="pic4"></a>
+                                                <div class="image" onclick="showDescription4()">
+                                                    <img src="assets/Compressed/about4-min.png" alt="" id="pic4">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -243,7 +288,7 @@
                                         <span class="about-description-title text-center mb-3">International
                                             Student</span>
                                         I am currently a junior majoring in Computer Science and Engineering while
-                                        pursuing my passion in Data Science as a minor. During my education at UToledo,
+                                        pursuing my interest in Data Science as a minor. During my education at UToledo,
                                         I have had wonderful time learning cutting-edge technologies while participating
                                         in
                                         several student organizations like First Year Rocket Engineering, Vietnamese
@@ -278,11 +323,13 @@
                                                 <path
                                                     d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
                                             </svg></button>
-                                        <span class="about-description-title text-center mb-3">Myers-Briggs Type
-                                            Indicator - ISTJ type</span>
-                                        I always take responsible for my actions and take pride in the work I have done.
-                                        As a programmer, I enjoy my enormous attention to details, my love for making
-                                        impacts and my work ethic to prove myself.
+                                        <span class="about-description-title text-center mb-3">My dream job - Full Stack
+                                            Developer</span>
+                                        I strive to become a Full Stack Developer. I have a great passion for
+                                        programming since a very young age. For all the skills I have learned,
+                                        programming had always been there and it never felt exhausting. Eventually, I
+                                        want to be able to complete every task by myself which is a big motivation why I
+                                        want to become Full Stack.
                                     </p>
                                 </div>
                                 <div class="section p-0" id="p4">
@@ -296,12 +343,7 @@
                                             </svg></button>
                                         <span class="about-description-title text-center mb-3">Vietnamese
                                             Nationality</span>
-                                        I am proud of being Vietnamese. My country is a country with a special culure.
-                                        From the Hung King Dynasty - the first Dynasty of Vietnam - our ancestors
-                                        celebrated Tet Holiday every year. In the Tet, we cooked Banh Chung and Banh
-                                        Tet, two special dishes made from sticky rice to offer our ancestors. Thousand
-                                        years have passed and this nice cultural feature has been kept until now.
-
+                                        I am proud of being Vietnamese.
                                         Vietnamese people are intelligent, hard working and thirsty for moving up.
                                         Throughout history, we have had a large number of great man achieving the world
                                         fame. Tran Hung Dao and Vo Nguyen Giap are the two world military talents. Ho
@@ -323,6 +365,56 @@
                                     <div class="row d-flex align-items-center card-title px-0 pb-2">
                                         <div class="col-md-8 pl-0 d-flex align-items-center">
                                             <img class="d-none d-sm-inline-block company-logo"
+                                                src="assets/Nysus_for_header-300x86.png" alt="">
+                                            <span class="nysus-name ml-xs-0 ml-sm-3">Nysus Solutions L.L.C</span>
+                                        </div>
+                                        <div class="d-flex align-items-center col-md-4 mt-2 mt-md-0 px-0">
+                                            <h4 class="nysus-title w-100">
+                                                System Software Developer Co-op
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid px-0">
+                                    <div class="row mb-3 d-flex justify-content-center">
+                                        <div class="col-11">
+                                            <div class="mb-4">
+                                                <h5 class="nysus-task-achieve">Responsibilities</h5>
+                                                <ul>
+                                                    <li>Maintained and update (mainly web-based) manufacturing software
+                                                        systems related to: just-in-time manufacturing execution system
+                                                        (MES), data collection systems, and web-based administrative
+                                                        applications. Many involving integration to PLCs.</li>
+                                                    <li>Participated in design efforts related to new system projects
+                                                        and support the implementation and ongoing use of these
+                                                        applications.</li>
+                                                    <li>Supported existing applications using tools developed and MS SQL
+                                                        Server Management Studio.</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h5 class="nysus-task-achieve">Achievements</h5>
+                                                <ul>
+                                                    <li>TBD</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer text-secondary">
+                                    <span>Jan 2022 - Present</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5 justify-content-center">
+                        <div class="col-10">
+                            <div class="card card-common">
+                                <div class="container-fluid d-flex align-items-center justify-content-center mb-2 pt-3">
+                                    <div class="row d-flex align-items-center card-title px-0 pb-2">
+                                        <div class="col-md-8 pl-0 d-flex align-items-center">
+                                            <img class="d-none d-sm-inline-block company-logo"
                                                 src="assets/equityLogo.png" alt="">
                                             <span class="equity-name ml-xs-0 ml-sm-3">Equity Trust Company</span>
                                         </div>
@@ -336,24 +428,39 @@
                                 <div class="container-fluid px-0">
                                     <div class="row mb-3 d-flex justify-content-center">
                                         <div class="col-11">
-                                            <div>
+                                            <div class="mb-4">
                                                 <h5 class="equity-task-achieve">Responsibilities</h5>
                                                 <ul>
                                                     <li>Maintains and modifies existing APIs while maintaining
-                                                        documentation and testing standards Research and propose
+                                                        documentation and testing standards.</li>
+                                                    <li>Research and propose
                                                         technical and process improvements to senior technical team
                                                         members for review.</li>
                                                     <li>Performs programming assignments, showing aptitude in
                                                         programming standards, methods, and best practices.</li>
-                                                    <li>Participates in code reviews.</li>
-                                                    <li>Learns about financial processes</li>
+                                                    <li>Participates in code reviews & learns about financial processes.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h5 class="equity-task-achieve">Achievements</h5>
+                                                <ul>
+                                                    <li>Perfromed unit testing on 5 different main functions
+                                                        in the Account Open Process to verify their operations.</li>
+                                                    <li>Sucessfully deployed one function after performing necessary
+                                                        modifications and unit testing to the production stage where
+                                                        customers can use.
+                                                    </li>
+                                                    <li>Contributed to the process of remodelling the Account Open
+                                                        process by changing it from Service Bus Queue to using Topics &
+                                                        Subscriptions.</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-footer text-secondary">
-                                    <span>May 2021 - Present</span>
+                                    <span>May 2021 - August 2021</span>
                                 </div>
                             </div>
                         </div>
@@ -410,7 +517,7 @@
                                                     </li>
                                                     <li>Acquired significant experience and improved knowledge in new
                                                         programming languages like HTML, Javascript, and Android
-                                                        programming.</li>
+                                                        Programming.</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -526,7 +633,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer text-secondary">
-                                    <span>August 2020 - Present</span>
+                                    <span>August 2020 - December 2021</span>
                                 </div>
                             </div>
                         </div>
@@ -536,134 +643,207 @@
             <section id="skills">
                 <h3>Skills</h3>
                 <div class="container-fluid box">
-                    <div class="row justify-content-center mb-5">
-                        <div class="col-11">
-                            <div class="card card-common p-4">
-                                <h4 class="card-title">
-                                    Website Design & Development
-                                </h4>
-                                <div class="card-body px-0">
-                                    <div class="container-fluid px-0">
-                                        <div class="row">
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/html5.svg" alt="">
-                                                <p class="skills-description">HTML5</p>
+                    <div class="row justify-content-center">
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="blog-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__content px-3">
+                                            <h4 class="card-title">
+                                                Front-end Development
+                                            </h4>
+                                            <div class="card-body px-0">
+                                                <div class="container-fluid px-0">
+                                                    <div class="row text-center skills-wrapper-slides">
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/html5.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">HTML5</p>
+                                                            </div>
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/css.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">CSS</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0 second-row">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3"
+                                                                    src="assets/javascript.svg" alt="">
+                                                                <p class="skills-description">Javascript</p>
+                                                            </div>
+                                                            <div class="col p-0 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/boostrap.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">Boostrap</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/css.svg" alt="">
-                                                <p class="skills-description">CSS</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__content px-3">
+                                            <h4 class="card-title">
+                                                Back-end Development
+                                            </h4>
+                                            <div class="card-body px-0">
+                                                <div class="container-fluid px-0">
+                                                    <div class="row text-center skills-wrapper-slides">
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/mysql.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">MySQL</p>
+                                                            </div>
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/mongodb.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">MongoDB</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0 second-row">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/php.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">PHP</p>
+                                                            </div>
+                                                            <div class="col p-0 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/dot_net.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">.NET Framework</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/javascript.svg" alt="">
-                                                <p class="skills-description">Javascript</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__content px-3">
+                                            <h4 class="card-title">
+                                                Programming Language
+                                            </h4>
+                                            <div class="card-body px-0">
+                                                <div class="container-fluid px-0">
+                                                    <div class="row text-center skills-wrapper-slides">
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/csharp.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">C#</p>
+                                                            </div>
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/java.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">Java</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0 second-row">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/c++.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">C++</p>
+                                                            </div>
+                                                            <div class="col p-0 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/asm.png"
+                                                                    alt="">
+                                                                <p class="skills-description">Assembly</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col p-0 mr-4 text-center second-last-logo">
-                                                <img class="skills-logo mb-3" src="assets/boostrap.svg" alt="">
-                                                <p class="skills-description">Boostrap</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__content px-3">
+                                            <h4 class="card-title">
+                                                Data Science
+                                            </h4>
+                                            <div class="card-body px-0">
+                                                <div class="container-fluid px-0">
+                                                    <div class="row text-center skills-wrapper-slides">
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3"
+                                                                    src="assets/rstudio_94807.svg" alt="">
+                                                                <p class="skills-description">R</p>
+                                                            </div>
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/spss.png"
+                                                                    alt="">
+                                                                <p class="skills-description">SPSS</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0 second-row">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/sas-icon.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">SAS</p>
+                                                            </div>
+                                                            <div class="col p-0 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/python.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">Python</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col p-0 mr-4 text-center last-logo">
-                                                <img class="skills-logo mb-3" src="assets/jquery.png" alt="">
-                                                <p class="skills-description">jquery</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-slider__item swiper-slide">
+                                        <div class="blog-slider__content px-3">
+                                            <h4 class="card-title">
+                                                Other
+                                            </h4>
+                                            <div class="card-body px-0">
+                                                <div class="container-fluid px-0">
+                                                    <div class="row text-center skills-wrapper-slides">
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/gitlab.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">Gitlab</p>
+                                                            </div>
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/github.svg"
+                                                                    alt="">
+                                                                <p class="skills-description">Github</p>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col d-flex justify-content-center align-items-center px-0 second-row">
+                                                            <div class="col p-0 mr-4 text-center">
+                                                                <img class="skills-logo mb-3" src="assets/azure.png"
+                                                                    alt="">
+                                                                <p class="skills-description">Azure</p>
+                                                            </div>
+                                                            <div class="col p-0 text-center jquery-logo">
+                                                                <img class="skills-logo mb-3" src="assets/jquery.png"
+                                                                    alt="">
+                                                                <p class="skills-description">jquery</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row justify-content-center mb-5">
-                        <div class="col-11">
-                            <div class="card card-common p-4">
-                                <h4 class="card-title">
-                                    Back-end Support
-                                </h4>
-                                <div class="card-body px-0">
-                                    <div class="container-fluid px-0">
-                                        <div class="row text-center">
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/mysql.svg" alt="">
-                                                <p class="skills-description">MySQL</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/mongodb.svg" alt="">
-                                                <p class="skills-description">MongoDB</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/php.svg" alt="">
-                                                <p class="skills-description">PHP</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center third-last-logo">
-                                                <img class="skills-logo mb-3" src="assets/dot_net.svg" alt="">
-                                                <p class="skills-description">.NET Framework</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row justify-content-center mb-5">
-                        <div class="col-11">
-                            <div class="card card-common p-4">
-                                <h4 class="card-title">
-                                    Programming Language
-                                </h4>
-                                <div class="card-body px-0">
-                                    <div class="container-fluid px-0">
-                                        <div class="row text-center">
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/csharp.svg" alt="">
-                                                <p class="skills-description">C#</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/java.svg" alt="">
-                                                <p class="skills-description">Java</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/c++.svg" alt="">
-                                                <p class="skills-description">C++</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/python.svg" alt="">
-                                                <p class="skills-description">Python</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row justify-content-center mb-5">
-                        <div class="col-11">
-                            <div class="card card-common p-4">
-                                <h4 class="card-title">
-                                    Other
-                                </h4>
-                                <div class="card-body px-0">
-                                    <div class="container-fluid px-0">
-                                        <div class="row text-center">
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/gitlab.svg" alt="">
-                                                <p class="skills-description">Gitlab</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/github.svg" alt="">
-                                                <p class="skills-description">Github</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center">
-                                                <img class="skills-logo mb-3" src="assets/jupyter.svg" alt="">
-                                                <p class="skills-description">Jupyter</p>
-                                            </div>
-                                            <div class="col p-0 mr-4 text-center fourth-last-logo">
-                                                <img class="skills-logo mb-3" src="assets/datascience.svg" alt="">
-                                                <p class="skills-description">Data Science</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="blog-slider__pagination"></div>
                             </div>
                         </div>
                     </div>
@@ -708,7 +888,7 @@
                             </div>
                         </div>
 
-                        <div class="timeline-item mb-0">
+                        <div class="timeline-item">
                             <div class="timeline-img"></div>
                             <div class="timeline-content timeline-card js--fadeInLeft">
                                 <div class="timeline-img-header">
@@ -717,15 +897,56 @@
                                 <div class="date">April 2021 - May 2021</div>
                                 <p class="project-description"><span class="card-title">Radix Project</span>
                                     Radix project is written in Intel 80x86 Assembly Language. The program will first
-                                    take in radices for input and output numbers from 2 (binary) to 62. Once the
-                                    arithmetic has been completed, the program will output all calculations to the user
-                                    and then prompt the user if they wish to repeat. Then depending on the user, the
-                                    program will either terminate or can be repeated as many times as the user wishes.
-                                    In addition, none of the Irvine32 functions are to be used which means that I had
-                                    to come up with our own procedures for reading the
-                                    input and converting it to a usable value. </p>
+                                    take in radices for input, perform basic operations and output the results in radix
+                                    from 2 (binary) to 62. Once it is complete, it will prompt the user if they wish to
+                                    repeat.
+                                    In addition, none of the Irvine32 functions are to be used, since all the procedures
+                                    were manually written (reading the
+                                    input/converting it to a usable value). </p>
                                 <a class="bnt-more" style="cursor: pointer" data-toggle="modal"
                                     data-target="#radixVideo">View</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-img"></div>
+                            <div class="timeline-content timeline-card js--fadeInRight">
+                                <div class="timeline-img-header">
+
+                                </div>
+                                <div class="date">October 2021 - November 2021</div>
+                                <p class="project-description"><span class="card-title">Huffman Coding
+                                        Compression</span>Huffman coding (also known as Huffman Encoding) is an
+                                    algorithm for doing data compression, and it forms the basic idea behind file
+                                    compression. The idea is to use “variable-length encoding”.It is due to the fact
+                                    that some characters occur more frequently than others in a text to design an
+                                    algorithm that can represent the same piece of text using a lesser number of bits.
+                                    We can then reference to the Huffman tree to decode any given string of characters.
+                                </p>
+                                <a class="bnt-more" style="cursor: pointer" data-toggle="modal"
+                                    data-target="#huffman">View</a>
+                                <a id="bnt-more1" href="document/ProjectManual.pdf" target="_blank">Manual</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item mb-0">
+                            <div class="timeline-img"></div>
+                            <div class="timeline-content timeline-card js--fadeInLeft">
+                                <div class="timeline-img-header">
+
+                                </div>
+                                <div class="date">November 2021 - December 2021</div>
+                                <p class="project-description"><span class="card-title">Covid Vaccine Study</span>
+                                    COVID-19 is an extremely dangerous epidemic that negatively influences enormous
+                                    aspects of the world. One of the optimistic solutions the launch of diverse COVID-19
+                                    vaccines in order to
+                                    prevent the spread of the epidemic. Our study was conducted to measure the
+                                    effectiveness of the COVID-19 vaccine which could assist numerous regions to conduct
+                                    a strategy to optimally manage the spread of COVID-19. The data will draw
+                                    conclusions about the effectiveness of vaccines in mitigating the number of
+                                    infections, spread, and deaths for vaccinated and unvaccinated populations. </p>
+                                <a class="bnt-more" style="cursor: pointer"
+                                    href="https://github.com/hoangnhatduyle/CovidDataProject" target="_blank">View</a>
                             </div>
                         </div>
                     </div>
@@ -762,7 +983,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer text-secondary">
-                                    <span>August 2018 - October 2022</span>
+                                    <span>August 2018 - Present</span>
                                 </div>
                             </div>
                         </div>
@@ -791,6 +1012,213 @@
                                 </div>
                                 <div class="card-footer text-secondary">
                                     <span>August 2015 - May 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="feedback">
+                <h3>Feedback</h3>
+                <div class="container-fluid px-5 px-lg-5 box">
+                    <div class="row d-flex justify-content-center align-items-center card-slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper d-flex align-items-center">
+                                <div class="feedback-slides swiper-slide">
+                                    <div class="feedbck">
+                                        <div class="pattern"></div>
+                                        <div class="image">
+                                            <img src="assets/Compressed/Katie-min.png">
+                                        </div>
+                                        <div class="name_job mb-1 text-center">Katie Wittine</div>
+                                        <div class="mb-3 text-center">Equity Trust Company</div>
+                                        <div class="rating mb-2">
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star-half.png" />
+                                        </div>
+                                        <p>Hoang has been an incredible addition to the myEQUITY Connect Team. His
+                                            contributions have added reliability and are enabling the
+                                            team to rapidly reach our goals. He's eager to
+                                            learn, has a great attitude, and has been able to quickly pick up our coding
+                                            patterns and concepts. I look forward to watching him continue to learn and
+                                            grow as a developer.</p>
+                                        <div class="btns d-flex justify-content-center">
+                                            <button
+                                                onclick="location.href='https://www.linkedin.com/in/katiewittine/'">More
+                                                Info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback-slides swiper-slide">
+                                    <div class="feedbck">
+                                        <div class="pattern"></div>
+                                        <div class="image">
+                                            <img src="assets/Compressed/Barry-min.png">
+                                        </div>
+                                        <div class="name_job mb-1 text-center">Barry Fleming</div>
+                                        <div class="mb-3 text-center">Equity Trust Company</div>
+                                        <div class="rating mb-2">
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                        </div>
+                                        <p>Hoang demonstrated the ability to quickly adapt and pick up on our coding
+                                            practices. He has been exceeding expectations on given tasks and has shown a
+                                            strong interest in learning, through his clarifying questions
+                                            and take time to work through his own problems. He has been an
+                                            enjoyable team member and assimilated quickly into our culture.</p>
+                                        <div class="btns d-flex justify-content-center">
+                                            <button
+                                                onclick="location.href='https://www.linkedin.com/in/barry-fleming-3082a2bb/'">More
+                                                Info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback-slides swiper-slide">
+                                    <div class="feedbck">
+                                        <div class="pattern"></div>
+                                        <div class="image">
+                                            <img src="assets/aaron.jfif">
+                                        </div>
+                                        <div class="name_job mb-1 text-center">Aaron Bollinger</div>
+                                        <div class="mb-3 text-center">Plastic Technologies Inc</div>
+                                        <div class="rating mb-2">
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                            <img src="https://img.icons8.com/fluency/22/000000/star.png" />
+                                        </div>
+                                        <p>Le is the type of person that takes initiative and does not shy away from
+                                            hard problems. In fact, he was one of the most successful co-ops in the
+                                            company. Rather than punting the problem back to the team, he always tries
+                                            to do what he can before asking questions.</p>
+                                        <div class="btns d-flex justify-content-center align-items-center">
+                                            <button
+                                                onclick="location.href='https://www.linkedin.com/in/aaron-bollinger-24a7745/'">More
+                                                Info</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-small mb-5">
+                            <div class="card card-common rounded">
+                                <div class="container-fluid px-0">
+                                    <div class="row justify-content-center align-items-center px-3">
+                                        <div class="col-sm-5 text-center">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="feedback-small-image">
+                                                    <img src="assets/Compressed/Katie-min.png">
+                                                </div>
+                                            </div>
+                                            <div class="name_job">Katie Wittine</div>
+                                            <div>Equity Trust Company</div>
+                                        </div>
+                                        <div class="col-sm-7 py-3">
+                                            <div class="mb-3 d-flex justify-content-center justify-content-sm-start">
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star-half.png" />
+                                            </div>
+                                            <div>Hoang has been an incredible addition to
+                                                the myEQUITY Connect Team. His
+                                                contributions have added reliability and are enabling the
+                                                team to rapidly reach our goals. He's eager to
+                                                learn, has a great attitude, and has been able to quickly pick up our
+                                                coding
+                                                patterns and concepts. I look forward to watching him continue to learn
+                                                and
+                                                grow as a developer.</div>
+                                            <div class="btns d-flex justify-content-center">
+                                                <button
+                                                    onclick="location.href='https://www.linkedin.com/in/katiewittine/'">More
+                                                    Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-small mb-5">
+                            <div class="card card-common rounded">
+                                <div class="container-fluid px-0">
+                                    <div class="row justify-content-center align-items-center px-3">
+                                        <div class="col-sm-5 text-center">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="feedback-small-image">
+                                                    <img src="assets/Compressed/Barry-min.png">
+                                                </div>
+                                            </div>
+                                            <div class="name_job">Barry Fleming</div>
+                                            <div>Equity Trust Company</div>
+                                        </div>
+                                        <div class="col-sm-7 py-3">
+                                            <div class="mb-3 d-flex justify-content-center justify-content-sm-start">
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                            </div>
+                                            <div>Hoang demonstrated the ability to quickly adapt and pick up on our
+                                                coding
+                                                practices. He has been exceeding expectations on given tasks and has
+                                                shown a
+                                                strong interest in learning, through his clarifying questions
+                                                and take time to work through his own problems. He has been an
+                                                enjoyable team member and assimilated quickly into our culture.</div>
+                                            <div class="btns d-flex justify-content-center">
+                                                <button
+                                                    onclick="location.href='https://www.linkedin.com/in/katiewittine/'">More
+                                                    Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-small">
+                            <div class="card card-common rounded">
+                                <div class="container-fluid px-0">
+                                    <div class="row justify-content-center align-items-center px-3">
+                                        <div class="col-sm-5 text-center">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="feedback-small-image">
+                                                    <img src="assets/aaron.jfif">
+                                                </div>
+                                            </div>
+                                            <div class="name_job">Aaron Bollinger</div>
+                                            <div>Plastic Technologies Inc</div>
+                                        </div>
+                                        <div class="col-sm-7 py-3">
+                                            <div class="mb-3 d-flex justify-content-center justify-content-sm-start">
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                                <img src="https://img.icons8.com/fluency/24/000000/star.png" />
+                                            </div>
+                                            <div>Le is the type of person that takes initiative and does not shy away
+                                                from
+                                                hard problems. In fact, he was one of the most successful co-ops in the
+                                                company. Rather than punting the problem back to the team, he always
+                                                tries
+                                                to do what he can before asking questions.</div>
+                                            <div class="btns d-flex justify-content-center">
+                                                <button
+                                                    onclick="location.href='https://www.linkedin.com/in/katiewittine/'">More
+                                                    Info</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -893,6 +1321,42 @@
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
     <script src="js/project.js"></script>
+    <script src="Tools/node_modules/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script type="module">
+        var swiper = new Swiper('.swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 65,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+        });
+        swiper.slideTo(1, false, false);
+    </script>
+
+    <script type="text/javascript">
+        var swiper = new Swiper('.blog-slider', {
+            spaceBetween: 30,
+            effect: 'fade',
+            speed: 0,
+            loop: true,
+            mousewheel: {
+                invert: false,
+            },
+            // autoHeight: true,
+            pagination: {
+                el: '.blog-slider__pagination',
+                clickable: true,
+            }
+        });
+    </script>
 
     <script>
         $(".close").click(function () {

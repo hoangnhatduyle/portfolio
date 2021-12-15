@@ -1,0 +1,152 @@
+.card-slider {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 0 !important;
+}
+
+.feedback-slides {
+    width: 30% !important;
+    border-radius: 25px !important;
+}
+
+.feedbck {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 8%;
+    border: 1px solid gray;
+    box-shadow: 1px 2px 5px #999;
+    transition: all .4s;
+    overflow: auto;
+}
+
+.feedbck:hover {
+    box-shadow: 2px 3px 15px #999;
+}
+
+.feedbck .image {
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    background: #003E7E;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.feedbck .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.pattern {
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    top: 0;
+    background-color: lightgray;
+    z-index: -1;
+}
+
+.feedbck p {
+    text-align: justify;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.name_job {
+    margin: 10px 0 3px 0;
+    color: #003E7E;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.rating i {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.btns {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btns button {
+    background: #003E7E;
+    width: 100%;
+    padding: 9px 0px;
+    outline: none;
+    border: 2px solid #003E7E;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    transition: all 0.3s linear;
+}
+
+.btns button:hover {
+    background: #fff;
+    color: #003E7E;
+}
+
+@media (max-width: 750px) {
+    .swiper {
+        display: none;
+    }
+
+    .feedback-small {
+        display: block;
+    }
+}
+
+@media (min-width: 751px) {
+    .swiper {
+        display: block;
+    }
+
+    .feedback-small {
+        display: none;
+    }
+}
+
+.feedback-small-image {
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    background: #003E7E;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.feedback-small-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+@media (max-width: 992px) {
+    .feedback-slides {
+        width: 40% !important;
+    }
+}

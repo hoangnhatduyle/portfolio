@@ -15,7 +15,7 @@
     line-height: 1.2em;
 }
 
-.team-selection h1 span{
+.team-selection h1 span {
     color: #FD1A1A;
 }
 
@@ -24,7 +24,7 @@
     margin: auto;
     width: 40%;
     height: 4px;
-    background: #117864;
+    background: #134FC9;
     margin-bottom: 40px;
 }
 
@@ -41,14 +41,14 @@
     border-radius: 50%;
 }
 
-.ps a img {
+.ps img {
     object-fit: cover;
     width: 100%;
     filter: grayscale(100%);
     transition: 0.4s all;
 }
 
-.ps a img:hover {
+.ps img:hover {
     filter: none;
     cursor: pointer;
 }
@@ -76,15 +76,31 @@
     color: #873600;
 }
 
+#about .image {
+    height: 170px;
+    width: 170px;
+    background: #003E7E;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+#about .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
 @media (max-width: 395px) {
-    .ps a  {
+    .ps a {
         min-width: 120px;
     }
 
     .ps a img {
         height: 100%;
-    }   
-    
+    }
+
     #image-group {
         display: flex;
         flex-direction: column;

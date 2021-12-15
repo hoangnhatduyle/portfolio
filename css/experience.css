@@ -57,7 +57,7 @@
     height: 100%;
     width: 100%;
     max-width: 100px;
-    max-height: 50px;    
+    max-height: 50px;
 }
 
 .club-name {
@@ -85,19 +85,43 @@
 }
 
 .equity-name {
-    color: #17325c;
+    color: #003E7E;
 }
 
 .equity-title {
     font-size: 1.1rem;
     line-height: 2rem;
-    color: #17325c;
+    color: #1A5276;
 }
 
 .equity-task-achieve {
     font-size: 23px;
     font-weight: 600;
-    color: #17325c;
+    color: #003E7E;
+    margin-bottom: 5px;
+}
+
+.nysus-logo {
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.nysus-name {
+    color: black;
+}
+
+.nysus-title {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: gray;
+}
+
+.nysus-task-achieve {
+    font-size: 23px;
+    font-weight: 600;
+    color: black;
     margin-bottom: 5px;
 }
 
@@ -109,15 +133,20 @@
 }
 
 #experience ul li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
-  }
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -1em;
+    /* Also needed for space (tweak if needed) */
+}
 
 @media (min-width: 768px) {
-    .job-title, .school-title, .club-title, .equity-title {
+    .job-title, .school-title, .club-title, .equity-title, .nysus-title {
         text-align: right;
     }
 }
