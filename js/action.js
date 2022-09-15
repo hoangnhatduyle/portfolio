@@ -1,49 +1,3 @@
-// (function () {
-//     console.log('sasa');
-// })();
-
-// $(document).ready(function () {
-//     var trigger = $('.toggle'),
-//         overlay = $('.overlay'),
-//         isClosed = false;
-
-//     trigger.click(function () {
-//         hamburger_cross();
-//     });
-
-//     function hamburger_cross() {
-
-//         if (isClosed == true) {
-//             document.getElementsByClassName("overlay").style.display = "none";
-//             isClosed = false;
-//         } else {
-//             document.getElementsByClassName("overlay").style.display = "block";
-//             isClosed = true;
-//         }
-//     }
-
-//     // $('[data-toggle="offcanvas"]').click(function () {
-//     //     $('#wrapper').toggleClass('toggled');
-//     // });
-// });
-
-// $(document).ready(function () {
-//     $(".send-btn").click(function () {
-//         console.log("hello");
-//         if (document.getElementById("name").value == "" || document.getElementById("email").value == "" || document.getElementById("myText").value == "") {
-//             $("#error").toggleClass("expand");
-//             $("#error").fadeOut(4500, function () {
-//                 $(this).remove();
-//             });
-//         } else {
-//             $("#success").toggleClass("expand");
-//             $("#success").fadeOut(4500, function () {
-//                 $(this).remove();
-//             });
-//         }
-//     });
-// });
-
 let about = document.querySelector("#about");
 let experience = document.querySelector("#experience");
 let skills = document.querySelector("#skills");
@@ -166,7 +120,7 @@ function feedbackSection() {
 }
 function contactSection() {
     let contact = document.querySelector("#contact");
-    window.scrollTo(0, contact.offsetTop);
+    window.scrollTo(0, contact.offsetTop + 1);
 }
 
 function on() {
@@ -205,40 +159,6 @@ function fadeOut(id, time) {
         fadeTarget.parentNode.removeChild(fadeTarget);;
     }, time);
 }
-
-// function sendEmail(event) {
-//     const emailForm = document.querySelector("#emailForm");
-//     var name = emailForm.elements.name;
-//     var email = emailForm.elements.email;
-//     var mailBody = emailForm.elements.message;
-
-//     if (name.value == "" || email.value == "" || mailBody.value == "") {
-//         document.getElementById("error").style.display = "inline-block";
-//         fadeOut("error", 3000);
-//     } else {
-//         var mailContent = "Name: " + name.value + ". \nEmail: " + email.value + ". \nMessage: " + mailBody.value;
-//         event.preventDefault();
-//         Email.send({
-//             SecureToken: "25ad52ce-4d77-4b5d-abe9-6d83f5eed1a6",
-//             From: "prtflpersonal@gmail.com",
-//             To: "lehoangnhatduy2000@gmail.com",
-//             Subject: "Message From Portfolio",
-//             Body: mailContent
-//         }).then(function (message) {
-//             if (message == "OK") {
-//                 document.getElementById("success").style.display = "inline-block";
-//                 fadeOut("success", 3000);
-//                 name.value = "";
-//                 email.value = "";
-//                 mailBody.value = "";
-//             } else {
-//                 console.log(message)
-//                 document.getElementById("failure").style.display = "inline-block";
-//                 fadeOut("failure", 4000);
-//             }
-//         });
-//     }
-// }
 
 function showDescription1() {
     document.getElementById("p1").style.display = "block";
@@ -295,3 +215,14 @@ function showColor(p1, p2, p3, p4) {
         document.getElementById("pic3").style.filter = "grayscale(100%)";
     }
 }
+
+$(".close").click(function() {
+    document.getElementById("p1").style.display = "none";
+    document.getElementById("p2").style.display = "none";
+    document.getElementById("p3").style.display = "none";
+    document.getElementById("p4").style.display = "none";
+    document.getElementById("pic4").style.filter = "grayscale(100%)";
+    document.getElementById("pic1").style.filter = "grayscale(100%)";
+    document.getElementById("pic2").style.filter = "grayscale(100%)";
+    document.getElementById("pic3").style.filter = "grayscale(100%)";
+});
