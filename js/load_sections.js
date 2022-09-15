@@ -23,6 +23,10 @@ $(function() {
 });
 
 $(function() {
+    $("#certs").load("sections//cert_section.html");
+});
+
+$(function() {
     $("#project").load("sections//project_section.html");
 });
 
