@@ -215,14 +215,3 @@ function showColor(p1, p2, p3, p4) {
         document.getElementById("pic3").style.filter = "grayscale(100%)";
     }
 }
-
-$(".close").click(function() {
-    document.getElementById("p1").style.display = "none";
-    document.getElementById("p2").style.display = "none";
-    document.getElementById("p3").style.display = "none";
-    document.getElementById("p4").style.display = "none";
-    document.getElementById("pic4").style.filter = "grayscale(100%)";
-    document.getElementById("pic1").style.filter = "grayscale(100%)";
-    document.getElementById("pic2").style.filter = "grayscale(100%)";
-    document.getElementById("pic3").style.filter = "grayscale(100%)";
-});

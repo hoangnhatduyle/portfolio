@@ -9,7 +9,8 @@
     <title>Hoang Nhat Duy Le</title>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="css/reset.css">
@@ -26,7 +27,8 @@
 
     <!--Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
@@ -50,102 +52,19 @@
         </nav>
 
         <nav id="vertical">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- sidebar -->
-                    <div class="col-xl-2 col-lg-3 col-md-4 pl-0 pr-0 fixed-top sidenav">
-                        <div class="intro px-2">
-                            <a class="logo" onclick="topFunction()">
-                                <h1 id="fullname">Hoang Nhat Duy Le<br>
-                                    <span id="job">Software Developer</span>
-                                </h1>
-                            </a>
-                        </div>
-                        <ul class="navbar-nav flex-column">
-                            <li class="nav-item"><a class="nav-link text-dark p-3 about" onclick="aboutSection()"><i
-                                        class="text-success fas fa-user-alt fa-lg mr-3"></i>About</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 experience" onclick="experienceSection()"><i
-                                        class="text-primary fas fa-chart-line fa-lg mr-3"></i>Experience</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 skills" onclick="skillsSection()"><i
-                                        class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 project" onclick="projectSection()"><i
-                                        class="project-icon fas fa-chart-pie fa-lg mr-3"></i>Project</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 education" onclick="educationSection()"><i
-                                        class="text-danger fas fa-graduation-cap fa-lg mr-3"></i>Education</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 feedback" onclick="feedbackSection()"><i
-                                        class="feedback-icon fas fa-comments fa-lg mr-3"></i>Feedback</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 contact" onclick="contactSection()"><i
-                                        class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 resume" data-toggle="modal" data-target="#resume-popup"><i class="fas fa-file-alt fa-lg mr-3"></i>Resume</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
         </nav>
 
         <nav id="hide">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- sidebar -->
-                    <div class="pl-0 pr-0 hidden-sidenav">
-                        <ul class="navbar-nav flex-column">
-                            <li class="nav-item"><a class="nav-link text-dark p-3 about" onclick="off();aboutSection()"><i
-                                        class="text-success fas fa-user-alt fa-lg mr-3"></i>About</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 experience" onclick="off();experienceSection()"><i
-                                        class="text-primary fas fa-chart-line fa-lg mr-3"></i>Experience</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 skills" onclick="off();skillsSection()"><i
-                                        class="text-warning fas fa-signal fa-lg mr-3"></i>Skills</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 project" onclick="off();projectSection()"><i
-                                        class="project-icon fas fa-chart-pie fa-lg mr-3"></i>Project</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 education" onclick="off();educationSection()"><i
-                                        class="text-danger fas fa-graduation-cap fa-lg mr-3"></i>Education</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 feedback" onclick="off();feedbackSection()"><i
-                                        class="feedback-icon fas fa-comments fa-lg mr-3"></i>Feedback</a>
-                            </li>
-
-                            <li class="nav-item"><a class="nav-link text-dark p-3 contact" onclick="off();contactSection()"><i
-                                        class="envelope fas fa-phone fa-lg mr-3"></i>Contact</a>
-                            </li>
-
-                            <li class="nav-item"><a href="document/Hoang_Nhat_Duy_Le_Resume.pdf" target="_blank" class="nav-link text-dark p-3 resume"><i
-                                        class="fas fa-file-alt fa-lg mr-3"></i>Resume</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
         </nav>
 
         <div class="modal mt-5 fade" id="resume-popup">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-center">
-                        <h4 class="w-100 modal-title text-center font-weight-bold">The document will open automatically, you can download it in Word or PDF.</h4>
+                        <h4 class="w-100 modal-title text-center font-weight-bold">The document will open automatically,
+                            you can download it in Word or PDF.</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body bg-dark d-flex justify-content-center">
@@ -194,10 +113,13 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <p style="line-height: 1.5rem;">Since this is a project I have done during college, I have to make it private to avoid any problem associated with the Academoc Honesty Policy. Please send me an email (you can find my information or directly send email in the
+                        <p style="line-height: 1.5rem;">Since this is a project I have done during college, I have to
+                            make it private to avoid any problem associated with the Academoc Honesty Policy. Please
+                            send me an email (you can find my information or directly send email in the
                             Contact Section) so that I can invite you to view this Repository.</p>
                         <br>
-                        <p>Please click <a href="https://github.com/hoangnhatduyle/Huffman" target="_blank">here</a> for Source Code when you have the permission.</p>
+                        <p>Please click <a href="https://github.com/hoangnhatduyle/Huffman" target="_blank">here</a> for
+                            Source Code when you have the permission.</p>
                         </p>
                     </div>
                     <div class="modal-footer justify-content-center">
@@ -212,450 +134,34 @@
             <section id="about"></section>
             <section id="experience"></section>
             <section id="skills"></section>
-            <section id="project">
-                <h3>Project</h3>
-                <div class="timeline box">
-                    <div class="container">
-                        <div class="timeline-item">
-                            <div class="timeline-img"></div>
-                            <div class="timeline-content timeline-card js--fadeInLeft">
-                                <div class="timeline-img-header">
-
-                                </div>
-                                <div class="date">May 2020 - Present</div>
-                                <p class="project-description"><span class="card-title">myHome Website</span> myHome project is built with the purpose of managing my house rental. The website includes tenant contact information, lease agreement, deadline, ... This website is currently
-                                    just a front end product but in the future I will integrate the use of the database to improve the quality of the website.</p>
-                                <a class="bnt-more" href="https://hoangnhatduyle.github.io/myHome/" target="_blank">View</a>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-img"></div>
-                            <div class="timeline-content timeline-card js--fadeInRight">
-                                <div class="timeline-img-header">
-
-                                </div>
-                                <div class="date">August 2020 - December 2021</div>
-                                <p class="project-description"><span class="card-title">UToledo Data Science
-                                        Website</span>UToledo Data Science Website is an official website of UT Data Science Club used to promote the image of the club. The website contains information of the advisor, current club members, ongoing events
-                                    and the projects that are being carried out by the club. It was used as the main resource to contact the the club as planned.</p>
-                                <a class="bnt-more" href="https://utoledo-datascience.github.io/" target="_blank">View</a>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-img"></div>
-                            <div class="timeline-content timeline-card js--fadeInLeft">
-                                <div class="timeline-img-header">
-
-                                </div>
-                                <div class="date">April 2021 - May 2021</div>
-                                <p class="project-description"><span class="card-title">Radix Project</span> Radix project is written in Intel 80x86 Assembly Language. The program will first take in radices for input, perform basic operations and output the results in radix from 2
-                                    (binary) to 62. Once it is complete, it will prompt the user if they wish to repeat. In addition, none of the Irvine32 functions are to be used, since all the procedures were manually rewritten (reading the input/converting
-                                    it to a usable value). </p>
-                                <a class="bnt-more" style="cursor: pointer" data-toggle="modal" data-target="#radixVideo">View</a>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-img"></div>
-                            <div class="timeline-content timeline-card js--fadeInRight">
-                                <div class="timeline-img-header">
-
-                                </div>
-                                <div class="date">October 2021 - November 2021</div>
-                                <p class="project-description"><span class="card-title">Huffman Coding
-                                        Compression</span>Huffman coding (also known as Huffman Encoding) is an algorithm for doing data compression, and it forms the basic idea behind file compression. The idea is to use “variable-length encoding”. It
-                                    is due to the fact that some characters occur more frequently than others in a text to design an algorithm that can represent the same piece of text using a lesser number of bits. We can then reference to the Huffman
-                                    tree to decode any given string of characters.
-                                </p>
-                                <a class="bnt-more" style="cursor: pointer" data-toggle="modal" data-target="#huffman">View</a>
-                                <a id="bnt-more1" href="document/ProjectManual.pdf" target="_blank">Manual</a>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item mb-0">
-                            <div class="timeline-img"></div>
-                            <div class="timeline-content timeline-card js--fadeInLeft">
-                                <div class="timeline-img-header">
-
-                                </div>
-                                <div class="date">November 2021 - December 2021</div>
-                                <p class="project-description"><span class="card-title">Covid Vaccine Study</span> COVID-19 is an extremely dangerous epidemic that negatively influences enormous aspects of the world. One of the optimistic solutions is the launch of diverse COVID-19
-                                    vaccines in order to prevent the spread of the epidemic. Our study was conducted to measure the effectiveness of the COVID-19 vaccine among different world regions. The data has drawn conclusions about the efficieny
-                                    of vaccines in mitigating the number of infections, spread, and deaths for vaccinated and unvaccinated populations. </p>
-                                <a class="bnt-more" style="cursor: pointer" href="https://github.com/hoangnhatduyle/CovidVaccineProject" target="_blank">View</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="education">
-                <h3>Education</h3>
-                <div class="container-fluid px-5 px-lg-5 box">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-6 col-sm-12 col-md-7 p-2 mr-xl-5 mr-sm-0 mb-4 mb-md-0">
-                            <div class="card card-common">
-                                <div class="container-fluid px-0">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-5 col-sm-6 logo-image">
-                                            <img src="assets/toledo.png" alt="">
-                                        </div>
-                                        <div class="col-lg-7 col-sm-6 card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="text-secondary">
-                                                    <a class="card-title" href="https://www.utoledo.edu/" target="_blank">
-                                                        University of
-                                                        Toledo</a>
-                                                    <h5 class="mt-2 location">Toledo, Ohio, United States</h5>
-                                                    <ul>
-                                                        <li>GPA: 3.90</li>
-                                                        <li>Major: Computer Science and Engineering</li>
-                                                        <li>Minor: Data Science</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-secondary">
-                                    <span>August 2018 - Present</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-sm-12 col-md-5 p-2">
-                            <div class="card card-common">
-                                <div class="container-fluid px-0">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-5 col-sm-6 logo-image">
-                                            <img src="assets/nth.png" alt="">
-                                        </div>
-                                        <div class="col-lg-7 col-sm-6 card-body">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="text-secondary">
-                                                    <a class="card-title" href="https://thptnguyenthuonghien.hcm.edu.vn/" target="_blank">Nguyen Thuong
-                                                        Hien High School<a>
-                                                            <h5 class="mt-2 location">Ho Chi Minh City, Vietnam</h5>
-                                                            <ul>
-                                                                <li>Natural Science</li>
-                                                                <li>Specialization: Chemistry</li>
-                                                            </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer text-secondary">
-                                    <span>August 2015 - May 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="feedback">
-                <h3>Feedback</h3>
-                <div class="container-fluid px-5 px-lg-5 box">
-                    <div class="row d-flex justify-content-center align-items-center card-slider">
-                        <div class="swiper">
-                            <div class="swiper-wrapper d-flex align-items-center">
-                                <div class="feedback-slides swiper-slide">
-                                    <div class="feedbck">
-                                        <div class="pattern"></div>
-                                        <div class="image">
-                                            <img src="assets/Compressed/Katie-min.png">
-                                        </div>
-                                        <div class="name_job mb-2 text-center">Katie Wittine</div>
-                                        <div class="mb-3 text-center">Equity Trust Company</div>
-                                        <div class="rating mb-2">
-                                            <p style="color: rgb(255, 201, 17); font-weight: bold; font-size: 18px;">Application Developer II</p>
-                                        </div>
-                                        <p style="line-height: 1.5;">Hoang has been an incredible addition to the myEQUITY Connect Team. His
-                                            contributions have added reliability and are enabling the
-                                            team to rapidly reach our goals. He's eager to
-                                            learn, has a great attitude, and has been able to quickly pick up our coding
-                                            patterns and concepts. I look forward to watching him continue to learn and
-                                            grow as a developer.</p>
-                                        <div class="btns d-flex justify-content-center">
-                                            <button
-                                                onclick="location.href='https://www.linkedin.com/in/katiewittine/'">More
-                                                Info</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="feedback-slides swiper-slide">
-                                    <div class="feedbck">
-                                        <div class="pattern"></div>
-                                        <div class="image">
-                                            <img src="assets/Compressed/Barry-min.png">
-                                        </div>
-                                        <div class="name_job mb-2 text-center">Barry Fleming</div>
-                                        <div class="mb-3 text-center">Equity Trust Company</div>
-                                        <div class="rating mb-2">
-                                            <p style="color: rgb(255, 201, 17); font-weight: bold; font-size: 18px;">Software Development Manager</p>
-                                        </div>
-                                        <p style="line-height: 1.5;">Hoang demonstrated the ability to quickly adapt and pick up on our coding
-                                            practices. He has been exceeding expectations on given tasks and has shown a
-                                            strong interest in learning, through his clarifying questions
-                                            and take time to work through his own problems. He has been an
-                                            enjoyable team member and assimilated quickly into our culture.</p>
-                                        <div class="btns d-flex justify-content-center">
-                                            <button
-                                                onclick="location.href='https://www.linkedin.com/in/barry-fleming-3082a2bb/'">More
-                                                Info</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="feedback-slides swiper-slide">
-                                    <div class="feedbck">
-                                        <div class="pattern"></div>
-                                        <div class="image">
-                                            <img src="assets/aaron.jfif">
-                                        </div>
-                                        <div class="name_job mb-2 text-center">Aaron Bollinger</div>
-                                        <div class="mb-3 text-center">First Solar</div>
-                                        <div class="rating mb-2">
-                                            <p style="color: rgb(255, 201, 17); font-weight: bold; font-size: 18px;">Software Engineer III - MES</p>
-                                        </div>
-                                        <p style="line-height: 1.5;">Le is the type of person that takes initiative and does not shy away from
-                                            hard problems. In fact, he was one of the most successful co-ops in the
-                                            company. Rather than punting the problem back to the team, he always tries
-                                            to do what he can before asking questions.</p>
-                                        <div class="btns d-flex justify-content-center align-items-center">
-                                            <button
-                                                onclick="location.href='https://www.linkedin.com/in/aaron-bollinger-24a7745/'">More
-                                                Info</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="feedback-slides swiper-slide">
-                                    <div class="feedbck">
-                                        <div class="pattern"></div>
-                                        <div class="image">
-                                            <img src="assets/james.jpg">
-                                        </div>
-                                        <div class="name_job mb-2 text-center">James Knoblauch</div>
-                                        <div class="mb-3 text-center">Nysus Solutions</div>
-                                        <div class="rating mb-2">
-                                            <p style="color: rgb(255, 201, 17); font-weight: bold; font-size: 18px;">Director Of Software Engineering</p>
-                                        </div>
-                                        <p style="line-height: 1.5;">We have been having a great experience working with Le since his first co-op with us. Very sharp, and always looking to take on new tasks and learn new things. Great guy, and I cannot recommend him highly enough!</p>
-                                        <div class="btns d-flex justify-content-center align-items-center">
-                                            <button
-                                                onclick="location.href='https://www.linkedin.com/in/james-knoblauch-669259189/'">More
-                                                Info</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedback-small mb-5">
-                            <div class="card card-common rounded">
-                                <div class="container-fluid px-0">
-                                    <div class="row justify-content-center align-items-center px-3">
-                                        <div class="col-sm-5 text-center">
-                                            <div class="d-flex justify-content-center">
-                                                <div class="feedback-small-image">
-                                                    <img src="assets/Compressed/Katie-min.png">
-                                                </div>
-                                            </div>
-                                            <div class="name_job">Katie Wittine</div>
-                                            <div>Equity Trust Company</div>
-                                        </div>
-                                        <div class="col-sm-7 py-3">
-                                            <div class="mb-3 d-flex justify-content-center justify-content-sm-start">
-                                                <p style="color: rgb(255, 201, 17); font-weight: bold;">Application Developer II</p>
-                                            </div>
-                                            <div>Hoang has been an incredible addition to
-                                                the myEQUITY Connect Team. His
-                                                contributions have added reliability and are enabling the
-                                                team to rapidly reach our goals. He's eager to
-                                                learn, has a great attitude, and has been able to quickly pick up our
-                                                coding
-                                                patterns and concepts. I look forward to watching him continue to learn
-                                                and
-                                                grow as a developer.</div>
-                                            <div class="btns d-flex justify-content-center">
-                                                <button
-                                                    onclick="location.href='https://www.linkedin.com/in/katiewittine/'">More
-                                                    Info</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedback-small mb-5">
-                            <div class="card card-common rounded">
-                                <div class="container-fluid px-0">
-                                    <div class="row justify-content-center align-items-center px-3">
-                                        <div class="col-sm-5 text-center">
-                                            <div class="d-flex justify-content-center">
-                                                <div class="feedback-small-image">
-                                                    <img src="assets/Compressed/Barry-min.png">
-                                                </div>
-                                            </div>
-                                            <div class="name_job">Barry Fleming</div>
-                                            <div>Equity Trust Company</div>
-                                        </div>
-                                        <div class="col-sm-7 py-3">
-                                            <div class="mb-3 d-flex justify-content-center justify-content-sm-start">
-                                                <p style="color: rgb(255, 201, 17); font-weight: bold;">Software Development Manager</p>
-                                            </div>
-                                            <div>Hoang demonstrated the ability to quickly adapt and pick up on our
-                                                coding
-                                                practices. He has been exceeding expectations on given tasks and has
-                                                shown a
-                                                strong interest in learning, through his clarifying questions
-                                                and take time to work through his own problems. He has been an
-                                                enjoyable team member and assimilated quickly into our culture.</div>
-                                            <div class="btns d-flex justify-content-center">
-                                                <button
-                                                    onclick="location.href='https://www.linkedin.com/in/barry-fleming-3082a2bb/'">More
-                                                    Info</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedback-small mb-5">
-                            <div class="card card-common rounded">
-                                <div class="container-fluid px-0">
-                                    <div class="row justify-content-center align-items-center px-3">
-                                        <div class="col-sm-5 text-center">
-                                            <div class="d-flex justify-content-center">
-                                                <div class="feedback-small-image">
-                                                    <img src="assets/aaron.jfif">
-                                                </div>
-                                            </div>
-                                            <div class="name_job">Aaron Bollinger</div>
-                                            <div>Plastic Technologies Inc</div>
-                                        </div>
-                                        <div class="col-sm-7 py-3">
-                                            <div class="mb-3 d-flex justify-content-center justify-content-sm-start">
-                                                <p style="color: rgb(255, 201, 17); font-weight: bold;">Software Engineer III - MES</p>
-                                            </div>
-                                            <div>Le is the type of person that takes initiative and does not shy away
-                                                from
-                                                hard problems. In fact, he was one of the most successful co-ops in the
-                                                company. Rather than punting the problem back to the team, he always
-                                                tries
-                                                to do what he can before asking questions.</div>
-                                            <div class="btns d-flex justify-content-center">
-                                                <button
-                                                    onclick="location.href='https://www.linkedin.com/in/aaron-bollinger-24a7745/'">More
-                                                    Info</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feedback-small">
-                            <div class="card card-common rounded">
-                                <div class="container-fluid px-0">
-                                    <div class="row justify-content-center align-items-center px-3">
-                                        <div class="col-sm-5 text-center">
-                                            <div class="d-flex justify-content-center">
-                                                <div class="feedback-small-image">
-                                                    <img src="assets/james.jpg">
-                                                </div>
-                                            </div>
-                                            <div class="name_job">James Knoblauch</div>
-                                            <div>Nysus Solutions</div>
-                                        </div>
-                                        <div class="col-sm-7 py-3">
-                                            <div class="mb-3 d-flex justify-content-center justify-content-sm-start">
-                                                <p style="color: rgb(255, 201, 17); font-weight: bold;">Director Of Software Engineering</p>
-                                            </div>
-                                            <div>We have been having a great experience working with Le since his first co-op with us. Very sharp, and always looking to take on new tasks and learn new things. Great guy, and I cannot recommend him highly enough!</div>
-                                            <div class="btns d-flex justify-content-center">
-                                                <button
-                                                    onclick="location.href='https://www.linkedin.com/in/james-knoblauch-669259189/'">More
-                                                    Info</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="contact">
-                <h3>Contact</h3>
-                <!--contact page start-->
-                <div class="container-fluid px-xs-2 px-lg-5 mb-4 box">
-                    <div class="row align-items-center contact-section">
-                        <div class="col-lg-6 contact-info justify-content-center">
-                            <p class="d-none"><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                                    </svg></a><br>linkedin.com/in/hoangnhatduyle</p>
-                                                    <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-                                    </svg></a><br>linkedin.com/in/hoangnhatduyle</p>
-                                                    <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                    </svg></a><br>github.com/hoangnhatduyle</p>
-                                                    <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12.042 23.648c-7.813 0-12.042-4.876-12.042-11.171 0-6.727 4.762-12.125 13.276-12.125 6.214 0 10.724 4.038 10.724 9.601 0 8.712-10.33 11.012-9.812 6.042-.71 1.108-1.854 2.354-4.053 2.354-2.516 0-4.08-1.842-4.08-4.807 0-4.444 2.921-8.199 6.379-8.199 1.659 0 2.8.876 3.277 2.221l.464-1.632h2.338c-.244.832-2.321 8.527-2.321 8.527-.648 2.666 1.35 2.713 3.122 1.297 3.329-2.58 3.501-9.327-.998-12.141-4.821-2.891-15.795-1.102-15.795 8.693 0 5.611 3.95 9.381 9.829 9.381 3.436 0 5.542-.93 7.295-1.948l1.177 1.698c-1.711.966-4.461 2.209-8.78 2.209zm-2.344-14.305c-.715 1.34-1.177 3.076-1.177 4.424 0 3.61 3.522 3.633 5.252.239.712-1.394 1.171-3.171 1.171-4.529 0-2.917-3.495-3.434-5.246-.134z" />
-                                    </svg></a><br>lehoangnhatduy2000@gmail.com</p>
-                                                    <p><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
-                                    </svg>
-                                    </svg></a><br>Lê Hoàng Nhật Duy</p>
-                                                </div>
-                                                <div class="col-lg-6 contact-form px-3 px-lg-0">
-                                                    <h4>Want to get in touch?</h4>
-                                                    <form method="post" action="https://formspree.io/f/mpzkqegp" id="emailForm">
-                                                        <input type="text" name="name" class="text-box" placeholder="Your Name" id="name" required />
-                                                        <input type="text" name="email" class="text-box" placeholder="Your Email" id="email" />
-                                                        <textarea name="message" rows="2" placeholder="Your Message" id="myText" required></textarea>
-                                                        <div class="container-fluid">
-                                                            <div class="row justify-content-end">
-                                                                <button id="my-form-button" href="#">Send </button>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col px-0">
-                                                                    <p id="my-form-status"></p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--contact page end-->
-            </section>
+            <section id="project"></section>
+            <section id="education"></section>
+            <section id="feedback"></section>
+            <section id="contact"></section>
         </main>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
         </script>
-        <!-- Font Awesome JS -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
 
-        <script src="Tools/node_modules/swiper/swiper-bundle.min.js"></script>
-
-        <script src="js/action.js"></script>
-        <script src="js/sendEmail.js"></script>
-        <script src="js/load_sections.js"></script>
-
-        <!-- Initialize Swiper -->
-        <script type="module">
-            var swiper = new Swiper('.swiper', { effect: 'coverflow', grabCursor: true, centeredSlides: true, slidesPerView: 'auto', coverflowEffect: { rotate: 65, stretch: 0, depth: 100, modifier: 1, slideShadows: true, }, }); swiper.slideTo(1, false, false);
-        </script>
+    <script src="js/action.js"></script>
+    <script src="js/load_sections.js"></script>
+    <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
+    <script src="Tools/node_modules/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

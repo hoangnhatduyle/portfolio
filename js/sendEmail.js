@@ -1,32 +1,26 @@
+// get the form elements defined in your form HTML above
 
-window.addEventListener("DOMContentLoaded", function () {
+var form = document.getElementById("emailForm");
 
-    // get the form elements defined in your form HTML above
+// Success and Error functions for after the form is submitted
 
-    var form = document.getElementById("emailForm");
-    var button = document.getElementById("my-form-button");
-    var status = document.getElementById("my-form-status");
+function success() {
+    form.reset();
+    $("#my-form-button").css("display", "none");
+    $("#my-form-status").css("color", "black");
+    $("#my-form-status").html("Thanks for contacting me! I will reply to you soon!");
+}
 
-    // Success and Error functions for after the form is submitted
+function error() {
+    $("#my-form-status").html("There was a problem trying to send the email. Please use other methods to contact.");
+}
 
-    function success() {
-        form.reset();
-        button.style = "display: none; transition: 1s;";
-        status.style = "color: black; text-transform: initial"
-        status.innerHTML = "Thanks for contacting me! I will reply to you soon!";
-    }
+// handle the form submission event
 
-    function error() {
-        status.innerHTML = "Oops! There was a problem.";
-    }
-
-    // handle the form submission event
-
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var data = new FormData(form);
-        ajax(form.method, form.action, data, success, error);
-    });
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    ajax(form.method, form.action, data, success, error);
 });
 
 // helper function for sending an AJAX request
