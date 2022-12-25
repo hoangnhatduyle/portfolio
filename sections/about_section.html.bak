@@ -28,7 +28,7 @@
                             <div
                                 class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
                                 <div class="image" onclick="showDescription4()">
-                                    <img src="assets/Compressed/profile2-min.jpg" alt="" id="pic4">
+                                    <img src="assets/Compressed/about4-min.png" alt="" id="pic4">
                                 </div>
                             </div>
                         </div>
