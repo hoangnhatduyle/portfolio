@@ -120,7 +120,7 @@
 }
 
 .timeline-item:nth-child(1) .timeline-img-header {
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url(../assets/Compressed/homewebsite-min.JPG) center center no-repeat;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url(../assets/myHome_Updated.PNG) center center no-repeat;
   background-size: cover;
 }
 
