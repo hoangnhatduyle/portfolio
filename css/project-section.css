@@ -1,3 +1,8 @@
+.teammates-list li {
+  margin-left: 20px;
+  list-style-type: circle;
+}
+
 .timeline {
   position: relative;
   font-size: 17px;
@@ -84,7 +89,7 @@
   margin-left: -15px;
 }
 
-#project a {
+#project .timeline-item a {
   background: #003E7E;
   color: #FFFFFF;
   padding: 8px 20px;
@@ -97,7 +102,9 @@
   box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
 }
 
-#project a:hover, #project a:active, #project a:focus {
+#project a:hover,
+#project a:active,
+#project a:focus {
   background: #154360;
   color: #FFFFFF;
   text-decoration: none;
@@ -125,22 +132,22 @@
 }
 
 .timeline-item:nth-child(2) .timeline-img-header {
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url(../assets/Compressed/datasciencewebsite-min.JPG) center center no-repeat;
-  background-size: cover;
-}
-
-.timeline-item:nth-child(3) .timeline-img-header {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url(../assets/Compressed/randomNumber-min.jpg) center center no-repeat;
   background-size: cover;
 }
 
-.timeline-item:nth-child(4) .timeline-img-header {
+.timeline-item:nth-child(3) .timeline-img-header {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url(../assets/Compressed/huffman-min.png) center center no-repeat;
   background-size: cover;
 }
 
-.timeline-item:nth-child(5) .timeline-img-header {
+.timeline-item:nth-child(4) .timeline-img-header {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url(../assets/covid.jfif) center center no-repeat;
+  background-size: cover;
+}
+
+.timeline-item:nth-child(5) .timeline-img-header {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), url(../assets/bridge.jpg) center center no-repeat;
   background-size: cover;
 }
 
