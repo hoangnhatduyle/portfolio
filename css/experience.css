@@ -125,6 +125,30 @@
     margin-bottom: 5px;
 }
 
+.first-solar-logo {
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.first-solar-name {
+    color: red;
+}
+
+.first-solar-title {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: rgb(255, 109, 109);
+}
+
+.first-solar-task-achieve {
+    font-size: 23px;
+    font-weight: 600;
+    color: red;
+    margin-bottom: 5px;
+}
+
 #experience ul {
     list-style: none;
     font-weight: 500;
@@ -146,7 +170,7 @@
 }
 
 @media (min-width: 768px) {
-    .job-title, .school-title, .club-title, .equity-title, .nysus-title {
+    .job-title, .school-title, .club-title, .equity-title, .nysus-title, .first-solar-title {
         text-align: right;
     }
 }
