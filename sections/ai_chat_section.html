@@ -1,0 +1,122 @@
+<!-- AI Chat Section - No header needed, starts in immersive mode -->
+<div class="container-fluid box ai-chat-container" id="aiChatContainer">
+    <div class="row d-flex justify-content-center">
+        <div class="col-11">
+            <div class="ai-chat-wrapper" id="aiChatWrapper">
+                <!-- Toggle Button -->
+                <div class="view-toggle-container text-center mb-4">
+                    <div class="toggle-description">
+                        <p class="text-muted mb-3">
+                            <i class="fas fa-info-circle"></i> 
+                            Choose how you want to explore my portfolio
+                        </p>
+                    </div>
+                    <div class="btn-group btn-group-lg toggle-buttons" role="group">
+                        <button type="button" class="btn btn-toggle active" id="aiChatBtn" onclick="enterChatMode()">
+                            <i class="fas fa-robot mr-2"></i>Chat with AI
+                        </button>
+                        <button type="button" class="btn btn-toggle" id="staticPortfolioBtn" onclick="enterPortfolioMode()">
+                            <i class="fas fa-user mr-2"></i>View Portfolio
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AI Chat View -->
+                <div id="aiChatView" class="view-content active">
+                    <div class="chat-intro text-center mb-4">
+                        <h4 class="chat-title">
+                            <i class="fas fa-robot"></i> Chat with My Personal AI
+                        </h4>
+                        <p class="chat-description">
+                            Ask me anything about my experience, skills, projects, or background. 
+                            This AI assistant knows all about me and can answer your questions instantly!
+                        </p>
+                        <div class="chat-features">
+                            <span class="feature-badge"><i class="fas fa-check-circle"></i> Real-time responses</span>
+                            <span class="feature-badge"><i class="fas fa-check-circle"></i> Powered by HuggingFace</span>
+                            <span class="feature-badge"><i class="fas fa-check-circle"></i> 24/7 Available</span>
+                        </div>
+                    </div>
+                    
+                    <div class="iframe-container">
+                        <iframe
+                            src="https://sunshine2405-personal-ai.hf.space"
+                            frameborder="0"
+                            width="100%"
+                            height="100%"
+                            class="ai-iframe"
+                        ></iframe>
+                    </div>
+                    
+                    <div class="chat-footer text-center mt-3">
+                        <p class="text-muted small">
+                            <i class="fas fa-lightbulb"></i> 
+                            Try asking: "What are your key skills?" or "Tell me about your recent projects"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Static Portfolio View -->
+                <div id="staticPortfolioView" class="view-content">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initialize chat mode on page load
+    enterChatMode();
+
+    function enterChatMode() {
+        // Toggle view content
+        document.getElementById('aiChatView').classList.add('active');
+        document.getElementById('staticPortfolioView').classList.remove('active');
+        document.getElementById('aiChatBtn').classList.add('active');
+        document.getElementById('staticPortfolioBtn').classList.remove('active');
+        
+        // Hide all other sections and navigation for immersive experience
+        document.body.classList.add('immersive-chat-mode');
+        
+        // Show the AI chat container
+        document.getElementById('ai-chat').style.display = 'block';
+        
+        // Make chat container fullscreen
+        document.getElementById('aiChatContainer').classList.add('fullscreen-chat');
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+
+    function enterPortfolioMode() {
+        topFunction();
+        // Toggle view content
+        document.getElementById('staticPortfolioView').classList.add('active');
+        document.getElementById('aiChatView').classList.remove('active');
+        document.getElementById('staticPortfolioBtn').classList.add('active');
+        document.getElementById('aiChatBtn').classList.remove('active');
+        
+        // Show navigation and other sections again
+        document.body.classList.remove('immersive-chat-mode');
+        
+        // Remove fullscreen from chat container
+        document.getElementById('aiChatContainer').classList.remove('fullscreen-chat');
+        
+        // Hide the entire AI chat container
+        document.getElementById('ai-chat').style.display = 'none';
+    }
+
+    function scrollToSection(sectionId) {
+        // First exit chat mode if in it
+        enterPortfolioMode();
+        
+        // Then scroll to the section
+        setTimeout(() => {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 300);
+    }
+</script>

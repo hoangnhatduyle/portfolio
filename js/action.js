@@ -5,6 +5,7 @@ let project = document.querySelector("#project");
 let education = document.querySelector("#education");
 let feedback = document.querySelector("#feedback");
 let contact = document.querySelector("#contact");
+let aiChat = document.querySelector("#ai-chat");
 
 
 window.addEventListener("scroll", () => {
@@ -15,8 +16,19 @@ window.addEventListener("scroll", () => {
         document.getElementById("go-top").style.display = "none";
     }
 
-    if (about.offsetTop <= windo && experience.offsetTop > windo) {
+    if (aiChat.offsetTop <= windo && about.offsetTop > windo) {
+        document.querySelector(".ai-chat").setAttribute("id", "activeAIChat");
+        document.querySelector(".about").removeAttribute("id", "activeAbout");
+        document.querySelector(".experience").removeAttribute("id", "activeExperience");
+        document.querySelector(".skills").removeAttribute("id", "activeSkills");
+        document.querySelector(".project").removeAttribute("id", "activeProject");
+        document.querySelector(".education").removeAttribute("id", "activeEducation");
+        document.querySelector(".contact").removeAttribute("id", "activeContact");
+        document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
+    }
+    else if (about.offsetTop <= windo && experience.offsetTop > windo) {
         document.querySelector(".about").setAttribute("id", "activeAbout");
+        document.querySelector(".ai-chat").removeAttribute("id", "activeAIChat");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".skills").removeAttribute("id", "activeSkills");
         document.querySelector(".project").removeAttribute("id", "activeProject");
@@ -77,6 +89,7 @@ window.addEventListener("scroll", () => {
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
+        document.querySelector(".ai-chat").removeAttribute("id", "activeAIChat");
     }
     else {
         document.querySelector(".contact").removeAttribute("id", "activeContact");
@@ -86,6 +99,7 @@ window.addEventListener("scroll", () => {
         document.querySelector(".education").removeAttribute("id", "activeEducation");
         document.querySelector(".experience").removeAttribute("id", "activeExperience");
         document.querySelector(".feedback").removeAttribute("id", "activeFeedback");
+        document.querySelector(".ai-chat").removeAttribute("id", "activeAIChat");
     }
 });
 
@@ -94,6 +108,16 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+function aiChatSection() {
+    // Call the enterChatMode function from ai_chat_section.html
+    if (typeof enterChatMode === 'function') {
+        enterChatMode();
+    } else {
+        // Fallback if function not loaded yet
+        let aiChat = document.querySelector("#ai-chat");
+        window.scrollTo(0, aiChat.offsetTop);
+    }
+}
 function aboutSection() {
     let about = document.querySelector("#about");
     window.scrollTo(0, about.offsetTop);

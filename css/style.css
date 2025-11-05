@@ -78,6 +78,18 @@ section {
     font-weight: 300;
 }
 
+.ai-chat {
+    background-color: white;
+    transition: all .5s;
+    font-size: 15px;
+}
+
+.ai-chat:hover {
+    border-left: 4px solid #17a2b8;
+    background: #F8F9F9;
+    cursor: pointer;
+}
+
 .about {
     background-color: white;
     transition: all .5s;
@@ -316,6 +328,12 @@ h3 {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
+}
+
+#activeAIChat {
+    font-weight: bold;
+    border-left: 4px solid #17a2b8;
+    background: #F8F9F9;
 }
 
 #activeAbout {

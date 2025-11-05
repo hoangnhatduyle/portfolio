@@ -11,6 +11,10 @@ $(function() {
 });
 
 $(function() {
+    $("#ai-chat").load("sections//ai_chat_section.html");
+});
+
+$(function() {
     $("#about").load("sections//about_section.html");
 });
 
