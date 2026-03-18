@@ -1,102 +1,29 @@
 <h3>Project</h3>
-<div class="timeline box">
-    <div class="container">
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content timeline-card js--fadeInLeft">
-                <div class="timeline-img-header">
+<div class="container-fluid box">
+    <div class="row justify-content-center">
+        <div class="col-11">
 
+            <!-- Featured Panel -->
+            <div class="proj-featured">
+                <div class="proj-featured-image" id="projFeaturedImage"></div>
+                <div class="proj-featured-content" id="projFeaturedContent">
+                    <div class="proj-featured-date" id="projFeaturedDate"></div>
+                    <h2 class="proj-featured-title" id="projFeaturedTitle"></h2>
+                    <p class="proj-featured-desc" id="projFeaturedDesc"></p>
+                    <div class="proj-featured-tags" id="projFeaturedTags"></div>
+                    <div class="proj-featured-actions" id="projFeaturedActions"></div>
                 </div>
-                <div class="date">December 2022 - Present</div>
-                <p class="project-description"><span class="card-title">myHome Website</span> myHome project is built
-                    with the purpose of managing my house rental. The website includes tenant contact information, lease
-                    agreement, deadline, ... This website plays a role as my personal tool and provides property
-                    management service to property owners and residents. It can be used to take responsibility for
-                    day-to-day data and ongoing communication, payments, and upkeep of properties.</p>
-                <a href="" class="bnt-more" data-toggle="modal" data-target="#exampleModal">View</a>
             </div>
-        </div>
 
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content timeline-card js--fadeInRight">
-                <div class="timeline-img-header">
+            <!-- Thumbnail Grid -->
+            <p class="proj-hint">Select a project</p>
+            <div class="proj-grid" id="projGrid"></div>
 
-                </div>
-                <div class="date">April 2021 - May 2021</div>
-                <p class="project-description"><span class="card-title">Radix Project</span> Radix project is written in
-                    Intel 80x86 Assembly Language. The program will first take in radices for input, perform basic
-                    operations and output the results in radix from 2 (binary) to 62.
-                    Once it is complete, it will prompt the user if they wish to repeat. In addition, none of the
-                    Irvine32 functions are to be used, since all the procedures were manually rewritten (reading the
-                    input/converting it to a usable value).
-                </p>
-                <a class="bnt-more" style="cursor: pointer" data-toggle="modal" data-target="#radixVideo">View</a>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content timeline-card js--fadeInLeft">
-                <div class="timeline-img-header">
-
-                </div>
-                <div class="date">October 2021 - November 2021</div>
-                <p class="project-description"><span class="card-title">Huffman Coding
-                        Compression</span>Huffman coding (also known as Huffman Encoding) is an algorithm for doing data
-                    compression, and it forms the basic idea behind file compression. The idea is to use
-                    “variable-length encoding”. It
-                    is due to the fact that some characters occur more frequently than others in a text to design an
-                    algorithm that can represent the same piece of text using a lesser number of bits. We can then
-                    reference to the Huffman tree to decode
-                    any given string of characters.
-                </p>
-                <a class="bnt-more" style="cursor: pointer" data-toggle="modal" data-target="#huffman">View</a>
-                <a id="bnt-more1" href="document/ProjectManual.pdf" target="_blank">Manual</a>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content timeline-card js--fadeInRight">
-                <div class="timeline-img-header">
-
-                </div>
-                <div class="date">November 2021 - December 2021</div>
-                <p class="project-description"><span class="card-title">Covid Vaccine Study</span> COVID-19 is an
-                    extremely dangerous epidemic that negatively influences enormous aspects of the world. One of the
-                    optimistic solutions is the launch of diverse COVID-19 vaccines in order
-                    to prevent the spread of the epidemic. Our study was conducted to measure the effectiveness of the
-                    COVID-19 vaccine among different world regions. The data has drawn conclusions about the efficieny
-                    of vaccines in mitigating the number
-                    of infections, spread, and deaths for vaccinated and unvaccinated populations. </p>
-                <a class="bnt-more" style="cursor: pointer" href="https://github.com/hoangnhatduyle/CovidVaccineProject"
-                    target="_blank">View</a>
-            </div>
-        </div>
-
-        <div class="timeline-item mb-0">
-            <div class="timeline-img"></div>
-            <div class="timeline-content timeline-card js--fadeInLeft">
-                <div class="timeline-img-header">
-
-                </div>
-                <div class="date">August 2022 - May 2023</div>
-                <p class="project-description"><span class="card-title">Sesquicentennial Bone Conduction
-                        Railing</span>With the sponsorship of the College of Arts and Letters & UT green
-                    fund, we were tasked with adding a unique art installation on campus that students and guests would
-                    be able to interact with that shared the history of Toledo.
-                    The design was a prototype fixture that can transmit sound through the bones in the
-                    user's forearms to allow them to hear the sounds of campus, similar to the art installation in
-                    Dresden. Our railing has the ability to be installed in various locations across campus, including
-                    Carlson Library, the UT Health Science campus, and Engineering Campus.
-                </p>
-                <a href="" class="bnt-more" data-toggle="modal" data-target="#bone_conducting_modal">View</a>
-            </div>
         </div>
     </div>
 </div>
 
+<!-- Modal: myHome Website -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -123,4 +50,210 @@
     </div>
 </div>
 
-<script src="js/project.js"></script>
+<!-- Modal: Radix Project -->
+<div class="modal fade" id="radixVideo" tabindex="-1" role="dialog" aria-labelledby="radixVideoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="font-weight: bold; font-size: 18px;">Radix Project Demo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nRZX-YH4yec" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Huffman Coding -->
+<div class="modal fade" id="huffman" tabindex="-1" role="dialog" aria-labelledby="huffmanLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="font-weight: bold; font-size: 18px;">Huffman Coding Compression Demo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nRZX-YH4yec" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Bone Conduction Railing -->
+<div class="modal fade" id="bone_conducting_modal" tabindex="-1" role="dialog" aria-labelledby="boneLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="font-weight: bold; font-size: 18px;">Sesquicentennial Bone Conduction Railing</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nRZX-YH4yec" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Multi-Agent AI Trading Platform -->
+<div class="modal fade" id="tradingSystemModal" tabindex="-1" role="dialog" aria-labelledby="tradingSystemLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="font-weight: bold; font-size: 18px;">Multi-Agent AI Trading Platform</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="line-height: 1.8;">
+                <p><strong>Status: In Development</strong></p>
+                <p>This ambitious project is currently under active development and not yet fully deployed. The system architecture is complete with a comprehensive tech stack including Python backend, PostgreSQL database, and Next.js frontend.</p>
+                <p><strong>Key Components:</strong></p>
+                <ul>
+                    <li>5 autonomous AI trading agents with distinct strategies</li>
+                    <li>LLM-powered auditor for constraint oversight</li>
+                    <li>Real-time dashboard with 11 analytics tabs</li>
+                    <li>Genetic algorithm-based strategy optimization</li>
+                    <li>Comprehensive risk management system</li>
+                    <li>Integration with Polygon.io for live market data</li>
+                </ul>
+                <p>Check back soon for live demo and GitHub repository links!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const projects = [
+  {
+    title: 'myHome Website',
+    date: 'December 2022 – Present',
+    description: 'A full-stack property management web application built to streamline residential rental operations. Supports tenant profiles, lease tracking, payment management, and bill visualization. Built with ASP.NET Framework and Angular, actively serving 6+ tenants with real-time data updates.',
+    tags: ['ASP.NET', 'Angular', 'TypeScript', 'SQL', 'RESTful API'],
+    image: 'assets/myHome_Updated.PNG',
+    buttons: [{ label: 'View', modal: '#exampleModal' }]
+  },
+  {
+    title: 'Radix Project',
+    date: 'April 2021 – May 2021',
+    description: 'A low-level application developed in Intel 80x86 Assembly Language that performs multi-base arithmetic, converting user inputs across radices 2 (binary) through 62. All I/O procedures were manually implemented without Irvine32 library dependencies, demonstrating direct register and memory management.',
+    tags: ['Assembly x86', 'Intel 80x86', 'Low-level'],
+    image: 'assets/Compressed/randomNumber-min.jpg',
+    buttons: [{ label: 'View', modal: '#radixVideo' }]
+  },
+  {
+    title: 'Huffman Coding Compression',
+    date: 'October 2021 – November 2021',
+    description: 'Implemented a lossless data compression algorithm using Huffman Encoding, which assigns variable-length binary codes to characters based on their frequency of occurrence. More frequent characters receive shorter encodings, reducing overall file size. The resulting Huffman tree enables efficient decoding of any compressed string.',
+    tags: ['C++', 'Algorithms', 'Data Structures'],
+    image: 'assets/Compressed/huffman-min.png',
+    buttons: [{ label: 'View', modal: '#huffman' }, { label: 'Manual', href: 'document/ProjectManual.pdf', target: '_blank' }]
+  },
+  {
+    title: 'Covid Vaccine Study',
+    date: 'November 2021 – December 2021',
+    description: 'A data science study analyzing COVID-19 vaccine effectiveness across global regions. Leveraged Python (pandas, matplotlib) to process infection, transmission, and mortality data for vaccinated vs. unvaccinated populations, producing statistically supported conclusions on vaccine efficacy.',
+    tags: ['Python', 'Pandas', 'Matplotlib', 'Data Analysis'],
+    image: 'assets/covid.jfif',
+    buttons: [{ label: 'View', href: 'https://github.com/hoangnhatduyle/CovidVaccineProject', target: '_blank' }]
+  },
+  {
+    title: 'Sesquicentennial Bone Conduction Railing',
+    date: 'August 2022 – May 2023',
+    description: 'An interdisciplinary capstone project sponsored by the University of Toledo College of Arts & Letters and the UT Green Fund. Designed and prototyped an interactive bone conduction railing that transmits campus soundscapes through the user\'s forearms — inspired by similar installations in Dresden. The modular design supports deployment at multiple campus locations.',
+    tags: ['Arduino', 'Embedded', 'Hardware'],
+    image: 'assets/bridge.jpg',
+    buttons: [{ label: 'View', modal: '#bone_conducting_modal' }]
+  },
+  {
+    title: 'Multi-Agent AI Trading Platform',
+    date: 'November 2025 – Present',
+    description: 'An autonomous multi-agent trading system where AI agents with distinct investment personalities trade stocks using large language models. Features 5 independent traders, an LLM-powered auditor for constraint oversight, real-time Next.js dashboard with 11 analytics tabs, strategy evolution via genetic algorithms, and comprehensive risk management with kill switches and position limits.',
+    tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Next.js', 'React', 'TypeScript'],
+    image: 'assets/multi_agent.png',
+    buttons: [{ label: 'View', modal: '#tradingSystemModal' }]
+  }
+];
+
+function renderFeatured(index, animate = false) {
+  const project = projects[index];
+  const content = document.getElementById('projFeaturedContent');
+
+  if (animate) {
+    content.classList.add('proj-transitioning');
+    setTimeout(() => {
+      updateFeaturedContent(index);
+      content.classList.remove('proj-transitioning');
+    }, 250);
+  } else {
+    updateFeaturedContent(index);
+  }
+}
+
+function updateFeaturedContent(index) {
+  const project = projects[index];
+
+  document.getElementById('projFeaturedImage').style.backgroundImage = `url('${project.image}')`;
+  document.getElementById('projFeaturedDate').textContent = project.date;
+  document.getElementById('projFeaturedTitle').textContent = project.title;
+  document.getElementById('projFeaturedDesc').textContent = project.description;
+
+  // Render tags
+  const tagsContainer = document.getElementById('projFeaturedTags');
+  tagsContainer.innerHTML = project.tags.map(tag =>
+    `<span class="proj-featured-tag">${tag}</span>`
+  ).join('');
+
+  // Render buttons
+  const actionsContainer = document.getElementById('projFeaturedActions');
+  actionsContainer.innerHTML = project.buttons.map(btn => {
+    if (btn.modal) {
+      return `<a class="proj-btn" data-toggle="modal" data-target="${btn.modal}">${btn.label}</a>`;
+    } else {
+      return `<a class="proj-btn" href="${btn.href}" target="${btn.target || '_self'}">${btn.label}</a>`;
+    }
+  }).join('');
+}
+
+function renderGrid(activeIndex) {
+  const grid = document.getElementById('projGrid');
+  grid.innerHTML = projects.map((project, index) => `
+    <div class="proj-thumb ${index === activeIndex ? 'active' : ''}" data-index="${index}">
+      <div class="proj-thumb-img" style="background-image: url('${project.image}')"></div>
+      <div class="proj-thumb-title">${project.title}</div>
+    </div>
+  `).join('');
+
+  // Attach click handlers
+  document.querySelectorAll('.proj-thumb').forEach(thumb => {
+    thumb.addEventListener('click', function() {
+      const index = parseInt(this.dataset.index);
+      renderGrid(index);
+      renderFeatured(index, true);
+    });
+  });
+}
+
+// Initialize
+renderGrid(0);
+renderFeatured(0, false);
+</script>

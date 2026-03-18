@@ -108,6 +108,36 @@
     color: #003E7E;
 }
 
+/* === Company Logo Styling === */
+.company-logo-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.feedback-company-logo {
+    max-width: 90%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.company-logo-mobile-container {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-company-logo-mobile {
+    max-width: 90%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 @media (max-width: 750px) {
     .swiper {
         display: none;
@@ -149,4 +179,14 @@
     .feedback-slides {
         width: 40% !important;
     }
+}
+
+.card-common {
+    box-shadow: 1px 2px 5px #999;
+    transition: all .4s;
+}
+
+.card-common:hover {
+    box-shadow: 2px 3px 15px #999;
+    transform: translateY(-1px);
 }

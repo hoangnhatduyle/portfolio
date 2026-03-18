@@ -174,3 +174,89 @@
         text-align: right;
     }
 }
+
+/* === Company left-border stripes === */
+.exp-first-solar  { border-left: 4px solid red; }
+.exp-nysus        { border-left: 4px solid black; }
+.exp-equity       { border-left: 4px solid #003E7E; }
+.exp-school       { border-left: 4px solid #003E7E; }
+.exp-pti          { border-left: 4px solid #28B463; }
+.exp-club         { border-left: 4px solid #FFD200; }
+
+/* === Current role badge === */
+.badge-current {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: red;
+    border-radius: 3px;
+    padding: 2px 7px;
+    vertical-align: middle;
+    margin-left: 6px;
+    white-space: nowrap;
+}
+
+/* === In-progress note === */
+.exp-note {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+/* === Tech stack tag strip === */
+.exp-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-left: 0;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.exp-tech-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+}
+
+.exp-tech-tag.tag-first-solar { color: red;     border-color: red;     background-color: rgba(255,0,0,0.07); }
+.exp-tech-tag.tag-nysus       { color: #333;    border-color: #333;    background-color: rgba(0,0,0,0.05); }
+.exp-tech-tag.tag-equity      { color: #003E7E; border-color: #003E7E; background-color: rgba(0,62,126,0.07); }
+.exp-tech-tag.tag-school      { color: #003E7E; border-color: #003E7E; background-color: rgba(0,62,126,0.07); }
+.exp-tech-tag.tag-pti         { color: #145A32; border-color: #28B463; background-color: rgba(40,180,99,0.07); }
+.exp-tech-tag.tag-club        { color: #7d6000; border-color: #FFD200; background-color: rgba(255,210,0,0.12); }
+
+/* === Heading size reduction and icon styles === */
+.job-task-achieve,
+.school-task-achieve,
+.club-task-achieve,
+.equity-task-achieve,
+.nysus-task-achieve,
+.first-solar-task-achieve {
+    font-size: 18px;
+}
+
+#experience h5 i.fas {
+    margin-right: 7px;
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+#experience h5.exp-heading-achieve i.fas {
+    color: #C0932B;
+}
+
+#experience h5.exp-heading-achieve {
+    padding-left: 8px;
+    border-radius: 2px;
+}

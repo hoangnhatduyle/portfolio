@@ -3,108 +3,152 @@
     <div class="row d-flex justify-content-center">
         <div class="col-11">
             <div class="team-selection">
-                <h1 style="margin-bottom: 10px;">My name is <span>Hoang Nhat Duy Le</span>. <br>I am currently a Software Engineer MES at First Solar.
-                </h1>
-                <span class="text-muted">(Please click on each image to view details)</span>
+
+                <!-- Zone 1: Intro -->
+                <div class="about-intro mb-4">
+                    <p class="about-tagline">
+                        From <span class="about-tagline-accent">Ho Chi Minh City</span> to Toledo, OH —
+                        building software that bridges people and machines.
+                    </p>
+                    <p class="about-subline">
+                        Software Engineer with 5+ years of experience across manufacturing execution systems,
+                        full-stack web development, and cloud DevOps. Currently at
+                        <span class="about-company-name">First Solar</span>, helping integrate shop floor systems at scale.
+                    </p>
+                </div>
+
+                <!-- Zone 2: Stats Strip -->
+                <div class="about-stats-row mb-5">
+                    <div class="about-stat-item">
+                        <span class="about-stat-number">5+</span>
+                        <span class="about-stat-label">Years Experience</span>
+                    </div>
+                    <div class="about-stat-divider"></div>
+                    <div class="about-stat-item">
+                        <span class="about-stat-number">3.90</span>
+                        <span class="about-stat-label">University GPA</span>
+                    </div>
+                    <div class="about-stat-divider"></div>
+                    <div class="about-stat-item">
+                        <span class="about-stat-number">30+</span>
+                        <span class="about-stat-label">Customers Served</span>
+                    </div>
+                    <div class="about-stat-divider"></div>
+                    <div class="about-stat-item">
+                        <span class="about-stat-number">4</span>
+                        <span class="about-stat-label">Companies</span>
+                    </div>
+                </div>
+
                 <span class="border"></span>
+
+                <!-- Zone 3: Clickable Cards -->
                 <div class="ps">
+                    <p class="about-hint text-muted mb-4">Click a card to learn more</p>
                     <div class="container-fluid p-0">
-                        <div class="row p-0" id="image-group">
-                            <div class="d-flex justify-content-center align-items-center col-md-3 col-6 p-0">
-                                <div class="image" onclick="showDescription1()">
-                                    <img src="assets/Compressed/about3-min.jpg" id="pic1">
+                        <div class="row p-0 justify-content-center" id="image-group">
+
+                            <div class="col-md-3 col-6 p-2">
+                                <div class="about-card" onclick="showDescription1()">
+                                    <div class="image">
+                                        <img src="assets/Compressed/about3-min.jpg" id="pic1" alt="Vietnamese Heritage">
+                                    </div>
+                                    <div class="about-card-label">
+                                        <span class="about-card-title">International Student</span>
+                                        <span class="about-card-teaser">Vietnamese heritage &amp; global perspective</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-center align-items-center col-md-3 col-6 p-0 divPic2">
-                                <div class="image" onclick="showDescription2()">
-                                    <img src="assets/Compressed/about1-min.jpeg" alt="" id="pic2">
+
+                            <div class="col-md-3 col-6 p-2 divPic2">
+                                <div class="about-card" onclick="showDescription2()">
+                                    <div class="image">
+                                        <img src="assets/Compressed/about1-min.jpeg" id="pic2" alt="Growth and Development">
+                                    </div>
+                                    <div class="about-card-label">
+                                        <span class="about-card-title">Growth Mindset</span>
+                                        <span class="about-card-teaser">Always learning, always improving</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div
-                                class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
-                                <div class="image" onclick="showDescription3()">
-                                    <img src="assets/Hoang-Nhat-Duy-Le-180x180.jpg" alt="" id="pic3">
+
+                            <div class="col-md-3 col-6 p-2">
+                                <div class="about-card" onclick="showDescription3()">
+                                    <div class="image">
+                                        <img src="assets/Hoang-Nhat-Duy-Le-180x180.jpg" id="pic3" alt="Software Engineer">
+                                    </div>
+                                    <div class="about-card-label">
+                                        <span class="about-card-title">Engineer at Heart</span>
+                                        <span class="about-card-teaser">Passion for full-stack development</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div
-                                class="d-flex justify-content-center align-items-center col-md-3 col-6 mt-5 mt-md-0 p-0">
-                                <div class="image" onclick="showDescription4()">
-                                    <img src="assets/Compressed/profile2-min.jpg" alt="" id="pic4">
+
+                            <div class="col-md-3 col-6 p-2">
+                                <div class="about-card" onclick="showDescription4()">
+                                    <div class="image">
+                                        <img src="assets/Compressed/profile2-min.jpg" id="pic4" alt="Future Vision">
+                                    </div>
+                                    <div class="about-card-label">
+                                        <span class="about-card-title">Future Vision</span>
+                                        <span class="about-card-teaser">Leadership, innovation, impact</span>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
 
+                <!-- Zone 4: Description Panels (IDs p1-p4 preserved) -->
                 <div class="section p-0" id="p1">
                     <span class="name"></span>
                     <span class="border"></span>
-                    <p class="about-description">
-                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                            </svg></button>
-                        <span class="about-description-title text-center mb-3">International
-                            Student</span> My Vietnamese nationality is marked by a rich cultural heritage and values of
-                        resilience, unity, and innovation. By embracing our vibrant traditions in cuisine, art, and
-                        music, I take pride in representing Vietnam professionally, leveraging its unique insights to
-                        contribute meaningfully on a global scale.
-                    </p>
+                    <div class="about-description">
+                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></button>
+                        <span class="about-description-title">International Student</span>
+                        <p class="about-description-body">
+                            Growing up in Ho Chi Minh City, Vietnam, I developed a strong sense of resilience and adaptability that has shaped every chapter of my career. Leaving home to study in the United States was not just an academic decision — it was a commitment to growth. I carry Vietnamese values of perseverance and community into every team I join, and I take pride in representing my culture while contributing to a global industry.
+                        </p>
+                    </div>
                 </div>
+
                 <div class="section p-0" id="p2">
                     <span class="name"></span>
                     <span class="border"></span>
-                    <p class="about-description">
-                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                            </svg></button>
-                        <span class="about-description-title text-center mb-3">Growth and
-                            Development</span> I am someone who is consistently growing themselves and who takes the
-                        time to continue learning even though it’s not a direct requirement of the job.
-                        Additionally, I consistently sets firm goals for myself. Then, once I’ve defined the benchmarks,
-                        I take the necessary steps to achieve those milestones.
-                    </p>
+                    <div class="about-description">
+                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></button>
+                        <span class="about-description-title">Growth Mindset</span>
+                        <p class="about-description-body">
+                            I believe that the best engineers are the ones who never stop being students. Whether it is exploring a new framework after hours, earning a certification, or simply asking better questions in code review — I invest deliberately in my own development. I set specific, measurable goals for myself each quarter and track them with the same rigor I bring to a sprint backlog. Continuous improvement is not a platitude for me; it is a practice.
+                        </p>
+                    </div>
                 </div>
+
                 <div class="section p-0" id="p3">
                     <span class="name"></span>
                     <span class="border"></span>
-                    <p class="about-description">
-                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                            </svg></button>
-                        <span class="about-description-title text-center mb-3">System Software Enginner - Nysus
-                            Solutions</span> As a software engineer for Nysus Solutions, I am driven by a profound
-                        passion for programming cultivated from a young age. Programming has served as a steadfast
-                        companion throughout my journey, facilitating the acquisition of new skills and never failing to
-                        invigorate my spirit. My aspiration to become a Full Stack Developer stems from a desire to
-                        independently tackle any challenge that comes my way. This relentless pursuit of
-                        self-sufficiency serves as a primary motivator, compelling me to master all facets of
-                        development.
-                    </p>
+                    <div class="about-description">
+                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></button>
+                        <span class="about-description-title">Engineer at Heart</span>
+                        <p class="about-description-body">
+                            My journey in software began long before my first professional role. At Nysus Solutions over three years, I maintained and extended manufacturing execution systems for more than 30 customers, working across JavaScript, PHP, HTML, SQL, and PLC integrations. What drives me is the full picture — front to back, UI to database — which is why I gravitate toward full-stack work. Programming is not just my profession; it has been my most consistent tool for solving real problems for real people.
+                        </p>
+                    </div>
                 </div>
+
                 <div class="section p-0" id="p4">
                     <span class="name"></span>
                     <span class="border"></span>
-                    <p class="about-description">
-                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z" />
-                            </svg></button>
-                        <span class="about-description-title text-center mb-3">Future Vision</span> My personal goals as
-                        a software engineer revolve around continual growth, innovation, and impactful contributions to
-                        the tech industry. I am dedicated to expanding my expertise across various domains and staying
-                        adaptable in a rapidly evolving field. With a focus on developing innovative solutions to
-                        real-world challenges, I aim to advance into leadership roles where I can mentor aspiring
-                        engineers and shape the future of technology. Through dedication and perseverance, I strive to
-                        leave a lasting mark on the world of software engineering.
-                    </p>
+                    <div class="about-description">
+                        <button class="close"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg></button>
+                        <span class="about-description-title">Future Vision</span>
+                        <p class="about-description-body">
+                            I am working toward a future where I can lead engineering teams building systems that meaningfully improve manufacturing and industrial operations. My goal is not simply to advance in title — it is to become the kind of engineer who mentors others, architects durable solutions, and bridges the gap between shop floor reality and cutting-edge software. I want to leave things measurably better than I found them.
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
