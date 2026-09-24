@@ -55,7 +55,7 @@
 }
 
 .contact-form .send-btn {
-    background: #003E7E;
+    background: var(--brand-primary);
     color: white;
     border: none;
     height: 50px;
@@ -94,7 +94,7 @@
 }
 
 #my-form-button {
-    background: #003E7E;
+    background: var(--brand-primary);
     color: white;
     border: none;
     height: 50px;

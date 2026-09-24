@@ -16,6 +16,7 @@
     width: 100%;
     max-width: 100px;
     max-height: 50px;
+    object-fit: contain;
 }
 
 .company-name {
@@ -34,22 +35,23 @@
     width: 100%;
     max-width: 100px;
     max-height: 50px;
+    object-fit: contain;
 }
 
 .school-name {
-    color: #003E7E;
+    color: var(--brand-primary);
 }
 
 .school-title {
     font-size: 1.1rem;
     line-height: 2rem;
-    color: #1A5276;
+    color: var(--brand-primary-dark);
 }
 
 .school-task-achieve {
     font-size: 23px;
     font-weight: 600;
-    color: #003E7E;
+    color: var(--brand-primary);
     margin-bottom: 5px;
 }
 
@@ -58,6 +60,7 @@
     width: 100%;
     max-width: 100px;
     max-height: 50px;
+    object-fit: contain;
 }
 
 .club-name {
@@ -82,22 +85,23 @@
     width: 100%;
     max-width: 100px;
     max-height: 50px;
+    object-fit: contain;
 }
 
 .equity-name {
-    color: #003E7E;
+    color: var(--brand-primary);
 }
 
 .equity-title {
     font-size: 1.1rem;
     line-height: 2rem;
-    color: #1A5276;
+    color: var(--brand-primary-dark);
 }
 
 .equity-task-achieve {
     font-size: 23px;
     font-weight: 600;
-    color: #003E7E;
+    color: var(--brand-primary);
     margin-bottom: 5px;
 }
 
@@ -106,6 +110,7 @@
     width: 100%;
     max-width: 100px;
     max-height: 50px;
+    object-fit: contain;
 }
 
 .nysus-name {
@@ -130,6 +135,7 @@
     width: 100%;
     max-width: 100px;
     max-height: 50px;
+    object-fit: contain;
 }
 
 .first-solar-name {
@@ -178,8 +184,8 @@
 /* === Company left-border stripes === */
 .exp-first-solar  { border-left: 4px solid red; }
 .exp-nysus        { border-left: 4px solid black; }
-.exp-equity       { border-left: 4px solid #003E7E; }
-.exp-school       { border-left: 4px solid #003E7E; }
+.exp-equity       { border-left: 4px solid var(--brand-primary); }
+.exp-school       { border-left: 4px solid var(--brand-primary); }
 .exp-pti          { border-left: 4px solid #28B463; }
 .exp-club         { border-left: 4px solid #FFD200; }
 
@@ -231,8 +237,8 @@
 
 .exp-tech-tag.tag-first-solar { color: red;     border-color: red;     background-color: rgba(255,0,0,0.07); }
 .exp-tech-tag.tag-nysus       { color: #333;    border-color: #333;    background-color: rgba(0,0,0,0.05); }
-.exp-tech-tag.tag-equity      { color: #003E7E; border-color: #003E7E; background-color: rgba(0,62,126,0.07); }
-.exp-tech-tag.tag-school      { color: #003E7E; border-color: #003E7E; background-color: rgba(0,62,126,0.07); }
+.exp-tech-tag.tag-equity      { color: var(--brand-primary); border-color: var(--brand-primary); background-color: rgba(224, 1, 34, 0.07); }
+.exp-tech-tag.tag-school      { color: var(--brand-primary); border-color: var(--brand-primary); background-color: rgba(224, 1, 34, 0.07); }
 .exp-tech-tag.tag-pti         { color: #145A32; border-color: #28B463; background-color: rgba(40,180,99,0.07); }
 .exp-tech-tag.tag-club        { color: #7d6000; border-color: #FFD200; background-color: rgba(255,210,0,0.12); }
 
@@ -259,4 +265,93 @@
 #experience h5.exp-heading-achieve {
     padding-left: 8px;
     border-radius: 2px;
+}
+
+/* === Featured panel + thumbnail selector (mirrors the Project section pattern) === */
+.exp-featured {
+    margin-bottom: 24px;
+}
+
+.exp-panel {
+    display: none;
+}
+
+.exp-panel.active {
+    display: block;
+}
+
+.exp-hint {
+    font-size: 0.85rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #888;
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+}
+
+.exp-grid {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.exp-thumb {
+    flex: 1 1 calc(16.666% - 14px);
+    min-width: 110px;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    background: #fff;
+}
+
+.exp-thumb:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(224, 1, 34, 0.15);
+}
+
+.exp-thumb.active {
+    border-color: var(--brand-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(224, 1, 34, 0.2);
+}
+
+.exp-thumb-logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    padding: 10px;
+}
+
+.exp-thumb-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.exp-thumb-title {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--brand-primary);
+    text-align: center;
+    padding: 8px 6px;
+    line-height: 1.3;
+    background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .exp-grid {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .exp-thumb {
+        flex: 0 0 140px;
+    }
 }
