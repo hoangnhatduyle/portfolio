@@ -1,10 +1,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// GitHub Pages project site: https://hoangnhatduyle.github.io/portfolio/
+// GitHub Pages site on the custom domain https://hoangle.online/ (see public/CNAME)
 export default defineConfig({
-  site: 'https://hoangnhatduyle.github.io',
-  base: '/portfolio',
+  site: 'https://hoangle.online',
   output: 'static',
   trailingSlash: 'always',
   integrations: [sitemap()],

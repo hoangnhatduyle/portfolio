@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hoangnhatduyle.github.io/portfolio/sitemap-index.xml
+Sitemap: https://hoangle.online/sitemap-index.xml

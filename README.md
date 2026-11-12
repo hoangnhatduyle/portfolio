@@ -1,6 +1,6 @@
 # Hoang Nhat Duy Le: portfolio
 
-Live: https://hoangnhatduyle.github.io/portfolio/
+Live: https://hoangle.online/
 
 A static site built with [Astro](https://astro.build): a dark sidebar, light section banners, and content kept in plain JSON files.
 
@@ -34,7 +34,7 @@ Put images in `src/assets/` and refer to them by file name (for example `"image"
 
 ```bash
 npm install
-npm run dev        # http://localhost:4321/portfolio/
+npm run dev        # http://localhost:4321/
 npm run build      # production build into dist/
 npm run preview    # serve the production build
 ```
@@ -59,7 +59,7 @@ Pushing to `master` runs `.github/workflows/deploy.yml`, which builds the site a
 
 One-time setup: in the repository, go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
 
-The site lives under `/portfolio/` (`base` in `astro.config.mjs`). If you later rename the repo to `hoangnhatduyle.github.io` or add a custom domain, change `site` and remove `base`.
+The site is served from the custom domain `hoangle.online` (`site` in `astro.config.mjs`, `public/CNAME`). DNS lives at Namecheap: four `A` records and one `CNAME` for `www` pointing at GitHub Pages. In **Settings → Pages**, set the custom domain and tick **Enforce HTTPS**.
 
 ## Other things to know
 

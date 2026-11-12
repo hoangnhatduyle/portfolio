@@ -9,13 +9,13 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: [['list']],
   use: {
-    baseURL: `http://127.0.0.1:${PORT}/portfolio/`,
+    baseURL: `http://127.0.0.1:${PORT}/`,
     trace: 'retain-on-failure',
   },
   webServer: {
     // Tests run against the production build, the same artifact that ships to GitHub Pages.
     command: `npm run build && npx astro preview --port ${PORT} --host 127.0.0.1 --ignore-lock`,
-    url: `http://127.0.0.1:${PORT}/portfolio/`,
+    url: `http://127.0.0.1:${PORT}/`,
     reuseExistingServer: true,
     timeout: 120_000,
   },
