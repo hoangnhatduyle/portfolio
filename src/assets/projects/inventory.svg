@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+  <rect width="960" height="540" fill="#efebe7"/>
+  <g text-anchor="middle">
+    <rect x="30" y="40" width="285" height="160" rx="14" fill="#fff" stroke="#17181c33" stroke-width="2"/>
+    <text x="172" y="108" font-size="28" font-weight="700" fill="#17181c">Items</text>
+    <text x="172" y="148" font-size="21" fill="#4a4a4f">fridge · freezer · pantry</text>
+    <rect x="337" y="40" width="285" height="160" rx="14" fill="#fff" stroke="#17181c33" stroke-width="2"/>
+    <text x="480" y="108" font-size="28" font-weight="700" fill="#17181c">Expiry dates</text>
+    <text x="480" y="148" font-size="21" fill="#4a4a4f">quantities &amp; units</text>
+    <rect x="645" y="40" width="285" height="160" rx="14" fill="#17181c"/>
+    <text x="787" y="108" font-size="28" font-weight="700" fill="#fff">Notifications</text>
+    <text x="787" y="148" font-size="21" fill="#ffffffb8">before things expire</text>
+    <rect x="30" y="230" width="445" height="160" rx="14" fill="#fff" stroke="#17181c33" stroke-width="2"/>
+    <text x="252" y="298" font-size="28" font-weight="700" fill="#17181c">Shopping list</text>
+    <text x="252" y="338" font-size="21" fill="#4a4a4f">+ recipes for what expires soon</text>
+    <rect x="497" y="230" width="433" height="160" rx="14" fill="#fff" stroke="#c8102e" stroke-width="3"/>
+    <text x="713" y="298" font-size="28" font-weight="700" fill="#17181c">Embedded SQLite</text>
+    <text x="713" y="338" font-size="21" fill="#4a4a4f">works with no network</text>
+  </g>
+  <text x="30" y="470" font-size="25" font-weight="700" fill="#17181c">Angular 18 · Capacitor → Android APK</text>
+</svg>

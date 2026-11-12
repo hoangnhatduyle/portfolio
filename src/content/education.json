@@ -1,0 +1,29 @@
+[
+  {
+    "id": "uc",
+    "school": "University of Cincinnati",
+    "location": "Cincinnati, Ohio, United States",
+    "logo": "University-of-Cincinnati-Logo.png",
+    "start": "2026-08",
+    "end": "2028-05",
+    "endLabel": "expected",
+    "bullets": [
+      "Master of Science in Computer Science",
+      "Research advisor: Professor Justin Zhan",
+      "Research focus: multi-agent LLM systems at CincySI Lab"
+    ]
+  },
+  {
+    "id": "utoledo",
+    "school": "University of Toledo",
+    "location": "Toledo, Ohio, United States",
+    "logo": "logo-utoledo-horizontal.png",
+    "start": "2018-08",
+    "end": "2023-05",
+    "bullets": [
+      "B.S. Computer Science & Engineering · Minor in Data Science",
+      "GPA 3.89",
+      "Completed 5 co-ops (full- and part-time)"
+    ]
+  }
+]

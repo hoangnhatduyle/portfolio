@@ -1,0 +1,106 @@
+[
+  {
+    "id": "daily",
+    "title": "Daily",
+    "caption": "What I reach for first",
+    "items": [
+      {
+        "name": "RAG"
+      },
+      {
+        "name": "Agent orchestration"
+      },
+      {
+        "name": "LLM evals"
+      },
+      {
+        "name": "Agent security & provenance"
+      },
+      {
+        "name": "Python",
+        "icon": "python"
+      },
+      {
+        "name": "FastAPI",
+        "icon": "fastapi"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "postgresql"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript"
+      },
+      {
+        "name": "React / Next.js",
+        "icon": "react"
+      },
+      {
+        "name": "Docker",
+        "icon": "docker"
+      }
+    ]
+  },
+  {
+    "id": "working",
+    "title": "Working knowledge",
+    "caption": "Comfortable, not daily",
+    "items": [
+      {
+        "name": "Kubernetes",
+        "icon": "kubernetes"
+      },
+      {
+        "name": "Redis",
+        "icon": "redis"
+      },
+      {
+        "name": "CI/CD"
+      },
+      {
+        "name": "Vector stores"
+      },
+      {
+        "name": "Azure"
+      },
+      {
+        "name": "C# / .NET",
+        "icon": "dotnet"
+      },
+      {
+        "name": "Angular",
+        "icon": "angular"
+      }
+    ]
+  },
+  {
+    "id": "earlier",
+    "title": "Earlier career",
+    "caption": "Where I started",
+    "items": [
+      {
+        "name": "MES & PLC integration"
+      },
+      {
+        "name": "PHP",
+        "icon": "php"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "javascript"
+      },
+      {
+        "name": "SQL Server"
+      },
+      {
+        "name": "C++",
+        "icon": "cplusplus"
+      },
+      {
+        "name": "Java",
+        "icon": "java"
+      }
+    ]
+  }
+]

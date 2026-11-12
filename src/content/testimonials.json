@@ -1,0 +1,29 @@
+[
+  {
+    "id": "aaron",
+    "name": "Aaron Bollinger",
+    "role": "Software Engineer III - MES",
+    "org": "First Solar",
+    "quote": "Hoang is a reliable, high-output contributor who consistently turns complex work into tangible results. His technical work has driven real value for the team, and his attention to detail has helped bring new internal tools online smoothly. He's also shown strong agility managing competing priorities, delivering complex data integration work in short timeframes without sacrificing quality.",
+    "photo": "aaron.jpg",
+    "logo": "first-solar-headers.png"
+  },
+  {
+    "id": "heysam",
+    "name": "Heysam Salami",
+    "role": "Director of Software Operations",
+    "org": "Nysus Solutions",
+    "quote": "One of the many positive traits that Le has, is his ability to take what we have as a vision for a project and turn it into reality. He created a few dashboards that were able to allow us to better understand where our business stands with not only target dates, but also easily view planned to actual data side by side. He did this, while creating convenient and creative ways to input data easily.",
+    "photo": "heysam.jpg",
+    "logo": "Nysus_for_header-300x86.png"
+  },
+  {
+    "id": "barry",
+    "name": "Barry Fleming",
+    "role": "Software Development Manager",
+    "org": "Equity Trust Company",
+    "quote": "Hoang demonstrated the ability to quickly adapt and pick up on our coding practices. He has been exceeding expectations on given tasks and has shown a strong interest in learning, through his clarifying questions and take time to work through his own problems. He has been an enjoyable team member and assimilated quickly into our culture.",
+    "photo": "barry.png",
+    "logo": "equityLogo.png"
+  }
+]

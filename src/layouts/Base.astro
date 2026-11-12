@@ -1,0 +1,76 @@
+---
+import '@fontsource-variable/raleway';
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import { profile } from '../lib/content';
+import { AI_ORIGIN, FORM_ORIGIN } from '../lib/config';
+import { withBase } from '../lib/url';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${profile.name} · ${profile.role}`,
+  description = `${profile.name}: M.S. Computer Science student at the University of Cincinnati and CincySI Lab researcher building and evaluating multi-agent LLM systems. ${profile.availability.research}; ${profile.availability.fullTime.toLowerCase()}.`,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL(withBase('og.png'), Astro.site).href;
+
+// GitHub Pages cannot set headers, so the policy ships as a <meta> tag (production only: the dev toolbar needs inline scripts).
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' https://www.googletagmanager.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: https:",
+  "font-src 'self'",
+  `connect-src 'self' ${FORM_ORIGIN} ${AI_ORIGIN} https://www.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com`,
+  `frame-src ${AI_ORIGIN}`,
+  `form-action ${FORM_ORIGIN}`,
+  "base-uri 'self'",
+  "object-src 'none'",
+].join('; ');
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  jobTitle: profile.role,
+  url: Astro.site?.href,
+  affiliation: [{ '@type': 'CollegeOrUniversity', name: 'University of Cincinnati' }],
+  sameAs: [profile.links.github, profile.links.linkedin],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#17181c" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href={withBase('favicon.svg')} />
+    <link rel="sitemap" href={withBase('sitemap-index.xml')} />
+    {import.meta.env.PROD && <meta http-equiv="Content-Security-Policy" content={csp} />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
+    <script is:inline defer src={withBase('analytics.js')}></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <slot />
+  </body>
+</html>

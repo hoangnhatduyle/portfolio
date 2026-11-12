@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import Sidebar from '../components/layout/Sidebar.astro';
+import MobileBar from '../components/layout/MobileBar.astro';
+import Footer from '../components/layout/Footer.astro';
+import Hero from '../components/sections/Hero.astro';
+import Research from '../components/sections/Research.astro';
+import Experience from '../components/sections/Experience.astro';
+import Skills from '../components/sections/Skills.astro';
+import Projects from '../components/sections/Projects.astro';
+import Education from '../components/sections/Education.astro';
+import Feedback from '../components/sections/Feedback.astro';
+import ContactDialog from '../components/ui/ContactDialog.astro';
+import AskAiWidget from '../components/ui/AskAiWidget.astro';
+---
+
+<Base>
+  <Sidebar />
+  <div class="page">
+    <MobileBar />
+    <main id="main">
+      <Hero />
+      <Research />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Education />
+      <Feedback />
+    </main>
+    <Footer />
+  </div>
+  <ContactDialog />
+  <AskAiWidget />
+  <script>
+    import '../scripts/main';
+  </script>
+</Base>

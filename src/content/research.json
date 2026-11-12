@@ -1,0 +1,14 @@
+[
+  {
+    "id": "declared-evidence",
+    "status": "under-review",
+    "venue": "NAACL 2027",
+    "topic": "Auditing whether the evidence multi-agent LLM systems cite is what actually drove their decisions."
+  },
+  {
+    "id": "confidence-calibration",
+    "status": "under-review",
+    "venue": "NAACL 2027",
+    "topic": "How confidence changes as claims pass between agents in multi-agent LLM pipelines."
+  }
+]

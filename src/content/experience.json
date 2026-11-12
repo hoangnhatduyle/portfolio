@@ -1,0 +1,76 @@
+[
+  {
+    "id": "cincysi",
+    "company": "CincySI Lab",
+    "role": "Graduate Researcher",
+    "kind": "research",
+    "start": "2026-10",
+    "end": "present",
+    "logo": "CincySI_Lab final Logo.png",
+    "achievements": [
+      "Researching multi-agent LLM systems with Prof. Justin Zhan in the Super Intelligence Lab at the University of Cincinnati.",
+      "Two manuscripts on auditing and calibrating multi-agent LLM pipelines are currently under review."
+    ],
+    "tags": ["Multi-Agent Systems", "LLMs", "Evaluation", "Python"]
+  },
+  {
+    "id": "first-solar",
+    "company": "First Solar",
+    "role": "Software Engineer - MES",
+    "kind": "industry",
+    "start": "2025-02",
+    "end": "2026-05",
+    "logo": "first-solar-headers.png",
+    "achievements": [
+      "Built a remote-monitoring capability that surfaces real-time production-floor imagery to operators online, reducing the need for physical floor presence and enabling faster remote decision-making.",
+      "Integrated a machine learning model trained on historical operator decisions to automate image-based responses, cutting average response time from 10+ seconds to about 1.2 seconds and contributing to a multi-million-dollar operational efficiency roadmap, then led its rollout to additional manufacturing sites across the US, India, and Southeast Asia.",
+      "Strengthened internal application security by migrating legacy HTTP endpoints to HTTPS as part of a broader authentication protocol modernization initiative."
+    ],
+    "tags": ["C#", "SQL", "MES", "ERP", "Machine Learning"]
+  },
+  {
+    "id": "nysus",
+    "company": "Nysus Solutions",
+    "role": "System Software Developer",
+    "kind": "industry",
+    "start": "2022-01",
+    "end": "2025-02",
+    "logo": "Nysus_for_header-300x86.png",
+    "achievements": [
+      "Updated and maintained web-based software using JavaScript, PHP, HTML, and SQL to improve the code base for more than 30 customers.",
+      "Played a significant role in project design, development, and testing, contributing substantially to project launches and installations.",
+      "Worked with the Lead Application Architect to design and deploy a robust architecture that supports the growth of new applications being developed and deployed."
+    ],
+    "tags": ["JavaScript", "PHP", "SQL", "MES", "SAP", "Oracle", "PLCs"]
+  },
+  {
+    "id": "equity-trust",
+    "company": "Equity Trust Company",
+    "role": "DevOps Developer Intern",
+    "kind": "industry",
+    "start": "2021-05",
+    "end": "2021-08",
+    "logo": "equityLogo.png",
+    "achievements": [
+      "Unit-tested 5+ main functions in the company's core process to verify customers' operations.",
+      "Deployed 2 main functions to production after the necessary modifications and unit testing.",
+      "Helped remodel and raise the security level of the Customer Account Open process by moving it from Service Bus Queues to Topics & Subscriptions in Azure."
+    ],
+    "tags": ["REST APIs", "Azure", ".NET", "Unit Testing"]
+  },
+  {
+    "id": "pti",
+    "company": "Plastic Technologies Inc",
+    "role": "Software Developer Co-op",
+    "kind": "industry",
+    "start": "2020-01",
+    "end": "2020-05",
+    "logo": "pti.png",
+    "achievements": [
+      "Developed algorithms to plot CSV graphs and calculate the volume of plastic bottles and preforms.",
+      "Updated, maintained, and extended the company website, making simulation work more functional, informative, and user-friendly.",
+      "Provided on-site instruction, support, and a technical report for 2 customers."
+    ],
+    "tags": [".NET", "C#", "JavaScript", "SQL", "HTML"]
+  }
+]

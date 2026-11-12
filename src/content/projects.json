@@ -1,0 +1,104 @@
+[
+  {
+    "id": "aegis",
+    "title": "AEGIS: an agent firewall that teaches",
+    "status": "shipped",
+    "start": "2026-11",
+    "end": "2026-11",
+    "featured": true,
+    "award": "Winner · Best Use of Auth0 · MakeUC 2026",
+    "summary": "A rule-based firewall that intercepts every AI agent tool call, blocking injected commands and secret leaks before they run and logging the rule behind each decision. A classroom on top lets students attack level chatbots, then take a quiz generated from their own session.",
+    "role": "I built Auth0 sign-in with three server-enforced roles (student, teacher, firewall admin) and the teacher/student dashboard.",
+    "image": "AEGIS_thumbnail.png",
+    "imageAlt": "AEGIS pixel-art illustration: an \"ignore rules\" attack is blocked by the firewall while a student learns why.",
+    "tags": ["Next.js", "Python", "PostgreSQL", "Auth0", "Docker"],
+    "links": [
+      {
+        "label": "Devpost",
+        "href": "https://devpost.com/software/aegis-hqro4a"
+      }
+    ],
+    "imageFit": "contain",
+    "imageBg": "#143047"
+  },
+  {
+    "id": "myhomes",
+    "title": "myHomes",
+    "status": "active",
+    "start": "2022-12",
+    "end": "present",
+    "summary": "A multi-property residential management app with tenant profiles, payment tracking, room management, and bill visualization, used by 6+ tenants. Each property has its own PostgreSQL database; an AI chatbot answers from a per-property knowledge base.",
+    "note": "Private deployment, shown with screenshots.",
+    "image": "myhomes.png",
+    "imageAlt": "Screenshot of the myHomes dashboard with a bill report chart.",
+    "tags": ["ASP.NET Core", "Angular", "PostgreSQL", "Railway", "LLM chatbot"],
+    "links": []
+  },
+  {
+    "id": "trading-platform",
+    "title": "Multi-Agent AI Trading Platform",
+    "status": "paused",
+    "statusLabel": "Paused – prototype",
+    "start": "2025-11",
+    "end": "2026-04",
+    "summary": "A prototype where LLM agents with distinct investment personalities trade stocks: five independent traders, an LLM auditor that enforces constraints, a Next.js analytics dashboard, genetic-algorithm strategy evolution, and risk controls such as kill switches and position limits.",
+    "image": "trading.png",
+    "imageAlt": "Architecture sketch of the multi-agent trading platform.",
+    "tags": ["Python", "FastAPI", "PostgreSQL", "Redis", "Next.js", "TypeScript"],
+    "links": []
+  },
+  {
+    "id": "cadence",
+    "title": "Cadence: my personal AI assistant",
+    "status": "active",
+    "start": "2026-08",
+    "end": "present",
+    "summary": "Cadence is the assistant behind the chat on this page: a retrieval-grounded assistant that answers questions about my résumé, projects, and research, and stays on topic. The code is private, so the best demo is to talk to it.",
+    "image": "Caricature.jpg",
+    "imageAlt": "Caricature of Hoang at a desk in a University of Cincinnati hoodie, with a laptop, research notes and a chessboard.",
+    "tags": ["Next.js", "TypeScript", "Supabase", "RAG", "Evals"],
+    "links": [],
+    "action": "open-chat"
+  },
+  {
+    "id": "bone-conduction",
+    "title": "Sesquicentennial Bone Conduction Railing",
+    "status": "shipped",
+    "start": "2022-08",
+    "end": "2023-05",
+    "summary": "An interdisciplinary senior-design project sponsored by the UToledo College of Arts & Letters and the UT Green Fund. We designed and prototyped an interactive railing that transmits campus soundscapes through the user's forearms, with a modular design for multiple campus locations.",
+    "image": "bridge.jpg",
+    "imageAlt": "A campus bridge railing, the site of the bone conduction installation.",
+    "tags": ["Arduino", "Embedded", "Hardware"],
+    "links": [
+      {
+        "label": "Design & report",
+        "href": "https://docs.google.com/document/d/1rq9oWRbO71FxXT81IibkOnbsD-2kgTLnTiRFbqNzszA/edit"
+      },
+      {
+        "label": "UToledo news",
+        "href": "https://news.utoledo.edu/index.php/04_26_2023/engineering-students-to-present-senior-design-projects-april-28"
+      },
+      {
+        "label": "Source code",
+        "href": "documents/BareMinimumWithDebug_Loop.ino",
+        "external": false
+      }
+    ],
+    "team": ["Erik Schaefer", "Ben Brasic", "Ray Vaught", "Ali Yaacoub"]
+  },
+  {
+    "id": "inventory-tracker",
+    "title": "Inventory Tracking App",
+    "status": "shipped",
+    "start": "2026-03",
+    "end": "2026-09",
+    "summary": "An offline-first grocery inventory app that tracks quantities and expiration dates, sends local notifications, builds shopping lists, and suggests recipes from items about to expire. Packaged as an Android APK.",
+    "image": "inventory.svg",
+    "imageAlt": "Diagram of the inventory app: items, expiry dates, local notifications, recipe suggestions.",
+    "tags": ["Angular", "Capacitor", "SQLite", "Android"],
+    "links": [],
+    "imageFit": "contain",
+    "imageBg": "#efebe7"
+  }
+]

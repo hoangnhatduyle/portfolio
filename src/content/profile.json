@@ -1,0 +1,18 @@
+{
+  "name": "Hoang Nhat Duy Le",
+  "role": "Software Engineer",
+  "headline": "I build scalable,",
+  "headlineAccent": "production systems.",
+  "summary": "Software engineer with 4+ years in production, from manufacturing software serving 30+ customers to a machine-learning rollout across First Solar sites in the US, India, and Southeast Asia. Now an M.S. Computer Science student and researcher at CincySI Lab, University of Cincinnati, working on multi-agent LLM systems.",
+  "availability": {
+    "research": "Research opportunities, Summer 2027",
+    "fullTime": "Full-time roles after graduating May 2028"
+  },
+  "links": {
+    "github": "https://github.com/hoangnhatduyle",
+    "linkedin": "https://www.linkedin.com/in/hoangnhatduyle",
+    "email": "lehoangnhatduy2000@gmail.com",
+    "resume": "documents/Hoang_Nhat_Duy_Le_Resume.pdf"
+  },
+  "stats": { "years": "4+", "customers": "30+" }
+}
