@@ -7,10 +7,7 @@ import { AI_URL } from '../../lib/config';
        Big enough for the assistant's own layout (chat + profile card), small enough to stay a dialog. -->
   <dialog id="ai-panel" class="panel" aria-label="Chat with my AI assistant" data-ai-dialog>
     <header class="panel__head">
-      <div>
-        <h2>Ask my AI</h2>
-        <p>Grounded in my résumé &amp; research</p>
-      </div>
+      <h2>Ask my AI</h2>
       <button type="button" class="panel__close" data-ai-close aria-label="Close chat">
         <svg
           width="18"
@@ -52,10 +49,7 @@ import { AI_URL } from '../../lib/config';
     <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
       <path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2zm7 11l.9 2.6 2.6.9-2.6.9L19 20l-.9-2.6-2.6-.9 2.6-.9L19 13z"></path>
     </svg>
-    <span class="fab__text">
-      <strong>Ask my AI</strong>
-      <small>Grounded in my résumé &amp; research</small>
-    </span>
+    <span class="fab__text">Ask my AI</span>
   </button>
 </div>
 
@@ -89,12 +83,8 @@ import { AI_URL } from '../../lib/config';
     box-shadow: 0 12px 28px rgb(23 24 28 / 0.36);
   }
   .fab__text {
-    display: grid;
+    font-weight: 700;
     line-height: 1.2;
-  }
-  .fab__text small {
-    font-size: 0.72rem;
-    opacity: 0.88;
   }
 
   /* Large, but clearly a dialog: about 78% of the window, capped on big monitors, page visible around it. */
@@ -134,18 +124,8 @@ import { AI_URL } from '../../lib/config';
     padding: 0.4rem 0.75rem 0.4rem 1rem;
     border-bottom: 1px solid rgb(255 255 255 / 0.1);
   }
-  .panel__head > div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.1rem 0.75rem;
-  }
   .panel__head h2 {
     font-size: 1rem;
-  }
-  .panel__head p {
-    font-size: 0.78rem;
-    color: var(--side-mute);
   }
   .panel__close {
     display: grid;

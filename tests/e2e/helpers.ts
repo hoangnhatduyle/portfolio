@@ -14,6 +14,18 @@ export async function stubExternals(page: Page): Promise<void> {
   );
 }
 
+/**
+ * The visible "Get in touch" button: the sidebar's on desktop, the hero's on phones
+ * (the hero pair is hidden at desktop widths because the sidebar already shows it).
+ */
+export function contactTrigger(page: Page) {
+  return page
+    .locator('.hero, [aria-label="Site"]')
+    .getByRole('button', { name: 'Get in touch' })
+    .locator('visible=true')
+    .first();
+}
+
 /** Collect console errors (this includes Content-Security-Policy violations). */
 export function collectConsoleErrors(page: Page): string[] {
   const errors: string[] = [];

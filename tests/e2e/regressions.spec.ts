@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { stubExternals } from './helpers';
+import { stubExternals, contactTrigger } from './helpers';
 
 test.beforeEach(async ({ page }) => {
   await stubExternals(page);
@@ -49,7 +49,7 @@ test.describe('contact dialog edge cases', () => {
   }) => {
     test.skip(isMobile, 'the mobile dialog is full-screen and has no backdrop');
     await page.goto('./');
-    await page.locator('.hero').getByRole('button', { name: 'Get in touch' }).click();
+    await contactTrigger(page).click();
     const dialog = page.getByRole('dialog', { name: 'Get in touch' });
     await page.getByLabel('Message').fill('Some text I am about to select with the mouse.');
     const box = (await page.getByLabel('Message').boundingBox())!;
@@ -64,7 +64,7 @@ test.describe('contact dialog edge cases', () => {
   test('a plain click on the backdrop still closes it', async ({ page, isMobile }) => {
     test.skip(isMobile, 'the mobile dialog is full-screen and has no backdrop');
     await page.goto('./');
-    await page.locator('.hero').getByRole('button', { name: 'Get in touch' }).click();
+    await contactTrigger(page).click();
     const dialog = page.getByRole('dialog', { name: 'Get in touch' });
     await page.mouse.click(8, 8);
     await expect(dialog).toBeHidden();
@@ -78,7 +78,7 @@ test.describe('contact dialog edge cases', () => {
         .catch(() => undefined);
     });
     await page.goto('./');
-    const open = () => page.locator('.hero').getByRole('button', { name: 'Get in touch' }).click();
+    const open = () => contactTrigger(page).click();
     await open();
     await page.getByLabel('Name').fill('Ada');
     await page.getByLabel('Email').fill('ada@example.com');

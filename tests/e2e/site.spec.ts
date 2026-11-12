@@ -1,6 +1,6 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
-import { collectConsoleErrors, stubExternals } from './helpers';
+import { collectConsoleErrors, stubExternals, contactTrigger } from './helpers';
 
 test.beforeEach(async ({ page }) => {
   await stubExternals(page);
@@ -97,9 +97,21 @@ test.describe('tabs', () => {
 });
 
 test.describe('contact dialog', () => {
-  test('opens from the hero, closes with Escape, and returns focus', async ({ page }) => {
+  test('hero buttons are hidden beside the sidebar and shown on phones', async ({
+    page,
+    isMobile,
+  }) => {
     await page.goto('./');
-    const trigger = page.locator('.hero').getByRole('button', { name: 'Get in touch' });
+    const heroButtons = page.locator('.hero__cta');
+    if (isMobile) await expect(heroButtons).toBeVisible();
+    else await expect(heroButtons).toBeHidden();
+  });
+
+  test('opens from the main contact button, closes with Escape, and returns focus', async ({
+    page,
+  }) => {
+    await page.goto('./');
+    const trigger = contactTrigger(page);
     await trigger.click();
     const dialog = page.getByRole('dialog', { name: 'Get in touch' });
     await expect(dialog).toBeVisible();
@@ -121,7 +133,7 @@ test.describe('contact dialog', () => {
       return route.fulfill({ status: 200, body: '{}' });
     });
     await page.goto('./');
-    await page.locator('.hero').getByRole('button', { name: 'Get in touch' }).click();
+    await contactTrigger(page).click();
     await page.getByRole('button', { name: 'Send message' }).click();
     await expect(page.getByText('Please enter your name.')).toBeVisible();
     await expect(page.getByText('Please enter a valid email address.')).toBeVisible();
@@ -136,7 +148,7 @@ test.describe('contact dialog', () => {
       return route.fulfill({ status: 200, contentType: 'application/json', body: '{"ok":true}' });
     });
     await page.goto('./');
-    await page.locator('.hero').getByRole('button', { name: 'Get in touch' }).click();
+    await contactTrigger(page).click();
     await page.getByLabel('Name').fill('Ada Lovelace');
     await page.getByLabel('Email').fill('ada@example.com');
     await page.getByLabel('Message').fill('Would love to chat about your research.');
@@ -152,7 +164,7 @@ test.describe('contact dialog', () => {
       return route.fulfill({ status: 200, body: '{}' });
     });
     await page.goto('./');
-    await page.locator('.hero').getByRole('button', { name: 'Get in touch' }).click();
+    await contactTrigger(page).click();
     await page.getByLabel('Name').fill('Bot');
     await page.getByLabel('Email').fill('bot@example.com');
     await page.getByLabel('Message').fill('Buy my cheap spam products now.');
@@ -169,7 +181,7 @@ test.describe('contact dialog', () => {
       route.fulfill({ status: 500, body: 'no' }),
     );
     await page.goto('./');
-    await page.locator('.hero').getByRole('button', { name: 'Get in touch' }).click();
+    await contactTrigger(page).click();
     await page.getByLabel('Name').fill('Ada');
     await page.getByLabel('Email').fill('ada@example.com');
     await page.getByLabel('Message').fill('Hello there, this should fail.');
@@ -182,7 +194,8 @@ test.describe('AI widget', () => {
   test('opens lazily, loads the assistant iframe, and closes with Escape', async ({ page }) => {
     await page.goto('./');
     const fab = page.getByRole('button', { name: /Ask my AI/ });
-    await expect(fab).toContainText('Grounded in my résumé & research');
+    await expect(fab).toHaveText('Ask my AI');
+    await expect(page.locator('body')).not.toContainText('Grounded in my');
     await expect(page.locator('[data-ai-frame]')).not.toHaveAttribute('src', /.+/);
 
     await fab.click();
