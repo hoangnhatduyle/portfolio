@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.astro/
+.playwright-mcp/
+test-results/
+playwright-report/
+coverage/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Stray Chrome/Lighthouse temp profiles
+C:*
+lighthouse.*
