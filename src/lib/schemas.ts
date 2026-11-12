@@ -68,7 +68,6 @@ export const projectSchema = z
     tags: z.array(z.string()),
     links: z.array(link).default([]),
     team: z.array(z.string()).default([]),
-    action: z.enum(['open-chat']).optional(),
   })
   .refine(endsAfterStart, RANGE_ERROR);
 

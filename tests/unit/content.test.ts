@@ -235,12 +235,13 @@ describe('images and naming', () => {
     expect(aegis?.imageBg).toMatch(/^#[0-9a-f]{6}$/i);
   });
 
-  test('the personal assistant is called Cadence and uses the caricature', () => {
+  test('Cadence is its own project, not the portfolio chat, and has no chat action', () => {
     expect(projects.map((p) => p.id)).not.toContain('personal-assistant');
     const cadence = projects.find((p) => p.id === 'cadence');
     expect(cadence?.title).toMatch(/^Cadence\b/);
     expect(cadence?.image).toBe('Caricature.jpg');
-    expect(cadence?.action).toBe('open-chat');
+    expect(cadence).not.toHaveProperty('action');
+    expect(cadence?.summary).not.toMatch(/chat on this page|behind the chat/i);
     expect(JSON.stringify(projects)).not.toMatch(/Personal AI Assistant/);
   });
 });

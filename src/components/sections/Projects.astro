@@ -58,13 +58,8 @@ import { isExternal, withBase } from '../../lib/url';
               </p>
             )}
 
-            {(p.links.length > 0 || p.action) && (
+            {p.links.length > 0 && (
               <p class="links">
-                {p.action === 'open-chat' && (
-                  <button type="button" class="btn btn--accent" data-open-chat>
-                    Chat with Cadence
-                  </button>
-                )}
                 {p.links.map((l) => (
                   <a
                     class="btn btn--ghost btn--ghost-ink"

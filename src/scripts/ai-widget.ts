@@ -52,13 +52,6 @@ export function initAiWidget(): void {
     if (onBackdrop) dialog.close();
   });
 
-  document.addEventListener('click', (event) => {
-    const trigger = (event.target as Element | null)?.closest('[data-open-chat]');
-    if (!trigger) return;
-    event.preventDefault();
-    open();
-  });
-
   // Pre-warm on first interaction or after a short idle, whichever comes first.
   const once = { once: true, passive: true } as const;
   window.addEventListener('scroll', warm, once);

@@ -49,16 +49,15 @@
   },
   {
     "id": "cadence",
-    "title": "Cadence: my personal AI assistant",
+    "title": "Cadence: a personal productivity assistant",
     "status": "active",
     "start": "2026-08",
     "end": "present",
-    "summary": "Cadence is the assistant behind the chat on this page: a retrieval-grounded assistant that answers questions about my résumé, projects, and research, and stays on topic. The code is private, so the best demo is to talk to it.",
+    "summary": "Cadence is a personal assistant that pulls my tasks, calendar, courses and mail into one daily briefing, with a board, a weekly review and voice input. It runs as an installable web app, and its voice and briefing behavior is checked by an eval suite. The code is private.",
     "image": "Caricature.jpg",
     "imageAlt": "Caricature of Hoang at a desk in a University of Cincinnati hoodie, with a laptop, research notes and a chessboard.",
-    "tags": ["Next.js", "TypeScript", "Supabase", "RAG", "Evals"],
-    "links": [],
-    "action": "open-chat"
+    "tags": ["Next.js", "TypeScript", "Supabase", "OpenAI", "Evals"],
+    "links": []
   },
   {
     "id": "bone-conduction",

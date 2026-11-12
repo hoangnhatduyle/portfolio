@@ -197,11 +197,13 @@ test.describe('AI widget', () => {
     await expect(fab).toBeFocused();
   });
 
-  test('the Personal AI Assistant project can open the chat', async ({ page }) => {
+  test('the Cadence project has no chat button; only the floating button opens the chat', async ({
+    page,
+  }) => {
     await page.goto('./');
+    await expect(page.locator('body')).not.toContainText('Chat with Cadence');
     await page.getByRole('tab', { name: 'Cadence' }).click();
-    await page.getByRole('button', { name: 'Chat with Cadence' }).click();
-    await expect(page.getByRole('dialog', { name: 'Chat with my AI assistant' })).toBeVisible();
+    await expect(page.getByRole('button', { name: /Chat with Cadence/ })).toHaveCount(0);
   });
 });
 
@@ -279,7 +281,7 @@ test.describe('experience and projects polish', () => {
     );
   });
 
-  test('the assistant is presented as Cadence everywhere on the page', async ({ page }) => {
+  test('Cadence is shown as a project and the old assistant name is gone', async ({ page }) => {
     await page.goto('./');
     await expect(page.locator('body')).not.toContainText('Personal AI Assistant');
     await page.getByRole('tab', { name: 'Cadence' }).click();
