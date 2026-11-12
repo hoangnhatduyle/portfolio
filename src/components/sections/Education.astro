@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+import SectionBanner from '../ui/SectionBanner.astro';
+import { education } from '../../lib/content';
+import { formatPeriod } from '../../lib/format';
+import { image } from '../../lib/assets';
+---
+
+<section id="education" aria-labelledby="education-heading">
+  <SectionBanner id="education" title="Education" />
+  <div class="container body">
+    <ul class="grid">
+      {education.map((e) => (
+        <li class="card reveal">
+          <Image class="logo" src={image(e.logo)} alt="" height={64} loading="lazy" />
+          <h3>{e.school}</h3>
+          <p class="location">{e.location}</p>
+          <ul class="bullets">
+            {e.bullets.map((b) => (
+              <li>{b}</li>
+            ))}
+          </ul>
+          <p class="period">
+            {formatPeriod(e.start, e.end)}
+            {e.endLabel && ` (${e.endLabel})`}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .body {
+    padding-block: 2.25rem var(--space-section);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: 1.25rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  .logo {
+    width: auto;
+    max-width: 11rem;
+    height: 4rem;
+    margin-bottom: 0.6rem;
+    object-fit: contain;
+    object-position: left center;
+  }
+  h3 {
+    font-size: 1.35rem;
+  }
+  .location,
+  .period {
+    font-size: var(--text-sm);
+    color: var(--ink-mute);
+  }
+  .bullets {
+    display: grid;
+    gap: 0.55rem;
+    margin-block: 0.9rem 1rem;
+  }
+  .bullets li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: var(--ink-soft);
+  }
+  .bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 1px;
+    background: var(--accent);
+  }
+  .period {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--line);
+  }
+</style>

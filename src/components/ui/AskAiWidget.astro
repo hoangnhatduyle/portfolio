@@ -1,0 +1,200 @@
+---
+import { AI_URL } from '../../lib/config';
+---
+
+<div class="ai" data-ai-widget data-ai-src={AI_URL}>
+  <!-- A modal <dialog>: focus is trapped, the page behind is inert, and Escape closes it natively.
+       Big enough for the assistant's own layout (chat + profile card), small enough to stay a dialog. -->
+  <dialog id="ai-panel" class="panel" aria-label="Chat with my AI assistant" data-ai-dialog>
+    <header class="panel__head">
+      <div>
+        <h2>Ask my AI</h2>
+        <p>Grounded in my résumé &amp; research</p>
+      </div>
+      <button type="button" class="panel__close" data-ai-close aria-label="Close chat">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 20 20"
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+          <path d="M4 4l12 12M16 4L4 16"></path>
+        </svg>
+      </button>
+    </header>
+    <p class="panel__status" role="status" data-ai-status>
+      Waking up the assistant. This can take about 30 seconds after inactivity.
+    </p>
+    <!-- sandbox omits allow-top-navigation, so the embedded app can never redirect this page. -->
+    <iframe
+      title="Chat with my AI assistant"
+      data-ai-frame
+      loading="lazy"
+      allow="clipboard-write"
+      referrerpolicy="no-referrer"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+    ></iframe>
+    <p class="panel__foot">AI-generated answers; please verify anything important.</p>
+  </dialog>
+
+  <button
+    type="button"
+    class="fab"
+    aria-haspopup="dialog"
+    aria-expanded="false"
+    aria-controls="ai-panel"
+    data-ai-toggle
+  >
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+      <path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2zm7 11l.9 2.6 2.6.9-2.6.9L19 20l-.9-2.6-2.6-.9 2.6-.9L19 13z"></path>
+    </svg>
+    <span class="fab__text">
+      <strong>Ask my AI</strong>
+      <small>Grounded in my résumé &amp; research</small>
+    </span>
+  </button>
+</div>
+
+<style>
+  .ai {
+    position: fixed;
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    z-index: 40;
+  }
+  .fab {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.7rem 1.15rem 0.7rem 0.95rem;
+    border: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 8px 24px rgb(23 24 28 / 0.3);
+    cursor: pointer;
+    text-align: left;
+    transition:
+      transform var(--dur-fast) var(--ease),
+      background-color var(--dur-fast) var(--ease),
+      box-shadow var(--dur-fast) var(--ease);
+  }
+  .fab:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgb(23 24 28 / 0.36);
+  }
+  .fab__text {
+    display: grid;
+    line-height: 1.2;
+  }
+  .fab__text small {
+    font-size: 0.72rem;
+    opacity: 0.88;
+  }
+
+  /* Large, but clearly a dialog: about 78% of the window, capped on big monitors, page visible around it. */
+  .panel {
+    width: min(78vw, 1200px);
+    height: min(78dvh, 800px);
+    max-width: none;
+    max-height: none;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--side);
+    color: #fff;
+    box-shadow: 0 24px 80px rgb(0 0 0 / 0.5);
+  }
+  .panel[open] {
+    display: flex;
+    flex-direction: column;
+    animation: rise var(--dur) var(--ease);
+  }
+  .panel::backdrop {
+    background: rgb(23 24 28 / 0.72);
+    backdrop-filter: blur(4px);
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.99);
+    }
+  }
+  .panel__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.4rem 0.75rem 0.4rem 1rem;
+    border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  }
+  .panel__head > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.1rem 0.75rem;
+  }
+  .panel__head h2 {
+    font-size: 1rem;
+  }
+  .panel__head p {
+    font-size: 0.78rem;
+    color: var(--side-mute);
+  }
+  .panel__close {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 0;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 0.1);
+    color: #fff;
+    cursor: pointer;
+  }
+  .panel__close:hover {
+    background: rgb(255 255 255 / 0.2);
+  }
+  .panel__status {
+    padding: 0.5rem 1rem;
+    background: rgb(255 176 32 / 0.14);
+    color: var(--chat-warn);
+    font-size: 0.8rem;
+  }
+  .panel__status[hidden] {
+    display: none;
+  }
+  iframe {
+    flex: 1 1 0;
+    width: 100%;
+    min-height: 0;
+    border: 0;
+    background: var(--chat-bg);
+  }
+  .panel__foot {
+    padding: 0.4rem 1rem;
+    font-size: 0.72rem;
+    color: var(--side-mute);
+    text-align: center;
+  }
+
+  /* The page behind a modal does not scroll (native dialogs do not lock it by themselves). */
+  :global(html.ai-open) {
+    overflow: hidden;
+  }
+
+  /* Phones: the chat is a true full-screen sheet. */
+  @media (max-width: 640px) {
+    .panel {
+      width: 100vw;
+      height: 100dvh;
+      border-radius: 0;
+    }
+  }
+</style>

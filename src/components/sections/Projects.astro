@@ -1,0 +1,243 @@
+---
+import { Image } from 'astro:assets';
+import SectionBanner from '../ui/SectionBanner.astro';
+import { projects } from '../../lib/content';
+import { formatPeriod } from '../../lib/format';
+import { image } from '../../lib/assets';
+import { isExternal, withBase } from '../../lib/url';
+---
+
+<section id="projects" aria-labelledby="projects-heading">
+  <SectionBanner id="projects" title="Projects" />
+  <div class="container body" data-tabs>
+    <div class="panels">
+      {projects.map((p, i) => (
+        <article
+          class="panel"
+          role="tabpanel"
+          id={`proj-panel-${p.id}`}
+          aria-labelledby={`proj-tab-${p.id}`}
+          tabindex="0"
+          hidden={i !== 0}
+        >
+          <div
+            class:list={['panel__media', { 'is-contain': p.imageFit === 'contain' }]}
+            style={p.imageBg ? `--media-bg: ${p.imageBg}` : undefined}
+          >
+            <Image
+              src={image(p.image)}
+              alt={p.imageAlt}
+              widths={[480, 760, 1000]}
+              sizes="(max-width: 860px) 92vw, 520px"
+              loading="lazy"
+            />
+          </div>
+          <div class="panel__body">
+            <p class="meta">
+              {p.award && <span class="award">★ {p.award}</span>}
+              {p.statusLabel && <span class="status">{p.statusLabel}</span>}
+              <span class="period">{formatPeriod(p.start, p.end)}</span>
+            </p>
+            <h3>{p.title}</h3>
+            <p class="summary">{p.summary}</p>
+            {p.role && (
+              <p class="role">
+                <strong>My role:</strong> {p.role}
+              </p>
+            )}
+            {p.note && <p class="note">{p.note}</p>}
+            <ul class="tags">
+              {p.tags.map((t) => (
+                <li class="tag">{t}</li>
+              ))}
+            </ul>
+
+            {p.team.length > 0 && (
+              <p class="team">
+                <strong>Team:</strong> {p.team.join(', ')}
+              </p>
+            )}
+
+            {(p.links.length > 0 || p.action) && (
+              <p class="links">
+                {p.action === 'open-chat' && (
+                  <button type="button" class="btn btn--accent" data-open-chat>
+                    Chat with Cadence
+                  </button>
+                )}
+                {p.links.map((l) => (
+                  <a
+                    class="btn btn--ghost btn--ghost-ink"
+                    href={withBase(l.href)}
+                    {...(isExternal(l.href)
+                      ? { target: '_blank', rel: 'noopener noreferrer' }
+                      : { download: true })}
+                  >
+                    {l.label}
+                  </a>
+                ))}
+              </p>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="tablist" role="tablist" aria-label="Select a project">
+      {projects.map((p, i) => (
+        <button
+          type="button"
+          role="tab"
+          id={`proj-tab-${p.id}`}
+          aria-controls={`proj-panel-${p.id}`}
+          aria-selected={i === 0 ? 'true' : 'false'}
+          tabindex={i === 0 ? 0 : -1}
+          class="tab"
+        >
+          <Image src={image(p.image)} alt="" width={160} height={100} loading="lazy" />
+          <span>{p.title.split(':')[0]}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .body {
+    padding-block: 2.25rem var(--space-section);
+  }
+  .panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  .panel[hidden] {
+    display: none;
+  }
+  .panel__media {
+    display: grid;
+    align-items: center;
+    background: var(--media-bg, var(--side));
+  }
+  .panel__media :global(img) {
+    width: 100%;
+    height: 100%;
+    min-height: 16rem;
+    object-fit: cover;
+  }
+  /* Shown whole at its own aspect ratio, centred on the matching background (no letterbox box). */
+  .panel__media.is-contain :global(img) {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+  .panel__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: clamp(1.25rem, 1rem + 1.5vw, 2rem);
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    align-items: center;
+    font-size: var(--text-sm);
+  }
+  .award {
+    padding: 0.15rem 0.7rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  .status {
+    padding: 0.15rem 0.7rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .period {
+    color: var(--ink-mute);
+  }
+  h3 {
+    font-size: clamp(1.35rem, 1.1rem + 1vw, 1.8rem);
+  }
+  .summary {
+    color: var(--ink-soft);
+  }
+  .role,
+  .team {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .note {
+    font-size: var(--text-sm);
+    color: var(--ink-mute);
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+  }
+  .links .btn--ghost {
+    color: var(--ink);
+    border-color: var(--line-strong);
+  }
+  .tablist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .tab {
+    display: grid;
+    gap: 0.4rem;
+    padding: 0.4rem 0.4rem 0.6rem;
+    background: var(--surface);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: left;
+    cursor: pointer;
+    opacity: 0.75;
+    transition:
+      opacity var(--dur-fast) var(--ease),
+      border-color var(--dur-fast) var(--ease),
+      transform var(--dur-fast) var(--ease),
+      box-shadow var(--dur-fast) var(--ease);
+  }
+  .tab :global(img) {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .tab:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  .tab[aria-selected='true'] {
+    opacity: 1;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-wash);
+  }
+  @media (max-width: 860px) {
+    .panel {
+      grid-template-columns: 1fr;
+    }
+    .panel__media :global(img) {
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+    }
+  }
+</style>

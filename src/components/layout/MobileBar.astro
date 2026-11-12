@@ -1,0 +1,123 @@
+---
+import { profile } from '../../lib/content';
+import { NAV_ITEMS } from '../../lib/nav';
+import { withBase } from '../../lib/url';
+---
+
+<header class="mobilebar" data-mobilebar>
+  <div class="mobilebar__row">
+    <a class="mobilebar__brand" href="#top">
+      {profile.name}
+    </a>
+    <button
+      type="button"
+      class="mobilebar__toggle"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      data-menu-toggle
+    >
+      <span class="sr-only">Menu</span>
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      >
+        <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="mobilebar__menu" hidden>
+    <nav aria-label="Primary mobile">
+      <ul>
+        {NAV_ITEMS.map((item) => (
+          <li>
+            <a class="m-link" href={`#${item.id}`} data-nav={item.id} data-menu-link>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <div class="mobilebar__actions">
+      <button type="button" class="btn btn--accent" data-open-contact data-menu-link>
+        Get in touch
+      </button>
+      <a
+        class="btn btn--ghost"
+        href={withBase(profile.links.resume)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Résumé (PDF)
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .mobilebar {
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: var(--side);
+    color: var(--side-text);
+  }
+  .mobilebar__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.5rem;
+    padding-inline: var(--gutter);
+  }
+  .mobilebar__brand {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .mobilebar__toggle {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-right: -0.5rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  .mobilebar__menu {
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+    padding: 0.5rem 0 1rem;
+  }
+  .m-link {
+    display: block;
+    padding: 0.8rem var(--gutter);
+    border-left: 3px solid transparent;
+    color: var(--side-mute);
+    text-decoration: none;
+  }
+  .m-link[aria-current='location'] {
+    color: #fff;
+    font-weight: 600;
+    border-left-color: var(--accent);
+  }
+  .mobilebar__actions {
+    display: grid;
+    gap: 0.6rem;
+    padding: 0.75rem var(--gutter) 0;
+  }
+  .mobilebar__actions .btn--ghost {
+    color: var(--side-text);
+  }
+  @media (max-width: 991.98px) {
+    .mobilebar {
+      display: block;
+    }
+  }
+</style>

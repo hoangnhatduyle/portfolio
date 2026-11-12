@@ -1,0 +1,90 @@
+---
+import { profile } from '../../lib/content';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <p class="footer__lead">Want to talk research, agents, or building something together?</p>
+      <p class="footer__sub">
+        {profile.availability.research}. {profile.availability.fullTime}.
+      </p>
+    </div>
+    <div class="footer__actions">
+      <button type="button" class="btn btn--accent" data-open-contact>
+        Get in touch
+      </button>
+      <a class="btn btn--ghost" href={`mailto:${profile.links.email}`}>
+        Email me
+      </a>
+    </div>
+  </div>
+  <div class="container footer__legal">
+    <p>
+      © {year} {profile.name}
+    </p>
+    <p>
+      <a href={profile.links.github} target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>{' '}
+      ·
+      <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding-block: 3.5rem 2rem;
+    background: var(--side);
+    color: var(--side-text);
+  }
+  .footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .footer__lead {
+    max-width: 28ch;
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2rem);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .footer__sub {
+    margin-top: 0.6rem;
+    color: var(--side-mute);
+    font-size: var(--text-sm);
+  }
+  .footer__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .footer__actions .btn--ghost {
+    color: var(--side-text);
+  }
+  .footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+    color: var(--side-mute);
+    font-size: var(--text-sm);
+  }
+  .footer__legal a {
+    text-decoration: none;
+  }
+  .footer__legal a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+</style>

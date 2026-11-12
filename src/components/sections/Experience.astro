@@ -1,0 +1,186 @@
+---
+import { Image } from 'astro:assets';
+import SectionBanner from '../ui/SectionBanner.astro';
+import { experience } from '../../lib/content';
+import { formatPeriod } from '../../lib/format';
+import { image } from '../../lib/assets';
+---
+
+<section id="experience" aria-labelledby="experience-heading">
+  <SectionBanner id="experience" title="Experience" />
+  <div class="container body" data-tabs>
+    <div class="panels">
+      {experience.map((e, i) => (
+        <article
+          class="panel"
+          role="tabpanel"
+          id={`exp-panel-${e.id}`}
+          aria-labelledby={`exp-tab-${e.id}`}
+          tabindex="0"
+          hidden={i !== 0}
+        >
+          <header class="panel__head">
+            <Image class="panel__logo" src={image(e.logo)} alt="" height={44} loading="lazy" />
+            <div>
+              <h3>{e.company}</h3>
+              <p class="role">{e.role}</p>
+            </div>
+            <p class="period">{formatPeriod(e.start, e.end)}</p>
+          </header>
+          <h4 class="label">Achievements</h4>
+          <ul class="achievements">
+            {e.achievements.map((a) => (
+              <li>{a}</li>
+            ))}
+          </ul>
+          <ul class="tags">
+            {e.tags.map((t) => (
+              <li class="tag">{t}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <div class="tablist" role="tablist" aria-label="Select a role">
+      {experience.map((e, i) => (
+        <button
+          type="button"
+          role="tab"
+          id={`exp-tab-${e.id}`}
+          aria-controls={`exp-panel-${e.id}`}
+          aria-selected={i === 0 ? 'true' : 'false'}
+          tabindex={i === 0 ? 0 : -1}
+          class="tab"
+        >
+          <Image src={image(e.logo)} alt="" height={30} loading="lazy" />
+          <span class="sr-only">{e.company}</span>
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .body {
+    padding-block: 2.25rem var(--space-section);
+  }
+  .panel {
+    padding: clamp(1.25rem, 1rem + 1.5vw, 2rem);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+  }
+  .panel[hidden] {
+    display: none;
+  }
+  .panel__head {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem 1.25rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .panel__logo {
+    width: auto;
+    max-width: 8rem;
+    height: 2.75rem;
+    object-fit: contain;
+  }
+  h3 {
+    font-size: 1.35rem;
+  }
+  .role {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .period {
+    font-size: var(--text-sm);
+    color: var(--ink-mute);
+    white-space: nowrap;
+  }
+  .label {
+    margin-top: 1.1rem;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .achievements {
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 0.7rem;
+  }
+  .achievements li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: var(--ink-soft);
+  }
+  .achievements li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 1px;
+    background: var(--accent);
+  }
+  .panel .tags {
+    margin-top: 1.25rem;
+  }
+  .tablist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .tab {
+    display: grid;
+    place-items: center;
+    width: 8rem;
+    height: 3.5rem;
+    padding: 0.5rem 0.9rem;
+    background: var(--surface);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    opacity: 0.7;
+    transition:
+      opacity var(--dur-fast) var(--ease),
+      border-color var(--dur-fast) var(--ease),
+      transform var(--dur-fast) var(--ease),
+      box-shadow var(--dur-fast) var(--ease);
+  }
+  .tab :global(img) {
+    width: auto;
+    max-width: 100%;
+    height: 1.9rem;
+    object-fit: contain;
+  }
+  .tab:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+  .tab[aria-selected='true'] {
+    opacity: 1;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-wash);
+  }
+  @media (max-width: 640px) {
+    .panel__head {
+      grid-template-columns: auto 1fr;
+    }
+    .period {
+      grid-column: 1 / -1;
+    }
+    .tab {
+      width: calc(50% - 0.4rem);
+    }
+  }
+</style>

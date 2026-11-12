@@ -1,0 +1,281 @@
+---
+import { profile } from '../../lib/content';
+
+import { FORM_ENDPOINT } from '../../lib/config';
+---
+
+<dialog id="contact-dialog" aria-labelledby="contact-title" data-contact-dialog>
+  <div class="shell">
+    <aside class="aside">
+      <h2 id="contact-title">Get in touch</h2>
+      <p class="aside__lead">
+        Research collaborations, Summer 2027 opportunities, or a full-time role after May 2028. I
+        read every message.
+      </p>
+      <ul class="aside__links">
+        <li>
+          <a href={`mailto:${profile.links.email}`}>{profile.links.email}</a>
+        </li>
+        <li>
+          <a href={profile.links.linkedin} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href={profile.links.github} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <form id="contact-form" method="post" action={FORM_ENDPOINT} novalidate data-contact-form>
+      <div class="field">
+        <label for="cf-name">Name</label>
+        <input
+          id="cf-name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          required
+          aria-describedby="cf-name-err"
+        />
+        <p class="err" id="cf-name-err" data-error-for="name"></p>
+      </div>
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input
+          id="cf-email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+          aria-describedby="cf-email-err"
+        />
+        <p class="err" id="cf-email-err" data-error-for="email"></p>
+      </div>
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea
+          id="cf-message"
+          name="message"
+          rows="6"
+          required
+          maxlength="5000"
+          aria-describedby="cf-message-err"
+        ></textarea>
+        <p class="err" id="cf-message-err" data-error-for="message"></p>
+      </div>
+
+      <!-- Honeypot: hidden from people and assistive tech, bots fill it in. -->
+      <div class="hp" aria-hidden="true">
+        <label for="cf-gotcha">Leave this empty</label>
+        <input id="cf-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <p class="status" role="status" aria-live="polite" data-form-status></p>
+
+      <div class="actions">
+        <button type="submit" class="btn btn--accent" data-submit>
+          Send message
+        </button>
+        <button type="button" class="btn btn--ghost btn--ghost-ink" data-close-contact>
+          Cancel
+        </button>
+      </div>
+    </form>
+
+    <button type="button" class="close" data-close-contact aria-label="Close contact form">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        aria-hidden="true"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      >
+        <path d="M4 4l12 12M16 4L4 16"></path>
+      </svg>
+    </button>
+  </div>
+</dialog>
+
+<style>
+  dialog {
+    width: min(56rem, 94vw);
+    max-width: none;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 24px 80px rgb(0 0 0 / 0.45);
+    overflow: hidden;
+  }
+  dialog::backdrop {
+    background: rgb(23 24 28 / 0.72);
+    backdrop-filter: blur(4px);
+  }
+  dialog[open] {
+    animation: pop var(--dur) var(--ease);
+  }
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+  }
+  .shell {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    max-height: 90dvh;
+  }
+  .aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2.25rem 2rem;
+    background: var(--side);
+    color: #fff;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .aside__lead {
+    color: rgb(255 255 255 / 0.78);
+  }
+  .aside__links {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: auto;
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+  .aside__links a {
+    color: var(--accent-on-dark);
+  }
+  form {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+    padding: 2.25rem 2rem;
+    overflow-y: auto;
+  }
+  .field {
+    display: grid;
+    gap: 0.35rem;
+  }
+  label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 1.5px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    font: inherit;
+    color: inherit;
+    transition: border-color var(--dur-fast) var(--ease);
+  }
+  textarea {
+    resize: vertical;
+    min-height: 8rem;
+  }
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid var(--accent-wash);
+    outline-offset: 0;
+    border-color: var(--accent);
+  }
+  input[aria-invalid='true'],
+  textarea[aria-invalid='true'] {
+    border-color: var(--accent);
+  }
+  .err {
+    min-height: 0;
+    font-size: var(--text-sm);
+    color: var(--accent);
+  }
+  .hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .status {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  .status[data-state='success'] {
+    color: var(--success);
+  }
+  .status[data-state='error'] {
+    color: var(--accent);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .actions .btn--ghost {
+    color: var(--ink);
+    border-color: var(--line-strong);
+  }
+  .close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 50%;
+    background: var(--banner);
+    cursor: pointer;
+    transition: background-color var(--dur-fast) var(--ease);
+  }
+  .close:hover {
+    background: var(--line-strong);
+  }
+
+  /* Mobile: a full-screen sheet */
+  @media (max-width: 720px) {
+    dialog {
+      width: 100vw;
+      height: 100dvh;
+      max-height: none;
+      margin: 0;
+      border-radius: 0;
+    }
+    .shell {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      height: 100dvh;
+      max-height: none;
+    }
+    .aside {
+      padding: 1.5rem var(--gutter) 1.25rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    .aside__links {
+      margin-top: 0.25rem;
+    }
+    form {
+      padding: 1.5rem var(--gutter) 2rem;
+    }
+    .close {
+      background: rgb(255 255 255 / 0.14);
+      color: #fff;
+    }
+  }
+</style>

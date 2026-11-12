@@ -1,0 +1,52 @@
+:root {
+  /* Surfaces: dark UC black for chrome, warm paper for content */
+  --side: #17181c;
+  --side-raised: #22242a;
+  --side-text: #ebe9e6;
+  --side-mute: #9c9a95;
+  --bg: #faf8f6;
+  --surface: #ffffff;
+  --banner: #efebe7;
+
+  /* Text */
+  --ink: #17181c;
+  --ink-soft: #4a4a4f;
+  --ink-mute: #6c6c72;
+  --line: rgb(23 24 28 / 0.12);
+  --line-strong: rgb(23 24 28 / 0.22);
+
+  /* UC red is an accent only: rules, active states, tags, primary buttons */
+  --accent: #c8102e;
+  --accent-hover: #a50d26;
+  --accent-on-dark: #ff6b7d; /* AA on --side for small text */
+  --accent-wash: rgb(200 16 46 / 0.07);
+
+  /* Status + chat surfaces */
+  --success: #1f6b3a;
+  --chat-bg: #0e0f12;
+  --chat-warn: #ffd48a;
+
+  /* Type */
+  --font-display: 'Raleway Variable', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-sm: 0.875rem;
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.4vw, 1.3rem);
+  --text-hero: clamp(2.5rem, 1.3rem + 4.2vw, 4.9rem);
+  --text-banner: clamp(1.6rem, 1.3rem + 1.4vw, 2.2rem);
+
+  /* Layout */
+  --sidebar-w: 232px;
+  --content-max: 1080px;
+  --gutter: clamp(1rem, 0.5rem + 3vw, 3rem);
+  --space-section: clamp(3rem, 2rem + 4vw, 5.5rem);
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  /* Depth + motion */
+  --shadow-card: 0 1px 2px rgb(23 24 28 / 0.06), 0 8px 24px rgb(23 24 28 / 0.06);
+  --shadow-lift: 0 2px 4px rgb(23 24 28 / 0.08), 0 16px 36px rgb(23 24 28 / 0.12);
+  --dur-fast: 150ms;
+  --dur: 300ms;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
