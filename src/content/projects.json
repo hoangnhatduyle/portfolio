@@ -88,16 +88,15 @@
   },
   {
     "id": "inventory-tracker",
-    "title": "Inventory Tracking App",
-    "status": "shipped",
+    "title": "Chắt Chiu: Kitchen Inventory App",
+    "status": "active",
     "start": "2026-03",
-    "end": "2026-09",
-    "summary": "An offline-first grocery inventory app that tracks quantities and expiration dates, sends local notifications, builds shopping lists, and suggests recipes from items about to expire. Packaged as an Android APK.",
-    "image": "inventory.svg",
-    "imageAlt": "Diagram of the inventory app: items, expiry dates, local notifications, recipe suggestions.",
-    "tags": ["Angular", "Capacitor", "SQLite", "Android"],
-    "links": [],
-    "imageFit": "contain",
-    "imageBg": "#efebe7"
+    "end": "present",
+    "summary": "A kitchen inventory app that tracks what is in the fridge, freezer and pantry, warns before things expire, and builds shopping lists and meal plans from what you already have. Data syncs live across devices on one shared login and stays usable offline. Rewritten from Angular to React with a Supabase backend, and packaged as an Android app for a Fire tablet.",
+    "note": "Private app, shown with screenshots of sample data.",
+    "image": "chatchiu.png",
+    "imageAlt": "Screenshot of the Chắt Chiu Kitchen board: expired, use-today, running-low and fresh tiles above Freezer, Fridge and Pantry cards with usage sliders.",
+    "tags": ["React", "TypeScript", "Supabase", "Capacitor", "PWA"],
+    "links": []
   }
 ]
