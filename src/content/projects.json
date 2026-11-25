@@ -8,7 +8,7 @@
     "featured": true,
     "award": "Winner · Best Use of Auth0 · MakeUC 2026",
     "summary": "A rule-based firewall that intercepts every AI agent tool call, blocking injected commands and secret leaks before they run and logging the rule behind each decision. A classroom on top lets students attack level chatbots, then take a quiz generated from their own session.",
-    "role": "I built Auth0 sign-in with three server-enforced roles (student, teacher, firewall admin) and the teacher/student dashboard.",
+    "role": "I built the classroom and quiz subsystem: the teacher/student session and class-insight APIs, and a quiz pipeline (generator, classmate agent, locked-rubric grader) that treats student text as untrusted and caps model spend.",
     "image": "AEGIS_thumbnail.png",
     "imageAlt": "AEGIS pixel-art illustration: an \"ignore rules\" attack is blocked by the firewall while a student learns why.",
     "tags": ["Next.js", "Python", "PostgreSQL", "Auth0", "Docker"],
